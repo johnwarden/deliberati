@@ -1,0 +1,4 @@
+baseURL = 'https://jonathanwarden.com/'
+languageCode = 'en-us'
+title = 'The Writings of Jonathan Warden'
+disableKinds = ['taxonomy', 'term']
