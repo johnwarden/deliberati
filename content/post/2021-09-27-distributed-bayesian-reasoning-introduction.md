@@ -5,6 +5,7 @@ date:   2021-09-08 00:00:00 +0200
 # tags: distributed-bayesian-reasoning
 toc: true
 toc_sticky: true
+math: true
 sidebar:
   - nav: "distributed-bayesian-reasoning"
     title: "In This Series"
