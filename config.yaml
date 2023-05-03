@@ -2,12 +2,13 @@ baseurl: https://jonathanwarden.com
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 20
-title: Jonathan Warden
+# title: Jonathan Warden
+title: Deliberati
 
 # languages:
 #     en:
 #         languageName: English
-#         title: The Writings of Jonathan Warden
+#         # title: The Writings of Jonathan Warden
 #         description: Example description
 #         weight: 1
 
@@ -25,9 +26,13 @@ DefaultContentLanguage: en
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: false
 
+taxonomies:
+  category: categories
+  tag: tags
+
 permalinks:
     post: /:slug/
-    page: /:slug/
+    # page: /:slug/
 
 params:
     mainSections:
@@ -46,11 +51,14 @@ params:
 
     sidebar:
         # emoji: 🍥
-        # subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        avatar:
+        subtitle: Jonathan Warden on Improving Conversations on the Internet
+        avatar: 
             enabled: false
-            local: true
-            # src: img/jonathan-profile-photo.png
+        logo:
+            enabled: true
+            local: false
+            src: /assets/images/deliberati-logo-long-120.png
+            # src: img/deliberati-logo-circle-512.png
 
     article:
         math: true
@@ -143,14 +151,15 @@ params:
             # - type: archives
             #   params:
             #       limit: 5
-            - type: categories
-              params:
-                  limit: 10
+            # - type: categories
+            #   params:
+            #       limit: 10
             - type: tag-cloud
               params:
                   limit: 10
         page:
             - type: toc
+
 
     opengraph:
         twitter:
@@ -183,39 +192,39 @@ params:
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main:
-        - identifier: social-protocols
-          name: Social Protocols
-          url: /categories/social-protocols/
-          weight: -100
-          params:
-            icon: categories
-            newTab: false
+    # main:
+        # - identifier: social-protocols
+        #   name: Social Protocols
+        #   url: /tags/social-protocols/
+        #   weight: -100
+        #   params:
+        #     icon: categories
+        #     newTab: false
 
-        - identifier: travel
-          name: Travel
-          url: /categories/travel/
-          weight: -98
-          params:
-            icon: categories
-            newTab: false
+        # - identifier: travel
+        #   name: Travel
+        #   url: /tags/travel/
+        #   weight: -98
+        #   params:
+        #     icon: categories
+        #     newTab: false
 
-        - identifier: language-design
-          name: Language Design
-          url: /categories/language-design/
-          weight: -98
-          params:
-            icon: categories
-            newTab: false
+        # - identifier: language-design
+        #   name: Language Design
+        #   url: /tags/language-design/
+        #   weight: -98
+        #   params:
+        #     icon: categories
+        #     newTab: false
 
 
-        - identifier: philosophy
-          name: Philosophy
-          url: /categories/philosophy/
-          weight: -99
-          params:
-            icon: categories
-            newTab: false
+        # - identifier: philosophy
+        #   name: Philosophy
+        #   url: /tags/philosophy/
+        #   weight: -99
+        #   params:
+        #     icon: categories
+        #     newTab: false
 
     social:
         - identifier: github
