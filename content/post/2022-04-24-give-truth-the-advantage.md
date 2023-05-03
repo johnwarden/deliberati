@@ -4,6 +4,9 @@ date:   2021-09-08 00:00:00 +0200
 title:  "Give Truth the Advantage"
 toc: true
 toc_sticky: true
+weight: 1 # Pin to top
+tags: ['Social Protocols', 'Game Theory and Social Media']
+image: assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
@@ -26,6 +29,8 @@ sidebar:
 
 
 Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite? 
+
+<!--more-->
 
 We can't prevent people from lying. But we can't on the one hand blame the algorithms for the spread of misinformation, and on the other hand blame everything on human nature. We know that the algorithms somehow change the nature of online discourse for the worse. So if they can be accidentally engineered to promote lies, couldn't they be intentionally engineered to promote truth?
 

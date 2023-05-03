@@ -2,7 +2,7 @@
 layout: single
 title:  "Deliberati Argument Model"
 date:   2021-10-03 00:00:00 +0200
-categories: ['Social Protocols']
+tags: ['Social Protocols', 'Argumentation Theory']
 toc: true
 math: true
 toc_sticky: true
@@ -11,12 +11,11 @@ header:
 sidebar:
   - nav: "argument-model-related"
     title: "Related Articles"
-excerpt: "In this article we introduce a few key terms and concepts used to develop the [mathematics of Distributed Bayesian Reasoning](/distributed-bayesian-reasoning-math)."
 
 ---
 
 
-{{ page.excerpt }}
+In this article we introduce a few key terms and concepts used to develop the [mathematics of Distributed Bayesian Reasoning](/distributed-bayesian-reasoning-math).
 
 In the field of argumentation theory, there are many different theories and models for analyzing arguments and naming their parts. But many modern theories still incorporate the basic ideas from the influential [Toulmin model](https://link.springer.com/content/pdf/10.1007%2F978-90-481-9473-5_4.pdf) first [introduced in 1948](https://www.goodreads.com/book/show/859298.The_Uses_of_Argument). We will adopt the core parts of the Toulmin model here, but use more modern terminology.
 

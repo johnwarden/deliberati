@@ -3,6 +3,8 @@ layout: single
 title:  "A Bayesian Account of Argumentation"
 toc: true
 toc_sticky: true
+tags: ['Social Protocols', 'Argumentation Theory']
+weight: 5
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"

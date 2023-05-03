@@ -3,6 +3,7 @@ layout: single
 title:  "The Law of Attention"
 toc: true
 toc_sticky: true
+tags: ['Social Protocols', 'Game Theory and Social Media']
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
@@ -11,7 +12,6 @@ sidebar:
 
 ---
 
-## Summary
 
 > "If a tree falls in a forest and no one is around to hear it, does it make a sound?
 > If content is distributed and no attention is paid to it, does it matter?"
@@ -20,6 +20,8 @@ sidebar:
 
 
 In this article, I argue that we can apply [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain and control the behaviors that dominate in an online community. Not only can game theory explain why misinformation and abuse are so common in social platforms, it can be used to design social platforms that will be filled with honest, informed, civil, and behavior.
+
+<!--more-->
 
 ## Attention Games
 

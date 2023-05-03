@@ -2,11 +2,11 @@
 layout: single
 title:  "Distributed Bayesian Reasoning Math"
 date:   2021-09-08 00:00:00 +0200
-math: true
-toc: true
+weight: 4
+
 # toc_sticky: true
-tags: ["distributed-bayesian-reasoning"]
-categories: ["social-protocols"]
+tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
+# categories: ["social-protocols"]
 
 sidebar:
   - title: "In This Series"
@@ -24,11 +24,11 @@ sidebar:
 header:
     teaser: /assets/images/distributed-bayesian-reasoning/jeffrey-conditioning-formula.png
 
-excerpt: "In this article we develop the basic mathematical formula for calculating the opinion of the meta-reasoner in arguments involving a single main argument thread."
-
 
 ---
 
+
+In this article we develop the basic mathematical formula for calculating the opinion of the meta-reasoner in arguments involving a single main argument thread.
 
 ## Background Reading
 

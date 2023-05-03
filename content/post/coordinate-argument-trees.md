@@ -1,3 +1,7 @@
+---
+title: Subordinate and Coordinate
+
+---
 
 ## Subordinate and Coordinate Arguments
 

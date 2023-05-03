@@ -4,8 +4,7 @@ title:  "Bayesian Averaging"
 date:   2021-11-22 00:00:00 +0200
 toc: true
 toc_sticky: true
-categories: ['social-protocols']
-tags: ['distributed-bayesian-reasoning']
+tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 header:
     # teaser: /assets/images/distributed-bayesian-reasoning/complex-argument-graph.svg
 sidebar:
@@ -17,6 +16,8 @@ sidebar:
 ---
 
 This article is part of the series on distributed Bayesian reasoning. It assumes you have read the previous article on the [Basic Math](/distributed-bayesian-reasoning-math).
+
+<!--more--> 
 
 ## The Problem: Small Samples
 

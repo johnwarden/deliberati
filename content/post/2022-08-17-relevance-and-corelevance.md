@@ -4,6 +4,7 @@ layout: single
 title:  "Relevance and Corelevance"
 toc: true
 toc_sticky: true
+tags: ['Social Protocols', 'Argumentation Theory']
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"

@@ -3,7 +3,9 @@ layout: single
 title:  "What Deserves Our Attention?"
 toc: false 
 date:   2023-05-01 00:00:00 +0200
-categories: ['social-protocols']
+tags: ['Social Protocols']
+weight: 2 # Pin to top
+
 # toc_sticky: true
 sidebar:
   - title: "In This Series"
