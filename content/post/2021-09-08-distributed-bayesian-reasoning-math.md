@@ -21,8 +21,7 @@ sidebar:
                  style='display: block; margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; max-width: 350px' />
      "
 
-header:
-    teaser: /assets/images/distributed-bayesian-reasoning/jeffrey-conditioning-formula.png
+# image: assets/images/distributed-bayesian-reasoning/jeffrey-conditioning-formula.png
 
 
 ---
@@ -49,9 +48,16 @@ You also need familiar with basic syntax and concepts from probability theory, s
 
 ## Sample Argument
 
+{{< figure src="assets/images/distributed-bayesian-reasoning/sample-argument-reference.svg" title="Sample Argument" >}}
+
+
+
+
+<!-- 
 <img src='/assets/images/distributed-bayesian-reasoning/sample-argument-reference.svg'
                  alt='Simplified Argument'
                  style='display: block; margin-left: auto; margin-right: auto; max-height: 400px' />
+ -->
 
 Suppose a sensational murder trial is being discussed in an online platform that allows the general public to vote on what they think the verdict should be and why.
 

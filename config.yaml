@@ -51,14 +51,14 @@ params:
 
     sidebar:
         # emoji: 🍥
-        subtitle: Jonathan Warden on Improving Conversations on the Internet
+        subtitle: Improving Conversations on the Internet
         avatar: 
             enabled: false
         logo:
             enabled: true
-            local: false
-            src: /assets/images/deliberati-logo-long-120.png
-            # src: img/deliberati-logo-circle-512.png
+            local: true
+            # src: /deliberati/assets/images/deliberati-logo-long-120.png
+            src: img/deliberati-logo-long-120.png
 
     article:
         math: true

@@ -15,8 +15,7 @@ sidebar:
     title: "In This Series"
   - nav: "distributed-bayesian-reasoning-related"
     title: "Related Articles"
-image: /assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
-
+image: assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
 # header:
 #     teaser: /assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
 

@@ -38,7 +38,7 @@ Social networks and online forums, as the public square where public discourse t
 
 Designing such rules is the goal of *Social Protocols*.
 
-## Next Article
+<!-- ## Next Article
 
 - What Is a Social Protocol
-
+ -->
