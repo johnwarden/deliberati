@@ -1,122 +1,70 @@
 
-baseURL = "http://example.org/"
-
-# Change the default theme to be use when building the site with Hugo
-theme = "LoveIt"
-
-# website title
-title = "My New Hugo Site"
-
-# language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
-
-# Home page config
-# 主页信息设置
-[params.home]
-  # amount of RSS pages
-  # RSS 文章数目
-  rss = 10
-  # Home page profile
-  # 主页个人信息
-  [params.home.profile]
-    enable = true
-    # Gravatar Email for preferred avatar in home page
-    # Gravatar 邮箱，用于优先在主页显示的头像
-    gravatarEmail = ""
-    # URL of avatar shown in home page
-    # 主页显示头像的 URL
-    avatarURL = ""
-    # title shown in home page (HTML format is supported)
-    # 主页显示的网站标题 (支持 HTML 格式)
-    title = "Home Page Title"
-    # subtitle shown in home page (HTML format is supported)
-    # 主页显示的网站副标题 (允许 HTML 格式)
-    subtitle = "Writings of JOnathn an Warden"
-    # whether to use typeit animation for subtitle
-    # 是否为副标题显示打字机动画
-    typeit = false 
-    # whether to show social links
-    # 是否显示社交账号
-    social = true
-    # disclaimer (HTML format is supported)
-    # 免责声明 (支持 HTML 格式)
-    disclaimer = ""
-  # Home page posts
-  # 主页文章列表
-  [params.home.posts]
-    enable = true
-    # special amount of posts in each home posts page
-    # 主页每页显示文章数量
-    paginate = 6
-
-[params.page.toc]
-  # whether to enable the table of the contents
-  enable = true
-  # whether to keep the static table of the contents in front of the post
-  keepStatic = false
-  # whether to make the table of the contents in the sidebar automatically collapsed
-  auto = true
-
-[params.page.math]
-  enable = true 
-  # default inline delimiter is $ ... $ and \( ... \)
-  # 默认行内定界符是 $ ... $ 和 \( ... \)
-  inlineLeftDelimiter = "$"
-  inlineRightDelimiter = "$"
-  # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
-  # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
-  blockLeftDelimiter = "$$"
-  blockRightDelimiter = "$$"
-  # KaTeX extension copy_tex
-  # KaTeX 插件 copy_tex
-  copyTex = true
-  # KaTeX extension mhchem
-  # KaTeX 插件 mhchem
-  mhchem = true
 
 
+baseurl = "http://www.example.com"
+title = "johndoe"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
 
-# Author config
-[author]
-  name = "xxxx"
-  email = ""
-  link = ""
+paginate = 20
 
-# Menu config
-[menu]
-  [[menu.main]]
-    weight = 1
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-  [[menu.main]]
-    weight = 2
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-  [[menu.main]]
-    weight = 3
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
+disqusShortname = "yourdiscussshortname"
 
-# Markup related configuration in Hugo
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "John Doe"
+  info = "Full Stack DevOps and Magician"
+  description = "John Doe's personal website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.jpg"
+  #gravatar = "john.doe@example.com"
+
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2019
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/johndoe/"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa fa-gitlab fa-2x"
+  weight = 2
+  url = "https://gitlab.com/johndoe/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/johndoe/"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
