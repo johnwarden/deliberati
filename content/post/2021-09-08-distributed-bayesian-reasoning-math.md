@@ -1,9 +1,20 @@
 ---
-# layout: single
+layout: single
 title:  "Distributed Bayesian Reasoning Basic Math"
 date:   2021-09-08 00:00:00 +0200
-# toc: true
+math: true
+toc: true
 toc_sticky: true
+links:
+  - title: GitHub
+    description: GitHub is the world's largest software development platform.
+    website: https://github.com
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: TypeScript
+    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+    website: https://www.typescriptlang.org
+    image: ts-logo-128.jpg
+
 sidebar:
   - title: "In This Series"
     nav: "distributed-bayesian-reasoning"
