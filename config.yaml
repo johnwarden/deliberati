@@ -1,4 +1,4 @@
-baseurl: https://jonathanwarden.com
+baseurl: https://johnwarden.github.io/deliberati/
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 20
