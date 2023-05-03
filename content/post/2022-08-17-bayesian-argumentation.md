@@ -5,6 +5,7 @@ toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Argumentation Theory']
 weight: 5
+summary: 'In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. in other words we can objectively measure subjective beliefs.'
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"
@@ -15,15 +16,6 @@ sidebar:
 ---
 
 ## Quantifying Argument
-<!--
-Todo: 
-    rhetorically persuasive
-
-    TODO: believe/accept. Introduce terminology accept/claim/proposition.
-
-[TOOD: show that conditional relevance is conditional statistical dependence]
-
--->
 
 What makes for a *good* argument? How can this be quantified?
 

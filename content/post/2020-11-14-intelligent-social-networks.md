@@ -2,7 +2,8 @@
 layout: single
 title:  "Intelligent Social Networks"
 date:   2020-11-08 13:40:43 -0700
-# tags: crowdsourced-truth
+tags: ["Social Protocols"]
+
 toc: true
 toc_sticky: true
 header:

@@ -4,6 +4,7 @@ title:  "Moderation as Consensus"
 date:   2020-11-08 13:40:43 -0700
 toc: true
 toc_sticky: true
+tags: ["Social Protocols"]
 sidebar:
   - title: "<h1>Definitions</h1>"
     text: "

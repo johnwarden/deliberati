@@ -1,9 +1,11 @@
 ---
 layout: single
 title:  "A Brief Review of Bayesian Inference"
+slug: review-of-bayesian-inference 
 date:   2021-10-26 00:00:00 +0200
 toc: true
 toc_sticky: true
+weight: 6
 sidebar:
   - nav: "distributed-bayesian-reasoning-related"
     title: "Related Articles"
@@ -16,9 +18,6 @@ header:
 > 
 > -- Sherlock Holmes (Arthur Conan Doyle)
 
-- Reallocating probability mass
-- Joint probability distributions
-- Not about Bayes rule
 
 For a long time Bayesian inference was something I understood without really understanding it. I only really *got it* it after reading Chapter 2 of John K. Kruschke's textbook [*Doing Bayesian Data Analysis*](https://nyu-cdsc.github.io/learningr/assets/kruschke_bayesian_in_R.pdf), where he describes Bayesian Inference as [*Reallocation of Credibility Across Possibilities*](https://link.springer.com/article/10.3758/s13423-017-1272-1).
 
@@ -30,14 +29,13 @@ A Bayesian reasoner starts out with **prior** beliefs, which are a set of mutual
 
 For example, suppose that Sherlock Holmes is investigating the Case of the Disappearing Duchess, and believes that there is a 50% chance that the Duke has kidnapped the Duchess and is holding her alive in captivity, a 25% that chance that the Duke has murdered her, and a 25% chance that she has been murdered by the Count. The total of the probabilities is 100%.
 
+**Prior Beliefs**
 
-| Prior Beliefs
 | Culprit   | Status    | Probability 
 | --------- | --------- | -------------
 | Duke      | Alive     | 50%          
 | Duke      | Dead      | 25%         
 | Count     | Dead      | 25%         
-| ----------| --------- | ----
 |           | TOTAL     | 100%
 
 ## Revising Beliefs
@@ -51,13 +49,13 @@ For example, if the Duchess's body is found buried under the Atrium, Holmes must
 
 So he concludes that she was either murdered by the Duke or murdered by the Count. These new beliefs are called his **posterior** beliefs.
 
-| Posterior Beliefs
+**Posterior Beliefs**
+
 | Culprit   | Status    | Probability 
 | --------- | --------- | -------------
 | Duke      | Alive     | **0% (eliminated)**         
 | Duke      | Dead      | 50%         
 | Count     | Dead      | 50%         
-| ----------| --------- | -------------
 |           | TOTAL     | 100%
 
 ## Reallocation of Probability Mass
@@ -86,9 +84,9 @@ Another way of looking at this is that the 50% "probability mass" previously all
 
 <div style="font-size: smaller; padding-left: 20px; margin-bottom: 20px;">Illustration of the concept of "Reallocation" or Probability Mass. After the "Alive+Duke" scenario is eliminated, probability mass is reallocated to the remaining 2 scenarios.</div>
 
-
+<!--
 Reallocation of probability mass must be **proportional**. In the example above, the prior probabilities of last two possibilities are equal, so the posteriors must also be equal. On the other hand, if one possibility were twice as likely as the next in the priors, it would remain twice as likely in the posteriors. We will discuss the exact math for calculating posterior probabilities below.
-
+-->
 
 ## Sequential Updating
 
@@ -140,7 +138,13 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 
 What makes Bayesian inference so powerful is that learning one thing can change the probability of another thing, sometimes in non-intuitive ways.
 
-For example, learning that the Duchess is dead **decreased** the probability that the Duke did it (from 75% to 50%), and **increased** the probability that the Count did it (from 25% to 50%), which you should be able to easily verify. This is illustrated in the four charts below
+For example, learning that the Duchess is dead **decreased** the probability that the Duke did it (from 75% to 50%), and **increased** the probability that the Count did it (from 25% to 50%). 
+
+You can see this in the four charts below. The first two charts we have already seen: they show the prior and posterior for each *scenario*. 
+
+The second two charts show the same probabilities, but this time showing the *total* for reach *culprit*. The Duke is the culprit in two difference scenarios, so the total prior probability for the Duke is the sum of the probability of these two scenarios (50% + 25% = 75%).
+
+After eliminating the Alive+Dike scenario, the remaining probability mass for the Duke and the Count are the same. 
 
 <img src="/assets/images/distributed-bayesian-reasoning/reallocation-of-probabilities-3.svg"
      alt="Reallocation of Probabilities Example"
@@ -154,7 +158,7 @@ For example, learning that the Duchess is dead **decreased** the probability tha
 
 Evidence about one proposition can only change beliefs about another proposition because the prior beliefs are beliefs in **combinations** of propositions, not individual propositions. 
 
-Holmes' prior beliefs are not simply *there is a 75% chance that the Duke did it* or *there is a 50% chance that the Duchess is dead*. If his beliefs were so simple, learning that the Duchess was murdered would not tell Holmes anything about whether it was the Duke or the Count that did it.
+Holmes' prior beliefs are not simply that *there is a 75% chance that the Duke did it* or *there is a 50% chance that the Duchess is dead*. If his beliefs were so simple, learning that the Duchess was murdered would not tell Holmes anything about whether it was the Duke or the Count that did it.
 
 Rather his beliefs are a joint probability distribution in which there is positive correlation between the Duchess being dead and Count having done it. It is these correlations that encode the knowledge that enables Homes to make inferences about the culprit upon learning of the Duchess's death.
 
@@ -164,13 +168,13 @@ I think that understanding prior beliefs as a belief in a **join probability dis
 
 Here again are Homes's prior beliefs before the Countess was found buried under the Atrium. 
 
-| Prior Beliefs
+**Prior Beliefs**
+
 | Culprit   | Status    | Probability 
 | --------- | --------- | -------------
 | Duke      | Alive     | 50%          
 | Duke      | Dead      | 25%         
 | Count     | Dead      | 25%         
-| ----------| --------- | ----
 |           | TOTAL     | 100%
 
 After eliminating the first possibility, the probability of the second two possibilities must be scaled so that they sum to 100%.
@@ -180,27 +184,27 @@ To scale any set of numbers so that they sum to 100%, just divide each by the to
 
 Generalizing, **the total prior probability of the possibilities compatible with the evidence is just the total prior probability of the evidence**. So in this case, the evidence is that the countess is dead, and the total prior probability that the countess is dead is 25%+25% = 50%.
 
-Using $$P$$ to indicate the prior probability, we can write this mathematically as:
+Using $P$ to indicate the prior probability, we can write this mathematically as:
 
 $$
 \begin{aligned}
     P(Dead) &= P(Duke, Dead) + P(Count, Dead) \newline
-            &= 25\% + 25\% = 50\%
+            &= 25\\% + 25\\% = 50\\%
 \end{aligned}
 $$
 
-We use $$P'$$ to indicate the posterior probability. To find the posterior probability of the remaining possibilities, we divide each by $$P(Dead) = 50\%$$
+We use $P'$ to indicate the posterior probability. To find the posterior probability of the remaining possibilities, we divide each by $P(Dead) = 50\\%$$
 
 $$
 \begin{aligned}
-    P'(Duke, Dead) &= \frac{P(Duke, Dead)}{P(Dead)} &= \frac{25\%}{50\%} = 50\% \newline
-    P'(Count, Dead) &= \frac{P(Count, Dead)}{P(Dead)} &= \frac{25\%}{50\%} = 50\%
+    P'(Duke, Dead) &= \frac{P(Duke, Dead)}{P(Dead)} &= \frac{25\\%}{50\\%} = 50\\% \newline
+    P'(Count, Dead) &= \frac{P(Count, Dead)}{P(Dead)} &= \frac{25\\%}{50\\%} = 50\\%
 \end{aligned}
 $$
 
 ## Conditioning
 
-Now since we know that the Duchess is dead, $$P'(Duke, Dead)$$ and $$P'(Count, Dead)$$ are redundant: they are just equal to $$P'(Duke)$$ and $$P'(Count)$$ respectively. So:
+Now since we know that the Duchess is dead, $P'(Duke, Dead)$ and $P'(Count, Dead)$ are redundant: they are just equal to $P'(Duke)$ and $P'(Count)$ respectively. So:
 
 $$
 \begin{aligned}
@@ -218,11 +222,9 @@ $$
 \end{aligned}
 $$
 
-----------
-
 ## Summary
 
-So far, we have engaged in Bayesian inference without using the famous Bayes' Theorem, or the concept of conditional probability. Once you understand the above conditioning rule, these will be very easy to understand. but I won't explain them here, as I think is where my ability to contribute some unique insight about Bayesian inference ends.
+So far, we have engaged in Bayesian inference without using the famous Bayes' Theorem, or the concept of conditional probability. Once you understand the above conditioning rule, these will be very easy to understand. But I won't explain them here, as I think is where my ability to contribute some unique insight about Bayesian inference ends.
 
 Here's a summary of the idea presented in this essay:
 
@@ -233,44 +235,7 @@ Here's a summary of the idea presented in this essay:
 - Update beliefs sequentially by eliminating possibilities as new evidence is learned
 - Make inferences about hypotheses based on evidence by simply calculating the total posterior probability of the hypothesis
 
-## Summary
-
-Which brings us back to Sherlock Holmes: *When you have eliminated the impossible, all that remains, no matter how improbable, must be the truth.* Paraphrasing this gives us a good summary of the idea of Bayesian inference as reallocation of credibility across possibilities:
-
-> When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
-> 
-> -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
-
-
-
-
-----
-
-
-
-
-
-
-This rule for updating the posterior probability of a hypothesis is sometimes called the rule for **conditioning**.
-
-## Conditional Probabilities
-
-The right-hand-side of the above equation is the definition of **conditional probability**. The conditional probablity is often written simply as $$P(Hypothesis \vert Evidence)$$. So the rule for conditioning can be written:
-
-$$
-\begin{aligned}
-    P'(Hypothesis) &= P(Hypothesis|Evidence) 
-\end{aligned}
-$$
-
-The conditional probability $$P(Hypothesis \vert Evidence)$$ should be thought of as the Bayesian reasoner's **hypothetical** prior belief: what they believe the probability of the hypothesis **would be** if the evidence were true. Whereas the posterior probability $$P'(Hypothesis)$$ represents their posterior belief **after** learning actually learning that the evidence is true.
-
-For example, $$P(Count \vert Dead)$$ is Holmes' belief, before learning that the Duchess is dead, of the probability that the Count did it if the Duchess **were** dead. When Holmes learns that the Duchess is in fact dead, his posterior belief should be updated to equal precisely this probability.
-
-## Bayes Theorem
-
-Note all the Bayesian inference we have done without even touching Bayes theorem
-
+<!--
 
 ## Summary
 
@@ -284,18 +249,7 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 
 
 
---------------
-
-
-
-
-# OLd
-
-## The Math
-
-
-
-For example, if a Bayesian reasoner draws a random card from a standard 52-card deck without looking at it, her prior beliefs are that the probability of each card is exactly $$\frac{1}{52}$$. The total of the probabilities is $$\frac{1}{52}\times52=1$$.
+For example, if a Bayesian reasoner draws a random card from a standard 52-card deck without looking at it, her prior beliefs are that the probability of each card is exactly $\frac{1}{52}$. The total of the probabilities is $\frac{1}{52}\times52=1$.
 
 
 <img src="/assets/images/distributed-bayesian-reasoning/bayesian-gambler-prior.svg"
@@ -334,7 +288,7 @@ TDOO: not hard
 
 Reallocating probability among the remaining 13 cards in this example was trivial because we know each card has equal probability. Other scenarios may be more complex. The general rule for reallocating probability is to scale up the probabilities of each remaining possibility such that they sum 1.
 
-To scale a set of numbers such that they sum to 1, just divide each by the total. In this case, the total probability of a heart was $$\frac{1}{4}$$. So the posterior probability of each remaining heart is its prior probability divided by $$\frac{1}{4}$$: $$\frac{1/52}{1/4} = \frac{1}{13}$$
+To scale a set of numbers such that they sum to 1, just divide each by the total. In this case, the total probability of a heart was $\frac{1}{4}$. So the posterior probability of each remaining heart is its prior probability divided by $\frac{1}{4}$: $\frac{1/52}{1/4} = \frac{1}{13}$$
 
 ## Repeating Inferences
 
@@ -419,7 +373,7 @@ This is because when probabilities are reallocated in Bayesian inference, they a
 
 
 
-In general, the total probability of the possibilities compatible with the evidence is just the total probability of the evidence. If we say that $$P(E)$$ is the probability of the evidence, then Bayesian inference basically comes down to dividing by $$P(E)$$.
+In general, the total probability of the possibilities compatible with the evidence is just the total probability of the evidence. If we say that $P(E)$ is the probability of the evidence, then Bayesian inference basically comes down to dividing by $P(E)$.
 
 TODO: don't use H. The possibilities are the combined possibilities. States of the world?
 
@@ -430,7 +384,7 @@ $$
 \end{aligned}
 $$
 
-Where $$P'$$ is the posterior probability, $$P$$ is the prior probability, $$H$$ is any possibility (often called a *hypothesis*), and $$E$$ is the evidence.
+Where $P'$ is the posterior probability, $P$ is the prior probability, $H$ is any possibility (often called a *hypothesis*), and $E$ is the evidence.
 
 ## Another Example
 
@@ -456,16 +410,6 @@ Perhaps counter-intuitively, this is also the probability of the evidence. To un
 
 
 
-<!--
-Or more generally:
-
-$$
-    P'(\text{Remaining Possibility}) = \frac{P(\text{Remaining Possibility})}{P(\text{Evidence})}
-$$
-
-
-
--->
 
 
 
@@ -509,9 +453,9 @@ $$
      P(H|E) = \frac{P(H,E)}{P(E)} 
 $$
 
-Where $$P(H,E)$$ is the probability that both $$H$$ and $$E$$ are true. 
+Where $P(H,E)$ is the probability that both $H$ and $E$ are true. 
 
-But for possibilities that are incompatible with the evidence, $$P(H,E)=0$$. For example the ace of spades can't be a heart, so: 
+But for possibilities that are incompatible with the evidence, $P(H,E)=0$. For example the ace of spades can't be a heart, so: 
 
 $$
     P(\text{Ace of Spades}, \text{Heart})=0
@@ -523,7 +467,7 @@ $$
     P(\text{Ace of Spades} \vert \text{Heart})=0
 $$
 
-For the possibilities that *are* compatible with the evidence, $$P(H,E)$$ is just $$P(H)$$. For example:
+For the possibilities that *are* compatible with the evidence, $P(H,E)$ is just $P(H)$. For example:
 
 $$
     P(\text{Ace of Hearts}, \text{Heart})=P(\text{Ace of Hearts})
@@ -538,7 +482,7 @@ $$
 \end{aligned}
 $$
 
-So the rule $$P'(E) = P(H \vert E)$$ can be formulated as:
+So the rule $P'(E) = P(H \vert E)$ can be formulated as:
 
 $$
 \begin{aligned}
@@ -556,6 +500,8 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
+
+-->
 
 
 

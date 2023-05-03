@@ -17,10 +17,6 @@ sidebar:
 
 ---
 
-or 
-
-## How to Get People on the Internet to Tell the Truth
-
 
 Everyone knows that you can't believe what you read on the Internet. That is, unless it comes from people you trust. 
 

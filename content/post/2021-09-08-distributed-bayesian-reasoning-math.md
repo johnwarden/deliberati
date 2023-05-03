@@ -2,7 +2,6 @@
 layout: single
 title:  "Distributed Bayesian Reasoning Math"
 date:   2021-09-08 00:00:00 +0200
-weight: 4
 
 # toc_sticky: true
 tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
@@ -29,6 +28,8 @@ sidebar:
 
 In this article we develop the basic mathematical formula for calculating the opinion of the meta-reasoner in arguments involving a single main argument thread.
 
+<!--more-->
+
 ## Background Reading
 
 To understand this article you should first read:
@@ -48,16 +49,14 @@ You also need familiar with basic syntax and concepts from probability theory, s
 
 ## Sample Argument
 
-{{< figure src="assets/images/distributed-bayesian-reasoning/sample-argument-reference.svg" title="Sample Argument" >}}
+<!-- {{< figure src="/assets/images/distributed-bayesian-reasoning/sample-argument-reference.svg" title="Sample Argument" >}} -->
 
 
 
 
-<!-- 
 <img src='/assets/images/distributed-bayesian-reasoning/sample-argument-reference.svg'
                  alt='Simplified Argument'
                  style='display: block; margin-left: auto; margin-right: auto; max-height: 400px' />
- -->
 
 Suppose a sensational murder trial is being discussed in an online platform that allows the general public to vote on what they think the verdict should be and why.
 
@@ -67,15 +66,6 @@ Initially, 1,000 users vote on the root claim (𝐴) *the defendant is guilty*, 
 
 The final votes are tabulated in the following table. We represent votes using the numeric values **0=reject**, **1=accept**, and **-1=didn't vote**. 
 
-<style>
-    .votes-table {
-        table-layout: auto; 
-        display: table;
-        width: 100%;
-        max-width: 250px;
-        margin: 25px auto;
-    } 
-</style>
 
 |          | A=-1 | A=0 | A=1 |  SUM
 | -------- | ---- | --- | --- |  ----
@@ -84,7 +74,6 @@ The final votes are tabulated in the following table. We represent votes using t
 | **B=1**  |  0   | 20  | 80  |  100
 | **SUM**  |  0   | **500** | **500** | **1000**
 | **B≥0**  |  0   | 45  | 105 |  150
-{: .votes-table}
 
 
 According to this table, all 1,000 users voted on 𝐴, with 500 rejecting 𝐴 (𝐴=0) and 500 accepting 𝐴 (𝐴=1). But only 150 users voted on 𝐵 (𝐵≥0).
@@ -258,16 +247,16 @@ Let's define a function $P_h$ that gives us the beliefs of the meta-reasoner. Th
 
 
 $$
+\label{2}
 \begin{aligned} 
     P_h(B) &= P(B|G ≥ 0)
 \end{aligned}
-\tag{2}\label{eq:hypothetical-b}
+\tag{2}
 $$
 
 
 Let's put the vote counts from the sub-jury in a table:
 
-{.votes-table}
 |          | B=0 | B=1 | B ≥ 0
 | -------- | --- | --- | -----
 | **𝐺=0**  | 0  | 0    | 0
@@ -284,14 +273,15 @@ $$
 \end{aligned}
 $$
 
-Recall that $\eqref{eq:total}$ tells us how belief in $B$ determines the first group of users' belief in $A$. So to calculate the probability that a member of the first jury would accept 𝐴 *if they held the beliefs of the second jury about 𝐵*, we simply substitute of $ P_h(B=b) $ in place of $ P_i(B=b) $ in $\eqref{eq:total}$:
+Recall that $\eqref{1}$ tells us how belief in $B$ determines the first group of users' belief in $A$. So to calculate the probability that a member of the first jury would accept 𝐴 *if they held the beliefs of the second jury about 𝐵*, we simply substitute of $ P_h(B=b) $ in place of $ P_i(B=b) $ in $\eqref{1}$:
 
 $$
+\label{3}
 \begin{aligned} 
     P_h(A) &= \left. \sum_{b≥0} P_i(B=b)P(A|B=b) \right\vert_{P_i=P_h}\cr \cr
            &= \sum_{b≥0} P_h(B=b)P(A|B=b) 
 \end{aligned}
-\tag{3}\label{3}
+\tag{3}
 $$
 
 
@@ -313,7 +303,7 @@ The meta-reasoner's belief $𝑃ₕ(A=1)$ is very close to $𝑃(A=1 \vert B=0)=
 
 ### Front-Door Adjustment
 
-To readers who are familiar with [Judea Pearl](https://en.wikipedia.org/wiki/Judea_Pearl)'s work on [graphical causal models](https://ftp.cs.ucla.edu/pub/stat_ser/r236-3ed.pdf), formula $\eqref{eq:hypothetical-a}$ may look familiar: it is a 
+To readers who are familiar with [Judea Pearl](https://en.wikipedia.org/wiki/Judea_Pearl)'s work on [graphical causal models](https://ftp.cs.ucla.edu/pub/stat_ser/r236-3ed.pdf), formula $\eqref{3}$ may look familiar: it is a 
 [front-door adjustment](https://medium.data4sci.com/causal-inference-part-xii-front-door-criterion-38bec5172f3e). Given the causal graph (𝐺≥0) → 𝐵 → 𝐴:
 
 $$
@@ -329,14 +319,14 @@ Given this causal graph and our probability data, we've used the do-calculus to 
 
 ### Jeffrey's Rule
 
-Formula $\eqref{eq:hypothetical-a}$ is also Jeffrey's Rule: the general rule for Bayesian belief revision for situations where new information may come with uncertainty, as described in the Stanford [Stanford Encyclopedia of Philosophy article on Bayes Theorem](https://plato.stanford.edu/entries/bayes-theorem/#4):
+Formula $\eqref{3}$ is also Jeffrey's Rule: the general rule for Bayesian belief revision for situations where new information may come with uncertainty, as described in the Stanford [Stanford Encyclopedia of Philosophy article on Bayes Theorem](https://plato.stanford.edu/entries/bayes-theorem/#4):
 
 > If a person with a prior such that $ 0 < P(B) < 1 $ has a learning experience whose sole immediate effect is to change her subjective probability for $B$ to $P_h(B)$, then her post-learning posterior for any $A$ should be [substituting our own terms]:
 >
 > $$ \begin{aligned}  𝑃ₕ(A)  \cr= &𝑃(A \vert B=1)𝑃ₕ(B=1) \cr + &𝑃(A \vert B=0 )(1 - 𝑃ₕ(B=1)) \end{aligned} $$
 >
 
-Which is of course again $\eqref{eq:hypothetical-a}$ with the terms of the summation expanded. Note the requirements about the "sole immediate effect" requires a conditional independence assumption, discussed in the next section.
+Which is of course again $\eqref{3}$ with the terms of the summation expanded. Note the requirements about the "sole immediate effect" requires a conditional independence assumption, discussed in the next section.
 
 
 
@@ -347,7 +337,7 @@ Which is of course again $\eqref{eq:hypothetical-a}$ with the terms of the summa
 
 ### Conditional Independence
 
-Formula $\eqref{eq:hypothetical-a}$ is only valid if we assume the meta-reasoner forms their belief about (𝐴) *the defendant is guilty* entirely based on their belief about (𝐵) *the defendant signed a confession*. So their belief in (𝐺) *the signature was forged* does not effect their belief in 𝐴 *directly*, but only *indirectly* through 𝐵. In other words 𝐴 is [**conditionally independent**](https://en.wikipedia.org/wiki/Conditional_independence) of $G$ given 𝐵. We discuss the justification for making these causal assumptions in the [Meta-Reasoner](/the-meta-reasoner/#the-causal-model-and-the-justified-opinion).
+Formula $\eqref{3}$ is only valid if we assume the meta-reasoner forms their belief about (𝐴) *the defendant is guilty* entirely based on their belief about (𝐵) *the defendant signed a confession*. So their belief in (𝐺) *the signature was forged* does not effect their belief in 𝐴 *directly*, but only *indirectly* through 𝐵. In other words 𝐴 is [**conditionally independent**](https://en.wikipedia.org/wiki/Conditional_independence) of $G$ given 𝐵. We discuss the justification for making these causal assumptions in the [Meta-Reasoner](/the-meta-reasoner/#the-causal-model-and-the-justified-opinion).
 
 Unfortunately, we can't make the same sort of assumptions about (𝐶) *the defendant retracted her confession*. 𝐶 does not effect belief in 𝐴 only through 𝐵: learning that the defendant retracted her confession may make less of an impression on a user who never believed the defendant signed a confession in the first place. So the effect of accepting 𝐶 on a user's acceptance of 𝐴 depends on whether or not that user accepts 𝐵.
 
@@ -409,11 +399,12 @@ $$
 \end{aligned}
 $$
 
-We can then rewrite the formula for $ P_i(A) $ using the law of total probability and some probability calculus. The derivation is similar to the derivation of $\eqref{eq:total}$ and is shown in the [appendix](#derivation-2):
+We can then rewrite the formula for $ P_i(A) $ using the law of total probability and some probability calculus. The derivation is similar to the derivation of $\eqref{1}$ and is shown in the [appendix](#derivation-2):
 
 
 
 $$
+\label{4}
     \begin{aligned} 
     P_i(A)    =~ &P_i(B=0) P(A|B=0) \cr
                 &\begin{aligned}
@@ -421,12 +412,13 @@ $$
                                 &× P(A|B=1,C=c)
                 \end{aligned}
     \end{aligned}
-    \tag{4}\label{eq:twoargumentinformed}
+    \tag{4}
 $$
 
-Now, suppose a third sub-jury holds a sub-trial about whether to accept 𝐶, giving us $P_h(C=c)$. We can then plug in the opinions of the sub-juries $ P_h(B=b) $ and $ P_h(C=c) $ in place of $ P_i(B=b) $ and $P_i(𝐶=𝑐$\|$B=1)$ in $\eqref{eq:twoargumentinformed}$:
+Now, suppose a third sub-jury holds a sub-trial about whether to accept 𝐶, giving us $P_h(C=c)$. We can then plug in the opinions of the sub-juries $ P_h(B=b) $ and $ P_h(C=c) $ in place of $ P_i(B=b) $ and $P_i(𝐶=𝑐$\|$B=1)$ in $\eqref{4}$:
 
 $$
+\label{5}
     \begin{aligned} 
     P_h(A)    =~ &P_h(B=0) P(A|B=0) \cr
                 &\begin{aligned}
@@ -434,13 +426,13 @@ $$
                                 &× P(A|B=1,C=c)
                 \end{aligned}
     \end{aligned}
-    \tag{5}\label{eq:twoargument-hypothetical}
+    \tag{5}
 $$
 
 
 This gives us us the posterior belief of the meta-reasoner $ P_h(A) $ as a function of the prior probability function $ P $ and the evidence from the sub-juries $ P_h(B=b) $ and $ P_h(C=c) $. 
 
-Using the shorthand $ F[P, P_h(B=b), P_h(C=c)] $ to refer to the formula in $\eqref{eq:twoargument-hypothetical}$, we illustrated this calculation in the chart below:
+Using the shorthand $ F[P, P_h(B=b), P_h(C=c)] $ to refer to the formula in $\eqref{5}$, we illustrated this calculation in the chart below:
 
 <img src="/assets/images/distributed-bayesian-reasoning/argument-thread-with-formulas.svg"
      alt="Argument Thread"
@@ -455,7 +447,7 @@ To show a sample calculation, suppose we obtain the following probabilities for 
 | 1 | 0    | 80% 
 | 1 | 1    | 65% 
 
-And suppose that the beliefs from the sub-juries are $P_h(B=1)=80\\%$ and $P_h(𝐶=1) = 60\\%$. Plugging these into $\eqref{eq:twoargument-hypothetical}$:
+And suppose that the beliefs from the sub-juries are $P_h(B=1)=80\\%$ and $P_h(𝐶=1) = 60\\%$. Plugging these into $\eqref{5}$:
 
 $$
     \begin{aligned} 
@@ -466,12 +458,12 @@ $$
     \end{aligned}
 $$
 
-Intuitively, this result reflects the fact that, although $B$ is an effective argument ($P(A=1 \vert B=1)=80\\%$) and the sub-jury mostly accepts it ($P_h(B=1)=80\\%$), C is a fairly effective counter-argument ($P(A=1 \vert B=1,C=1) = 65\\%$).
+Intuitively, this result reflects the fact that, although $B$ is an effective argument ($P(A=1 \vert B=1)=80\\%$) and the sub-jury mostly accepts it ($P_h(B=1)=80\\%$), 𝐶 is a fairly effective counter-argument ($P(A=1 \vert B=1,C=1) = 65\\%$).
 
 
 ## Formula for Long Threads
 
-To generalize $\eqref{eq:twoargument-hypothetical}$, we first rewrite it in the more easily-generalizable form:
+To generalize $\eqref{5}$, we first rewrite it in the more easily-generalizable form:
 
 $$
     \begin{aligned} 
@@ -483,6 +475,7 @@ $$
 Now suppose underneath the claim α there is a thread with 𝑛 premises $ β = \{β_1, β_2, ... ,β_n\} $. Then:
 
 $$
+\label{6}
 \begin{aligned} 
  P_h&(α=1) =\cr
     &\sum_{b_1≥0} P_h(β_1=b_1) × \textbf{ if } b_1=0 \textbf{ then } P(α=1|β_1=0) \textbf{ else }   \cr
@@ -490,7 +483,7 @@ $$
     &\space\space\space...  \cr
     &\space\space\space\space\space\space \sum_{b_n≥0} P_h(β_n=b_n) × P(α=1|β_1=1, β_2=1, ... , β_n=1)
 \end{aligned}
-\tag{6}\label{eq:general}
+\tag{6}
 $$
 
 Note this function $P_h$ is recursive. The recursion terminates when it reaches a **terminal claim** in the argument graph -- a claim without any premise arguments underneath it -- in which case β will be ∅ and the function will therefore return 
@@ -564,7 +557,7 @@ $$
 \end{aligned}
 $$
 
-Which is $\eqref{eq:hypothetical-a}$.
+Which is $\eqref{3}$.
 
 
 ### Derivation 2
@@ -598,7 +591,7 @@ $$
 
 
 
-Which is $\eqref{eq:twoargumentinformed}$.
+Which is $\eqref{4}$.
 
 
 <!-- NOTES

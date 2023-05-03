@@ -4,6 +4,7 @@ title:  "The Meta-Reasoner"
 date:   2021-10-26 00:00:00 +0200
 toc: true
 toc_sticky: true
+tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 sidebar:
   - nav: "distributed-bayesian-reasoning"
     title: "In This Series"
@@ -52,11 +53,11 @@ So the **posterior beliefs of the meta-reasoner** can be thought of as the **jus
 
 ## Summary of the Meta-Reasoner
 
-- The priors of the meta-reasoner are a set of joint probability distributions $$ P_1, P_2, ..., P_n $$ over sets of claims (e.g. one set of possibilities for each "sub-jury")
-- Different probability distributions may cover the same claim, and the marginal probability for the same claim in different distributions may be different (e.g. $$ P_0(Valid) ≠ P_1(Valid) $$ ). Thus the beliefs of the meta-reasoner may be inconsistent.
+- The priors of the meta-reasoner are a set of joint probability distributions $ P_1, P_2, ..., P_n $ over sets of claims (e.g. one set of possibilities for each "sub-jury")
+- Different probability distributions may cover the same claim, and the marginal probability for the same claim in different distributions may be different (e.g. $ P_0(Valid) ≠ P_1(Valid) $ ). Thus the beliefs of the meta-reasoner may be inconsistent.
 - The meta-reasoner updates their beliefs so that its posterior beliefs are consistent.
 - It does this by using the posterior beliefs from one probability distribution as evidence for updating the beliefs of another. The mathematical formula for this update is developed in [The Math](/distributed-bayesian-reasoning-math).
-- The argument structure determines the causal relationship between the meta-reasoner's beliefs (e.g. $$ Drunk → Valid → Guilty $$) and thus the ordering of updates.
+- The argument structure determines the causal relationship between the meta-reasoner's beliefs (e.g. $ Drunk → Valid → Guilty $) and thus the ordering of updates.
 - The **posterior beliefs of the meta-reasoner** can be thought of as the **justified opinion of the group**.
 
 

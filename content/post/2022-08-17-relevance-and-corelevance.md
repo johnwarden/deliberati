@@ -17,6 +17,8 @@ sidebar:
 
 In the [previous essay](/bayesian-argumentation) in this series, we introduced the basic ideas and terminology of Bayesian argumentation, including the concept of **relevance**.
 
+<!--more-->
+
 To review, **a premise $$B$$ is relevant to conclusion $$A$$** (in the mind of the subject) **iff**:
 
 $$

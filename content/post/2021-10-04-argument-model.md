@@ -1,16 +1,14 @@
 ---
 layout: single
-title:  "Deliberati Argument Model"
+title:  "The Argument Model"
+slug: argument-model
 date:   2021-10-03 00:00:00 +0200
 tags: ['Social Protocols', 'Argumentation Theory']
 toc: true
 math: true
+weight: 7
 toc_sticky: true
-header:
-    teaser: /assets/images/distributed-bayesian-reasoning/argument-tree-without-premises.svg
-sidebar:
-  - nav: "argument-model-related"
-    title: "Related Articles"
+# image: assets/images/distributed-bayesian-reasoning/argument-tree-without-premises.svg
 
 ---
 

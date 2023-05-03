@@ -4,6 +4,7 @@ title:  "The Law of Attention"
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Game Theory and Social Media']
+weight: 9
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
@@ -80,5 +81,6 @@ Since models are always approximations of reality, the outcomes may not always b
 
 But society is capable of learning. New social networks have always periodically come along to replace the old. My hope is that the next generation of social platforms will be built more intentionally, designed not just for profit, but to make public discourse less polarizing, more honest, and more intelligent.
 
+<!--
 ## Next in this Series: [The Deliberative Poll](/the-deliberative-poll)
-
+-->

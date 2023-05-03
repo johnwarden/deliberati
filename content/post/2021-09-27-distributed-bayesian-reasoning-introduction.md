@@ -8,14 +8,14 @@ tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 toc: true
 toc_sticky: true
 math: true
-# summary: "**Distributed Bayesian Reasoning** is a kind of **hypothetical opinion poll**. It tells us not what people actually believe, but what they **would believe** if they knew more."
+summary: "**Distributed Bayesian Reasoning** is a kind of **hypothetical opinion poll**. It tells us not what people actually believe, but what they **would believe** if they knew more."
 
 sidebar:
   - nav: "distributed-bayesian-reasoning"
     title: "In This Series"
   - nav: "distributed-bayesian-reasoning-related"
     title: "Related Articles"
-image: assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
+# image: assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
 # header:
 #     teaser: /assets/images/distributed-bayesian-reasoning/distributed-brain-without-caption.svg
 
@@ -26,7 +26,6 @@ image: assets/images/distributed-bayesian-reasoning/distributed-brain-without-ca
 
 **Distributed Bayesian Reasoning** is a kind of **hypothetical opinion poll**. It tells us not what people actually believe, but what they **would believe** if they knew more.
 
-<!--more-->
 
 The purpose is to produce **more intelligent [group judgments](https://personal.lse.ac.uk/list/PDF-files/ReviewPaper.pdf)** that better represent a group's collective knowledge.
 

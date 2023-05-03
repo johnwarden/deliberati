@@ -1,12 +1,11 @@
 ---
 layout: single
-title:  "Bayesian Averaging"
+title:  "Distributed Bayesian Reasoning - Bayesian Averaging"
+slug: distributed-bayesian-reasoning-bayesian-averaging
 date:   2021-11-22 00:00:00 +0200
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
-header:
-    # teaser: /assets/images/distributed-bayesian-reasoning/complex-argument-graph.svg
 sidebar:
   - nav: "distributed-bayesian-reasoning"
     title: "In This Series"
