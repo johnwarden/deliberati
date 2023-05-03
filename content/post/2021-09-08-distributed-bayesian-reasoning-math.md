@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Distributed Bayesian Reasoning Basic Math"
+title:  "Distributed Bayesian Reasoning Math"
 date:   2021-09-08 00:00:00 +0200
 math: true
 toc: true
@@ -96,18 +96,6 @@ Our first step is to convert these counts into probabilities
 
 Let's define a function 𝑐 that returns the values of a cell in this table. For example:
 
-Aligned example
-
-$$
-\begin{aligned}
-  a&=b+c \cr
-  d+e&=f
-\end{aligned}
-$$
-
-
-And n ow
-
 $$
 \begin{aligned} 
     𝑐(A=1)     &= 500 \cr
@@ -117,39 +105,49 @@ $$
 $$
 
 
-From this, we can define a function 𝑃 that tells us the probability that a random user voted in some way. For example:
+From this, we can define a function 𝑃 that tells us the probability that a random user voted in some way:
 
+
+$$
+    P(A=a) = \frac{𝑐(A=a)}{c()}
+$$
+
+So for example: 
 
 $$
 \begin{aligned} 
- P(A=1) &= 𝑐(A=1) \div c()\cr \cr
-    &= 500 \div 1000 = 50\\% 
+    P(A=1) &= \frac{𝑐(A=1)}{c()} \cr
+            &= \frac{500}{1000} = 50\\% 
 \end{aligned}
 $$
+
 
 
 We can also define [conditional probabilities](https://en.wikipedia.org/wiki/Conditional_probability), for example the probability that a random user accepts 𝐴 given they accept 𝐵 is:
 
-$$ P(A=1|B=1) = \frac{P(A=1,B=1)}{P(B=1)} $$
+$$
+    P(A=1|B=1) = \frac{P(A=1,B=1)}{P(B=1)} 
+$$
 
-We can calculate conditional probabilities just by taking the ratio of counts, because for example:
+We can calculate conditional probabilities just by taking the ratio of counts, because:
 
 
-$$ 
+$$
 \begin{aligned}
-    P(A=1|B=1) &= \frac{P(A=1,B=1)}{P(B=1)}\cr \cr
-           &= \frac{𝑐(A=1,B=1) \div c()}{ 𝑐(B=1) \div c() }\cr \cr
-           &= \frac{𝑐(A=1,B=1)}{𝑐(B=1)} 
+    P(A=a|B=b) &= \frac{P(A=a,B=b)}{P(B=b)}\cr \cr
+           &= \frac{𝑐(A=a,B=b) \div c()}{ 𝑐(B=b) \div c() }\cr \cr
+           &= \frac{𝑐(A=a,B=b)}{𝑐(B=b)} 
 \end{aligned}
 $$
 
 
-So 
+So for example 
 
 
 $$
 \begin{aligned} 
-    P(A=1|B=1) &= \frac{80}{100} = 80\\%
+    P(A=1|B=1) &= \frac{𝑐(A=1,B=1)}{𝑐(B=1)} \cr
+                &= \frac{80}{100} = 80\\%
 \end{aligned}
 $$
 
@@ -204,7 +202,7 @@ Which we have already calculated to be 70%.
 
 ## The Law of Total Probability
 
-The informed opinion on 𝐴 depends on 1) the probability that an informed user actually accepts 𝐵, and 2) the probability that a user who accepts 𝐵 also accepts 𝐴. In fact we can rewrite the equation for $$P_i(A)$$ in terms of these probabilities. Since the set of users who accept 𝐵 and the set that reject 𝐵 *partition* the set of users who voted on 𝐵, the [law of total probability](https://en.wikipedia.org/wiki/Law_of_total_probability) says that:
+The informed opinion on 𝐴 depends on 1) the probability that an informed user actually accepts 𝐵, and 2) the probability that a user who accepts 𝐵 also accepts 𝐴. In fact we can rewrite the equation for $P_i(A)$ in terms of these probabilities. Since the set of users who accept 𝐵 and the set that reject 𝐵 *partition* the set of users who voted on 𝐵, the [law of total probability](https://en.wikipedia.org/wiki/Law_of_total_probability) says that:
 
 
 $\label{1}$
@@ -270,12 +268,12 @@ $$
 
 Let's put the vote counts from the sub-jury in a table:
 
+{.votes-table}
 |          | B=0 | B=1 | B ≥ 0
 | -------- | --- | --- | -----
 | **𝐺=0**  | 0  | 0    | 0
 | **𝐺=1**  | 9  | 1    | 10
 | **𝐺≥0**  | **9**  | **1** | **10** 
-{: .votes-table}
 
 And now we can calculate:
 
@@ -287,7 +285,7 @@ $$
 \end{aligned}
 $$
 
-Recall that \eqref{eq:total} tells us how belief in $B$ determines the first group of users' belief in $A$. So to calculate the probability that a member of the first jury would accept 𝐴 *if they held the beliefs of the second jury about 𝐵*, we simply substitute of $ P_h(B=b) $ in place of $ P_i(B=b) $ in \eqref{eq:total}:
+Recall that $\eqref{eq:total}$ tells us how belief in $B$ determines the first group of users' belief in $A$. So to calculate the probability that a member of the first jury would accept 𝐴 *if they held the beliefs of the second jury about 𝐵*, we simply substitute of $ P_h(B=b) $ in place of $ P_i(B=b) $ in $\eqref{eq:total}$:
 
 $$
 \begin{aligned} 
@@ -316,7 +314,7 @@ The meta-reasoner's belief $𝑃ₕ(A=1)$ is very close to $𝑃(A=1 \vert B=0)=
 
 ### Front-Door Adjustment
 
-To readers who are familiar with [Judea Pearl](https://en.wikipedia.org/wiki/Judea_Pearl)'s work on [graphical causal models](https://ftp.cs.ucla.edu/pub/stat_ser/r236-3ed.pdf), formula \eqref{eq:hypothetical-a} may look familiar: it is a 
+To readers who are familiar with [Judea Pearl](https://en.wikipedia.org/wiki/Judea_Pearl)'s work on [graphical causal models](https://ftp.cs.ucla.edu/pub/stat_ser/r236-3ed.pdf), formula $\eqref{eq:hypothetical-a}$ may look familiar: it is a 
 [front-door adjustment](https://medium.data4sci.com/causal-inference-part-xii-front-door-criterion-38bec5172f3e). Given the causal graph (𝐺≥0) → 𝐵 → 𝐴:
 
 $$
@@ -327,19 +325,19 @@ $$
 
 A derivation of the above equation using the [do-calculus](https://plato.stanford.edu/entries/causal-models/do-calculus.html) is provided in the [Appendix](#derivation-1). The causal graph follows from the conditional independence assumption that we will discuss in the next section. 
 
-Given this causal graph and our probability data, we've used the do-calculus to **simulate an intervention**: we have estimated the probability that a user **would believe** 𝐴 if they had voted on all claims ($$A$$, $$B$$, and $$G$$) in the argument, even though no single user has actually done so!
+Given this causal graph and our probability data, we've used the do-calculus to **simulate an intervention**: we have estimated the probability that a user **would believe** 𝐴 if they had voted on all claims ($A$, $B$, and $G$) in the argument, even though no single user has actually done so!
 
 
 ### Jeffrey's Rule
 
-Formula \eqref{eq:hypothetical-a} is also Jeffrey's Rule: the general rule for Bayesian belief revision for situations where new information may come with uncertainty, as described in the Stanford [Stanford Encyclopedia of Philosophy article on Bayes Theorem](https://plato.stanford.edu/entries/bayes-theorem/#4):
+Formula $\eqref{eq:hypothetical-a}$ is also Jeffrey's Rule: the general rule for Bayesian belief revision for situations where new information may come with uncertainty, as described in the Stanford [Stanford Encyclopedia of Philosophy article on Bayes Theorem](https://plato.stanford.edu/entries/bayes-theorem/#4):
 
-> If a person with a prior such that $$ 0 < P(B) < 1 $$ has a learning experience whose sole immediate effect is to change her subjective probability for $$B$$ to $$P_h(B)$$, then her post-learning posterior for any $$A$$ should be [substituting our own terms]:
+> If a person with a prior such that $ 0 < P(B) < 1 $ has a learning experience whose sole immediate effect is to change her subjective probability for $B$ to $P_h(B)$, then her post-learning posterior for any $A$ should be [substituting our own terms]:
 >
 > $$ \begin{aligned}  𝑃ₕ(A)  \cr= &𝑃(A \vert B=1)𝑃ₕ(B=1) \cr + &𝑃(A \vert B=0 )(1 - 𝑃ₕ(B=1)) \end{aligned} $$
 >
 
-Which is of course again \eqref{eq:hypothetical-a} with the terms of the summation expanded. Note the requirements about the "sole immediate effect" requires a conditional independence assumption, discussed in the next section.
+Which is of course again $\eqref{eq:hypothetical-a}$ with the terms of the summation expanded. Note the requirements about the "sole immediate effect" requires a conditional independence assumption, discussed in the next section.
 
 
 
@@ -350,7 +348,7 @@ Which is of course again \eqref{eq:hypothetical-a} with the terms of the summati
 
 ### Conditional Independence
 
-Formula \eqref{eq:hypothetical-a} is only valid if we assume the meta-reasoner forms their belief about (𝐴) *the defendant is guilty* entirely based on their belief about (𝐵) *the defendant signed a confession*. So their belief in (𝐺) *the signature was forged* does not effect their belief in 𝐴 *directly*, but only *indirectly* through 𝐵. In other words 𝐴 is [**conditionally independent**](https://en.wikipedia.org/wiki/Conditional_independence) of $$G$$ given 𝐵. We discuss the justification for making these causal assumptions in the [Meta-Reasoner](/the-meta-reasoner/#the-causal-model-and-the-justified-opinion).
+Formula $\eqref{eq:hypothetical-a}$ is only valid if we assume the meta-reasoner forms their belief about (𝐴) *the defendant is guilty* entirely based on their belief about (𝐵) *the defendant signed a confession*. So their belief in (𝐺) *the signature was forged* does not effect their belief in 𝐴 *directly*, but only *indirectly* through 𝐵. In other words 𝐴 is [**conditionally independent**](https://en.wikipedia.org/wiki/Conditional_independence) of $G$ given 𝐵. We discuss the justification for making these causal assumptions in the [Meta-Reasoner](/the-meta-reasoner/#the-causal-model-and-the-justified-opinion).
 
 Unfortunately, we can't make the same sort of assumptions about (𝐶) *the defendant retracted her confession*. 𝐶 does not effect belief in 𝐴 only through 𝐵: learning that the defendant retracted her confession may make less of an impression on a user who never believed the defendant signed a confession in the first place. So the effect of accepting 𝐶 on a user's acceptance of 𝐴 depends on whether or not that user accepts 𝐵.
 
@@ -412,7 +410,7 @@ $$
 \end{aligned}
 $$
 
-We can then rewrite the formula for $$ P_i(A) $$ using the law of total probability and some probability calculus. The derivation is similar to the derivation of \eqref{eq:total} and is shown in the [appendix](#derivation-2):
+We can then rewrite the formula for $ P_i(A) $ using the law of total probability and some probability calculus. The derivation is similar to the derivation of $\eqref{eq:total}$ and is shown in the [appendix](#derivation-2):
 
 
 
@@ -427,10 +425,9 @@ $$
     \tag{4}\label{eq:twoargumentinformed}
 $$
 
-Now, suppose a third sub-jury holds a sub-trial about whether to accept 𝐶, giving us $$P_h(C=c)$$. We can then plug in the opinions of the sub-juries $$ P_h(B=b) $$ and $$ P_h(C=c) $$ in place of $$ P_i(B=b) $$ and $$P_i(𝐶=𝑐$$\|$$B=1)$$ in \eqref{eq:twoargumentinformed}:
+Now, suppose a third sub-jury holds a sub-trial about whether to accept 𝐶, giving us $P_h(C=c)$. We can then plug in the opinions of the sub-juries $ P_h(B=b) $ and $ P_h(C=c) $ in place of $ P_i(B=b) $ and $P_i(𝐶=𝑐$\|$B=1)$ in $\eqref{eq:twoargumentinformed}$:
 
 $$
-
     \begin{aligned} 
     P_h(A)    =~ &P_h(B=0) P(A|B=0) \cr
                 &\begin{aligned}
@@ -442,9 +439,9 @@ $$
 $$
 
 
-This gives us us the posterior belief of the meta-reasoner $$ P_h(A) $$ as a function of the prior probability function $$ P $$ and the evidence from the sub-juries $$ P_h(B=b) $$ and $$ P_h(C=c) $$. 
+This gives us us the posterior belief of the meta-reasoner $ P_h(A) $ as a function of the prior probability function $ P $ and the evidence from the sub-juries $ P_h(B=b) $ and $ P_h(C=c) $. 
 
-Using the shorthand $$ F[P, P_h(B=b), P_h(C=c)] $$ to refer to the formula in \eqref{eq:twoargument-hypothetical}, we illustrated this calculation in the chart below:
+Using the shorthand $ F[P, P_h(B=b), P_h(C=c)] $ to refer to the formula in $\eqref{eq:twoargument-hypothetical}$, we illustrated this calculation in the chart below:
 
 <img src="/assets/images/distributed-bayesian-reasoning/argument-thread-with-formulas.svg"
      alt="Argument Thread"
@@ -454,13 +451,12 @@ Using the shorthand $$ F[P, P_h(B=b), P_h(C=c)] $$ to refer to the formula in \e
 To show a sample calculation, suppose we obtain the following probabilities for users that have voted on 𝐴 and 𝐵, and 𝐶.
 
 |𝐵  |𝐶     |  𝑃(𝐴\|𝐵,𝐶)
-| -------- | ----        
+| --|----- | ----        
 | 0 | -1   | 50% 
 | 1 | 0    | 80% 
 | 1 | 1    | 65% 
-{: .votes-table}
 
-And suppose that the beliefs from the sub-juries are $$P_h(B=1)=80\\%$$ and $$P_h(𝐶=1) = 60\\%$$. Plugging these into \eqref{eq:twoargument-hypothetical}:
+And suppose that the beliefs from the sub-juries are $P_h(B=1)=80\\%$ and $P_h(𝐶=1) = 60\\%$. Plugging these into $\eqref{eq:twoargument-hypothetical}$:
 
 $$
     \begin{aligned} 
@@ -471,12 +467,12 @@ $$
     \end{aligned}
 $$
 
-Intuitively, this result reflects the fact that, although $$B$$ is an effective argument ($$P(A=1 \vert B=1)=80\\%$$) and the sub-jury mostly accepts it ($$P_h(B=1)=80\\%$$), C is a fairly effective counter-argument ($$P(A=1 \vert B=1,C=1) = 65\\%$$).
+Intuitively, this result reflects the fact that, although $B$ is an effective argument ($P(A=1 \vert B=1)=80\\%$) and the sub-jury mostly accepts it ($P_h(B=1)=80\\%$), C is a fairly effective counter-argument ($P(A=1 \vert B=1,C=1) = 65\\%$).
 
 
 ## Formula for Long Threads
 
-To generalize \eqref{eq:twoargument-hypothetical}, we first rewrite it in the more easily-generalizable form:
+To generalize $\eqref{eq:twoargument-hypothetical}$, we first rewrite it in the more easily-generalizable form:
 
 $$
     \begin{aligned} 
@@ -485,15 +481,15 @@ $$
     \end{aligned}
 $$
 
-Now suppose underneath the claim α there is a thread with 𝑛 premises $$ β = \{β_1, β_2, ... ,β_n\} $$. Then:
+Now suppose underneath the claim α there is a thread with 𝑛 premises $ β = \{β_1, β_2, ... ,β_n\} $. Then:
 
 $$
 \begin{aligned} 
  P_h&(α=1) =\cr
     &\sum_{b_1≥0} P_h(β_1=b_1) × \textbf{ if } b_1=0 \textbf{ then } P(α=1|β_1=0) \textbf{ else }   \cr
     &~~\sum_{b_2≥0} P_h(β_2=b_2) × \textbf{ if } b_2=0 \textbf{ then } P(α=1|β_1=1, β_2=0) \textbf{ else }   \cr
-    &~~~...  \cr
-    &~~~~~~ \sum_{b_n≥0} P_h(β_n=b_n) × P(α=1|β_1=1, β_2=1, ... , β_n=1)
+    &\space\space\space...  \cr
+    &\space\space\space\space\space\space \sum_{b_n≥0} P_h(β_n=b_n) × P(α=1|β_1=1, β_2=1, ... , β_n=1)
 \end{aligned}
 \tag{6}\label{eq:general}
 $$
@@ -502,9 +498,7 @@ Note this function $P_h$ is recursive. The recursion terminates when it reaches 
 
     
 $$
-
     P_i(α=1) = P(α=1 \vert ∅) = P(α=1)
-
 $$
 
 or the raw probability that a user accepts the terminal claim α.
@@ -522,7 +516,7 @@ We will address this issue, as well as the problem of sampling error, in the art
 ### Derivation 1
 
 
-Let's define a new variable $$J$$ that indicates that a user has participated in the sub-jury and voted on G:
+Let's define a new variable $J$ that indicates that a user has participated in the sub-jury and voted on G:
 
 $$
     J ≝ G ≥ 0
@@ -532,7 +526,6 @@ Note also that all participants in the sub-jury vote on 𝐵, so
 
 $$
     J ⟹ G ≥ 0 ⟹ B ≥ 0
-
 $$
 
 Our causal assumptions are that: 
@@ -543,7 +536,9 @@ Our causal assumptions are that:
 
 These assumptions give us this causal graph:
 
+$$
     𝐽 → 𝐵 → 𝐴
+$$
 
 We previously defined 
 
@@ -555,31 +550,27 @@ We now want to calculate
 
 $$
     P_h(A) = P_i(A|do(J))
-
 $$
 
-That is, the probability that a user who voted on B **would** accept $$A$$ if they voted on $$G$$ (even though no user has actually done so).
+That is, the probability that a user who voted on B **would** accept $A$ if they voted on $G$ (even though no user has actually done so).
 
 $$
 \begin{aligned} 
-
     P_h(A) &= P_i(A|do(J))  \cr  \cr
             &= \sum_{b} P_i(B=b|J) &&\text{front-door adj. formula} \cr
             &~~~~~~~~~× \sum_{j'}P_i(A|J=j',B=b)P_i(J=j') \cr \cr
             &= \sum_{b} P_i(B=b|J)P_i(A|B=b) &&\text{TODO} \cr \cr
             &= \sum_{b≥0} P(B=b|J)P(A|B=b) &&\text{definition of } P_i \cr \cr
             &= \sum_{b≥0} P_h(B=b)P(A|B=b) &&\text{definition of } P_h \cr \cr
-
-
 \end{aligned}
 $$
 
-Which is \eqref{eq:hypothetical-a}.
+Which is $\eqref{eq:hypothetical-a}$.
 
 
 ### Derivation 2
 
-Given this definition for $$P_i$$
+Given this definition for $P_i$$
 
 $$
 \begin{aligned} 
@@ -587,30 +578,28 @@ $$
 \end{aligned}
 $$
 
-We can rewrite $$P_i(A)$$ as:
+We can rewrite $P_i(A)$ as:
 
 $$
-\begin{align}  
-
+\begin{aligned} 
     P_i(A)&=  \cr
             &\begin{aligned}
                 &= P_i(A|b≥0) ~~~~ &&\text{definition of }P_i\cr \cr
                 &= \sum_{b \geq 0} P_i(B=b)P_i(A|B=b)  ~~~~&&\text{law of total prob}\cr \cr
                 &= P_i(B=0)P(A|B=0) ~~~~&&\text{definition of }P_i \cr
-                &~~~+ P_i(B=1)P(A|B=1 ∧ C≥0)\cr \cr
+                &\space\space\space\space+ P_i(B=1)P(A \vert B=1, C ≥ 0)\cr \cr
                 &=    P_i(B=0) P(A|B=0)
             \end{aligned} \cr
-
-            &~~~~\begin{aligned}
-                    + P_i(B=1) &\sum_{c≥0} P(C=c|B=1) ~~~~&&\text{law of total prob.} \cr
-                          &× P(A|B=1,C=c) 
+            &\space\space\space\space\begin{aligned}
+                    + P_i(B=1) &\sum_{c≥0} P(C=c \vert B=1) ~~~~&&\text{law of total prob.} \cr
+                          &× P(A \vert B=1,C=c) 
             \end{aligned} 
-
-
-    \end{align}
+\end{aligned}
 $$
 
-Which is \eqref{eq:twoargumentinformed}.
+
+
+Which is $\eqref{eq:twoargumentinformed}$.
 
 
 <!-- NOTES

@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Distributed Bayesian Reasoning"
+title:  "Distributed Bayesian Reasoning Introduction"
 date:   2021-09-08 00:00:00 +0200
 # tags: distributed-bayesian-reasoning
 toc: true

@@ -20,7 +20,6 @@ sidebar:
 > "There can be no liberty for a community which lacks the information by which to detect lies."
 >
 > -- Walter Lippmann, Liberty and the News, 1920 
-{: .notice--info}
 
 
 ## The Algorithms
@@ -35,7 +34,6 @@ We can't prevent people from lying. But we can't on the one hand blame the algor
 > "A moral monopoly is the antithesis of a marketplace of ideas."
 > 
 > -- Thomas Sowell
-{: .notice--info}
 
 I don't suggest simply training the algorithms to **identify** and delete misinformation. This is just computer-assisted moderation (or censorship). An artificially-intelligent moderator will reflect the beliefs and values of its creators, making the people who own a social platform the ultimate arbiters of truth and morality. So the algorithms should be neutral, holding no opinion about what is true, or what is right.
 
@@ -50,7 +48,6 @@ In the same way that today's social networks give the advantage to falsehood wit
 > "What information consumes is rather obvious: it consumes the attention of its recipients."
 >
 > -- Herbert Simon 
-{: .notice--info}
 
 
 As I argue in [The Law Of Attention](/the-law-of-attention), all online communities will be dominated by the behaviors that are rewarded with attention. Even if you are not particularly motivated by attention, obviously if nobody pays any attention to you on social media, you will stop posting.
@@ -66,7 +63,6 @@ But what other types of feedback loops can be created? What kind of behaviors ca
 > “You are not entitled to your opinion. You are entitled to your informed opinion. No one is entitled to be ignorant.”
 >
 > -- Harlan Ellison
-{: .notice--info}
 
 In [Truthtelling Games](/truthtelling-games), I show how game theory can be used to establish an **equilibrium** at honest behavior: a situation where rational individuals are better off revealing what they **honestly think is true**, because other people are doing the same.
 
@@ -78,7 +74,6 @@ Platforms such as Twitter essentially turns argument into a game that is won by 
 > "If we do not have the capacity to distinguish what’s true from what’s false, then by definition the marketplace of ideas doesn’t work. And by definition our democracy doesn’t work."
 > 
 > -- Barack Obama, 2020
-{: .notice--info}
 
 A combination of a Truthtelling Game and an Argument Game can result in a virtuous feedback loop where people win attention by promoting **honest and informed opinions**.
 

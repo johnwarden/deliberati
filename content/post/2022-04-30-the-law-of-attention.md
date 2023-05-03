@@ -17,7 +17,6 @@ sidebar:
 > If content is distributed and no attention is paid to it, does it matter?"
 >
 > -- Aviv Ovadya and Luke Thorburn, [Bridging Systems, 2023](https://arxiv.org/pdf/2301.09976.pdf)
-{: .notice--info}
 
 
 In this article, I argue that we can apply [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain and control the behaviors that dominate in an online community. Not only can game theory explain why misinformation and abuse are so common in social platforms, it can be used to design social platforms that will be filled with honest, informed, civil, and behavior.

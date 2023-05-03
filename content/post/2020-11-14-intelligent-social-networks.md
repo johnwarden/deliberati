@@ -18,7 +18,6 @@ excerpt: We depend on other people for most of what we know about the world. I c
 > "Who actually saw, heard, felt, counted, named the thing, about which you have an opinion? Was it the man who told you, or the man who told him, or someone still further removed? And how much was he permitted to see?"
 > 
 > -- Walter Lippmann, [Public Opinion](https://books.google.com/books?id=eLobn4WwbLUC&pg=PA45&dq=%22Who+actually+saw,+heard,+felt,+counted,+named+the+thing,+about+which+you+have+an+opinion?%22&hl=en&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwjLu56ApNHlAhVJ7J4KHeBLA-AQ6AEwAXoECAQQAg#v=onepage&q=%22Who%20actually%20saw%2C%20heard%2C%20felt%2C%20counted%2C%20named%20the%20thing%2C%20about%20which%20you%20have%20an%20opinion%3F%22&f=false), 1922
-{: .notice--info}
 
 
 We depend on other people for most of what we know about the world. I can observe for myself that the sun rises in the east, but I have never been to Cleveland; I believe it exists because other people do. 
@@ -36,7 +35,6 @@ The Internet democratized information. But it turns out, making it easy to sprea
 > "There has always been propaganda. But it has not previously been algorithmically amplified and deliberately targeted..."
 > 
 > -- Renée DiResta, [Computational Propaganda](https://yalereview.yale.edu/computational-propaganda), 2018
-{: .notice--info}
 
 
 The algorithms that the social networks use to keep people engaged tend to amplify misinformation, because misinformation invokes controversy and argument.
@@ -52,7 +50,6 @@ And it is working. Our society is being divided not just politically, but episte
 > "I may be wrong and you may be right, and by an effort, we may get nearer to the truth."
 > 
 > -- Karl Popper, [The Open Society and Its Enemies](http://quotesjournal.blogspot.com/2012/08/i-may-be-wrong-and-you-may-be-right-and.html), 1945
-{: .notice--info}
 
 
 It doesn't have to be this way. There is no fundamental reason that lies *must* have an advantage over truth on the Internet.
@@ -68,7 +65,6 @@ So a decentralized fact-checking system would need to solve these two problems, 
 > "...the truth is arguably the most powerful Schelling point out there"
 > 
 > -- Vitalik Buterin, [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), 2014
-{: .notice--info}
 
 Blockchains have successfully implemented protocols for producing a consensus on the state of the world in a trustless, decentralized manner. In other words, a process that people use to agree on truthful statements about the world.
 
@@ -87,7 +83,6 @@ The catch is that these protocols only work for questions of unambiguous, uncont
 > "It is like playing against a collective Deep Blue.”
 > 
 > -- Gary Kasparov, [Reuters Interview](http://www.chesslab.com/0799/kasparov1.htm), 1999
-{: .notice--info}
 
 In 1999, Gary Kasparov played a game of chess against the World. Kasparov would move, then random people on the Internet would vote on Team World's next move, and so on. Many people did not expect a high-calibre game.
 
@@ -104,13 +99,11 @@ When used in combination with a truth-consensus protocol, [the Deliberative Poll
 > "If we do not have the capacity to distinguish what’s true from what’s false, then by definition the marketplace of ideas doesn’t work. And by definition our democracy doesn’t work."
 > 
 > -- Barack Obama, Interview in The Atlantic, 2020
-{: .notice--info}
 
 
 > "We will create a civilization of the Mind in Cyberspace.”
 > 
 > -- John Perry Barlow, [A Declaration of the Independence of Cyberspace](https://www.eff.org/cyberspace-independence), 1996
-{: .notice--info}
 
 What kind of civilization are we creating in cyberspace? An enlightened democracy? Or an Orwellian nightmare, where we are all free to express our beliefs, but everything we believe is a lie?
 

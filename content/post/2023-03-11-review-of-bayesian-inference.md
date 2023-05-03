@@ -15,7 +15,6 @@ header:
 > “When you have eliminated the impossible, all that remains, no matter how improbable, must be the truth.”
 > 
 > -- Sherlock Holmes (Arthur Conan Doyle)
-{: .notice--info}
 
 - Reallocating probability mass
 - Joint probability distributions
@@ -135,7 +134,6 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
-{: .notice--info}
 
 
 ## Updating Beliefs based on Evidence
@@ -242,7 +240,6 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
-{: .notice--info}
 
 
 
@@ -282,7 +279,6 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
-{: .notice--info}
 
 
 
@@ -560,7 +556,6 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must be scaled to sum to 1.
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
-{: .notice--info}
 
 
 

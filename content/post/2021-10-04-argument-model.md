@@ -4,6 +4,7 @@ title:  "Deliberati Argument Model"
 date:   2021-10-03 00:00:00 +0200
 tags: ['distributed-bayesian-reasoning']
 toc: true
+math: true
 toc_sticky: true
 header:
     teaser: /assets/images/distributed-bayesian-reasoning/argument-tree-without-premises.svg
@@ -100,7 +101,7 @@ $$
 
 Note we place the premise after the conclusion. 
 
-For example, referring to our jury trial argument graph, the argument $$\text{𝐴◂-𝐵}$$ could be expressed in plain English as *the fact that the defendant signed a confession is a good reason to believe that she is guilty.*
+For example, referring to our jury trial argument graph, the argument $\text{𝐴◂-𝐵}$ could be expressed in plain English as *the fact that the defendant signed a confession is a good reason to believe that she is guilty.*
 
 We represent an argument that opposes conclusion 𝑋 with some premise 𝑌 using the notation:
 
@@ -108,31 +109,31 @@ $$
     \text{𝑋◃-𝑌}
 $$
 
-For example, the argument $$\text{𝐵◃-𝐺} might be expressed in plain English as *the fact that the signature was forged is a good reason NOT to believe that the defendant signed a confession*.
+For example, the argument $\text{𝐵◃-𝐺} might be expressed in plain English as *the fact that the signature was forged is a good reason NOT to believe that the defendant signed a confession*.
 
-If the claim 𝐵 is also used as the premise of some other argument, that would be a separate argument. For example, an argument that opposes conclusion 𝐻 with premise 𝐵 would be $$\text{𝐻◃-𝐵}, which is not the same argument as $$\text{𝐴◂-𝐵}, even though it uses the same premise
+If the claim 𝐵 is also used as the premise of some other argument, that would be a separate argument. For example, an argument that opposes conclusion 𝐻 with premise 𝐵 would be $\text{𝐻◃-𝐵}$, which is not the same argument as $\text{𝐴◂-𝐵}$, even though it uses the same premise
 
 ### Identifiers for Warrants
 
-We represent the warrant of the argument $$\text{𝐴◂-𝐵}$$ using the notation
+We represent the warrant of the argument $\text{𝐴◂-𝐵}$ using the notation
 
 $$
     \text{𝐴◂𝐵}
 $$
 
-It's easy to confuse the warrant with $$\text{𝐴◂𝐵}$$ with the argument $$\text{𝐴◂-𝐵}$$. The **warrant** $$\text{𝐴◂𝐵}$$ is a claim that 𝐵, *given it is accepted*, supports 𝐴, whereas the **argument** $$\text{𝐴◂-𝐵}$$ is the claim that 𝐵 *should be accepted*, and that it supports 𝐴. The former says "**if** the defendant signed a confession, that would be a good reason to believe she is guilty," whereas the latter says “**the fact that** the defendant signed a confession is a good reason to believe she is guilty.”
+It's easy to confuse the warrant with $\text{𝐴◂𝐵}$ with the argument $\text{𝐴◂-𝐵}$. The **warrant** $\text{𝐴◂𝐵}$ is a claim that 𝐵, *given it is accepted*, supports 𝐴, whereas the **argument** $\text{𝐴◂-𝐵}$ is the claim that 𝐵 *should be accepted*, and that it supports 𝐴. The former says "**if** the defendant signed a confession, that would be a good reason to believe she is guilty," whereas the latter says “**the fact that** the defendant signed a confession is a good reason to believe she is guilty.”
 
 
 
 ### Identifiers for Warrant Arguments
 
-Premises such as (𝐶) *the defendant retracted her confession* oppose the **warrant** of the argument $$\text{𝐴◂-𝐵}$$. We notate warrant arguments like this:
+Premises such as (𝐶) *the defendant retracted her confession* oppose the **warrant** of the argument $\text{𝐴◂-𝐵}$. We notate warrant arguments like this:
 
 $$
     \text{𝐴◂𝐵◃-𝐶}
 $$
 
-This identifier has the same form as the identifier for a premise argument, except that the conclusion (the part on the left of the $$\text{◃-}$$ or $$\text{◂-}$$) is a warrant.
+This identifier has the same form as the identifier for a premise argument, except that the conclusion (the part on the left of the $\text{◃-}$ or $\text{◂-}$) is a warrant.
 
 
 In plain English, this argument might be read as *the fact that the defendant retracted her confession is a good reason to believe that she is not guilty even if she confessed.*
@@ -148,9 +149,10 @@ Given a set of arguments that have been made in some situation, we can create a 
      alt="Simplified Argument Graph with Notation"
      style="display: block; margin-left: auto; margin-right: auto; width: 700px" />
 
+
 Each argument in this graph has one outgoing blue arrow, pointing to the argument or claim it supports or opposes. Using the same convention we adopted for argument identifiers, solid arrow heads represent supporting arguments, and hollow arrows heads indicate opposing arguments.
 
-Note that the blue arrows in this graph are redundant, because the relationships between arguments are revealed in the identifiers themselves. But note also that the two arguments that oppose $$\text{𝐴◂-𝐵}$$ oppose it in different ways: $$\text{𝐵◃-𝐺}$$ opposes the premise ($$𝐵$$), and $$\text{𝐴◂𝐵◃-𝐶}$$ opposes the warrant ($$\text{𝐴◂𝐵}$$), but they both oppose the argument overall.
+Note that the blue arrows in this graph are redundant, because the relationships between arguments are revealed in the identifiers themselves. But note also that the two arguments that oppose $\text{𝐴◂-𝐵}$ oppose it in different ways: $\text{𝐵◃-𝐺}$ opposes the premise ($𝐵$), and $\text{𝐴◂𝐵◃-𝐶}$ opposes the warrant ($\text{𝐴◂𝐵}$), but they both oppose the argument overall.
 
 Because cycles are hard to deal with, we will assume all argument graphs are acyclic, thus our argument graphs will always be DAGs.
 
@@ -158,13 +160,13 @@ Because cycles are hard to deal with, we will assume all argument graphs are acy
 
 Here is a brief review of the sample argument shown in the argument graph above using the terminology and notation we have introduced so far:
 
-- The claim (𝐺) *the signature was forged* opposes the conclusion (𝐵) *the defendant signed a confession*. Since 𝐵 is the premise of the argument $$\text{𝐴◂-𝐵}$$, $$𝐺$$ **opposes the premise** of $$\text{𝐴◂-𝐵}$$. So $$\text{𝐵◃-𝐺}$$ is a **premise argument**.
+- The claim (𝐺) *the signature was forged* opposes the conclusion (𝐵) *the defendant signed a confession*. Since 𝐵 is the premise of the argument $\text{𝐴◂-𝐵}$, $𝐺$ **opposes the premise** of $\text{𝐴◂-𝐵}$. So $\text{𝐵◃-𝐺}$ is a **premise argument**.
 
-- The claim (𝐶) *the defendant retracted her confession*, **opposes the warrant** of $$\text{𝐴◂-𝐵}$$. It says that even if the premise 𝐵 were true, it is not a good or sufficient reason to support $$𝐴$$. So $$\text{𝐴◂𝐵◃-𝐶}$$ is a **warrant argument**.
+- The claim (𝐶) *the defendant retracted her confession*, **opposes the warrant** of $\text{𝐴◂-𝐵}$. It says that even if the premise 𝐵 were true, it is not a good or sufficient reason to support $𝐴$. So $\text{𝐴◂𝐵◃-𝐶}$ is a **warrant argument**.
 
-- Both $$\text{𝐵◃-𝐺}$$ and $$\text{𝐴◂𝐵◃-𝐶}$$ oppose their conclusions: the premise and the warrant of $$\text{𝐴◂-𝐵}$$, respectively. Thus they both oppose the argument $$\text{𝐴◂-𝐵}$$.
+- Both $\text{𝐵◃-𝐺}$ and $\text{𝐴◂𝐵◃-𝐶}$ oppose their conclusions: the premise and the warrant of $\text{𝐴◂-𝐵}$, respectively. Thus they both oppose the argument $\text{𝐴◂-𝐵}$.
 
-- In the example above, we consider $$\text{𝐴◂-𝐵}$$ itself to be a premise argument, because it is supporting the claim $$𝐴$$. While claim $$𝐴$$ does not play the role of premise in any argument in this graph, it is pragmatic to call $$\text{𝐴◂-𝐵}$$ a premise argument because we always assume that $$𝐴$$ could be playing the role of premise in some larger argument graph.
+- In the example above, we consider $\text{𝐴◂-𝐵}$ itself to be a premise argument, because it is supporting the claim $𝐴$. While claim $𝐴$ does not play the role of premise in any argument in this graph, it is pragmatic to call $\text{𝐴◂-𝐵}$ a premise argument because we always assume that $𝐴$ could be playing the role of premise in some larger argument graph.
 
 
 ## Argument Threads
@@ -173,7 +175,7 @@ Here is a brief review of the sample argument shown in the argument graph above 
 
 An argument can support or oppose **the warrant of another warrant argument**.
 
-In response to $$\text{𝐴◂𝐵◃-𝐶}$$, someone might argue (𝐷) *guilty people always say they are innocent*. This argument would be written as $$\text{𝐴◂𝐵◃𝐶◃-𝐷}$$.
+In response to $\text{𝐴◂𝐵◃-𝐶}$, someone might argue (𝐷) *guilty people always say they are innocent*. This argument would be written as $\text{𝐴◂𝐵◃𝐶◃-𝐷}$.
 
 And of course there could be a response to **this** argument, and response to the response. The result could be a long **argument thread**.
 
@@ -189,15 +191,15 @@ We define an **argument thread** is a premise argument followed by a chain of **
 
 Argument threads proceed along the lines of "𝐴 because 𝐵, yes but not 𝐶, okay but 𝐷," and so on. Each argument in the thread is made in the context of all the previous arguments in the thread. The thread may be long, but jurors that are adding to the thread can be assumed to have have followed the whole thread of the argument -- even if they have not participated in the sub-jury about each premise. 
 
-The claims in the thread thus represents a **shared context**. Each argument in the thread is made in the context of all the previous claims in the thread, and **presumes acceptance of all of them**. For example, when someone argues that ($$\text{𝐴◂𝐵◃-𝐶}$$) *the defendant retracted her confession* it is clear from context that they accept (concede) that (𝐵) *the defendant signed a confession* but still don't accept that (𝐴) *the defendant is guilty*. 
+The claims in the thread thus represents a **shared context**. Each argument in the thread is made in the context of all the previous claims in the thread, and **presumes acceptance of all of them**. For example, when someone argues that ($\text{𝐴◂𝐵◃-𝐶}$) *the defendant retracted her confession* it is clear from context that they accept (concede) that (𝐵) *the defendant signed a confession* but still don't accept that (𝐴) *the defendant is guilty*. 
 
 Now, the arguer may not actually accept 𝐵 to be true, but by responding with a warrant argument instead of a premise argument (e.g. (𝐵◃-𝐺) *the signature was forged*), they are *conceding* 𝐵 for the sake of argument, providing a reason to reject 𝐴 even if 𝐵 is accepted.
 
-Considering a longer argument thread, the argument $$\text{𝐴◂𝐵◃𝐶◃-𝐷}$$ presumes acceptance of 𝐵 and 𝐶: a person who makes this argument is giving 𝐷 as a reason to reject 𝐴 given (even if) 𝐵 and 𝐶 are accepted. 
+Considering a longer argument thread, the argument $\text{𝐴◂𝐵◃𝐶◃-𝐷}$ presumes acceptance of 𝐵 and 𝐶: a person who makes this argument is giving 𝐷 as a reason to reject 𝐴 given (even if) 𝐵 and 𝐶 are accepted. 
 
 So the warrant of the last argument in the thread can be interpreted as the claim that the premise, **given acceptance of all preceding premises in the thread**, is a good reason to accept or reject the root conclusion. 
 
 ## Next
 
-Understanding the concepts in this argument model, in particular the difference between premise and warrant arguments, and the idea of argument threads as dialogs with shared context, is critical to understanding the [Causal Assumptions](https://deliberati.io/distributed-bayesian-reasoning-math/#causal-assumptions) in the [Distributed Bayesian Reasoning Math](https://deliberati.io/distributed-bayesian-reasoning-math/).
+Understanding the concepts in this argument model, in particular the difference between premise and warrant arguments, and the idea of argument threads as dialogs with shared context, is critical to understanding the [Causal Assumptions](/distributed-bayesian-reasoning-math/#causal-assumptions) in the [Distributed Bayesian Reasoning Math](/distributed-bayesian-reasoning-math/).
 

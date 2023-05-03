@@ -42,7 +42,6 @@ In a 2019 exposé in *the Verge*, an ex-Facebook moderator (in violation of his 
 > "'They kept reposting it again and again and again,'" he said, pounding the table as he spoke. 'It made me so angry. I had to listen to its screams all day.'"
 >
 > [Bodies in Seats](https://www.theverge.com/2019/6/19/18681845/facebook-moderator-interviews-video-trauma-ptsd-cognizant-tampa), The Verge, 2019
-{: .notice--info}
 
 This moderator was one of many who were diagnosed with PTSD and shared in a [$52 million settlement from Facebook](https://www.theverge.com/2020/5/12/21255870/facebook-content-moderator-settlement-scola-ptsd-mental-health) to compensate them for mental health issues developed on the job. Victims of the constant, raging, silent war against the trolls.
 
@@ -53,7 +52,6 @@ This moderator was one of many who were diagnosed with PTSD and shared in a [$52
 >  Are full of passionate intensity."
 > 
 > -- William Butler Yeats, [*The Second Coming*](https://www.poetryfoundation.org/poems/43290/the-second-coming)
-{: .notice--info}
 
 
 Unmoderated online public spaces suffer from the classic [**tragedy of the commons**](https://en.wikipedia.org/wiki/Tragedy_of_the_commons#:~:text=The%20tragedy%20of%20the%20commons,resource%20through%20their%20collective%20action.). As explained by Clay Shirkey.
@@ -62,7 +60,6 @@ Unmoderated online public spaces suffer from the classic [**tragedy of the commo
 > Individual users...have an incentive to maximize expression of their point of view, as well as maximizing the amount of communal attention they receive.
 >  
 > Clay Shirky, [Group as User](http://art.yale.edu/file_columns/0000/2307/shirky.pdf), 2003
-{: .notice--info}
 
 
 In online communities, conflict and shocking content are often the easiest way to attract attention. But it only takes a small amount of this content to pollute a community so that it is no longer fun and interesting for everyone. Eventually the community is abandoned to the trolls.
@@ -92,7 +89,6 @@ Slashdot developed the basic approach back in the aughts, as explained by Clay S
 > Rating, karma, meta-moderation -- each of these systems is relatively simple in technological terms. The effect of the whole, though, has been to allow Slashdot to support an enormous user base, while rewarding posters who produce broadly valuable material and quarantining offensive or off-topic posts.
 > 
 > Clay Shirky, [Group as User](http://art.yale.edu/file_columns/0000/2307/shirky.pdf), 2003
-{: .notice--info}
 
 
 
@@ -113,7 +109,6 @@ In situations where the contest is repeated over and over, once the participants
 > Everyone wants to provide the correct answer because everyone expects that everyone else will provide the correct answer and the protocol encourages everyone to provide what everyone else provides.
 > 
 > -- Vitalik Buterin, [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), 2014
-{: .notice--info}
 
 Online forums such as Reddit and Hacker News use digital reputation scores instead of cryptocurrency, but the result is an equilibrium where everyone is trying to submit and upvote the kind of comments that everyone expects everyone else to submit and upvote. In fact a Keynsian beauty contest can be seen almost literally played out in some image boards, where all the photos that are posted conform to that forum's particular standards of "beauty". 
 
