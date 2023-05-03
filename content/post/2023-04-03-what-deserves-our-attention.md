@@ -3,6 +3,7 @@ layout: single
 title:  "What Deserves Our Attention?"
 toc: false 
 date:   2023-05-01 00:00:00 +0200
+categories: ['social-protocols']
 # toc_sticky: true
 sidebar:
   - title: "In This Series"
@@ -10,6 +11,15 @@ sidebar:
   - nav: "social-protocols-related"
     title: "Related Articles"
 
+# menu:
+#     main:
+#         - identifier: home
+#           name: Home
+#           url: /
+#           weight: -100
+#           params:
+#             icon: home
+#             newTab: true
 ---
 
 Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page. This rule concentrates attention on popular content. 

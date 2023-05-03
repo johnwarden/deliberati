@@ -2,7 +2,7 @@
 layout: single
 title:  "Deliberati Argument Model"
 date:   2021-10-03 00:00:00 +0200
-tags: ['distributed-bayesian-reasoning']
+categories: ['Social Protocols']
 toc: true
 math: true
 toc_sticky: true
