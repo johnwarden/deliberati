@@ -6,7 +6,7 @@ toc: true
 weight: 4
 toc_sticky: true
 # categories: ['Social Protocols']
-tags: ['Social Protocols', 'Game Theory and Social Media']
+tags: ['Social Protocols', 'Game Theory']
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"

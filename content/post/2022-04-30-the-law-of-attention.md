@@ -3,7 +3,7 @@ layout: single
 title:  "The Law of Attention"
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Game Theory and Social Media']
+tags: ['Social Protocols', 'Game Theory']
 weight: 9
 sidebar:
   - title: "In This Series"

@@ -4,7 +4,7 @@ title:  "Information Elicitation Mechanisms"
 date:   2021-09-12 00:00:00 +0200
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Game Theory and Social Media']
+tags: ['Social Protocols', 'Game Theory']
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
