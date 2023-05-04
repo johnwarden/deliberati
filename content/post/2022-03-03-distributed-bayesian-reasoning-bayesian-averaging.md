@@ -5,6 +5,7 @@ slug: distributed-bayesian-reasoning-bayesian-averaging
 date:   2021-11-22 00:00:00 +0200
 toc: true
 toc_sticky: true
+weight: 112
 tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 sidebar:
   - nav: "distributed-bayesian-reasoning"

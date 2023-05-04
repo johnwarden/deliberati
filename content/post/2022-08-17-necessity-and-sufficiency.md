@@ -5,6 +5,7 @@ title:  "Necessity and Sufficiency"
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Argumentation Theory']
+weight: 72
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"
@@ -16,9 +17,9 @@ sidebar:
 
 ## Argument and Information
 
-In the [previous essay](/relevance-and-corelevance) in this series, we introduced the idea of **relevance**, and said that a premise is relevant to the conclusion iff $$P(A \vert B) > P(A \vert \bar{B})$$.
+In the [previous essay](/relevance-and-corelevance) in this series, we introduced the idea of **relevance**, and said that a premise is relevant to the conclusion iff $P(A \vert B) > P(A \vert \bar{B})$.
 
-Consider the argument (𝐴) *this is a good candidate for the job* because (𝐵) *he has a pulse*. Having a pulse may not be a very **persuasive** reason to hire somebody, but it is probably quite **relevant**, because if the candidate did **not** have a pulse, the subject would probably be much less likely to want to hire him. That is $$P(A \vert B) > P(A \vert \bar{B})$$.
+Consider the argument (𝐴) *this is a good candidate for the job* because (𝐵) *he has a pulse*. Having a pulse may not be a very **persuasive** reason to hire somebody, but it is probably quite **relevant**, because if the candidate did **not** have a pulse, the subject would probably be much less likely to want to hire him. That is $P(A \vert B) > P(A \vert \bar{B})$.
 
 So to be **persuasive**, the premise must not only be relevant: it must actually change the probability that the subject accepts the conclusion.
 
@@ -26,13 +27,13 @@ Why isn't 𝐵 *he has a pulse* persuasive to the subject? Because presumably, *
 
  <aside class="custom-aside" markdown="1">
 
-To understand why only new information can change the beliefs of a Bayesian reasoner, consider the standard rule for Bayesian belief revision. When a Bayesian reasoner learns that 𝐵 is true, their posterior belief in the probability of 𝐴 is updated to equal what they previously believed the probability of 𝐴 **would be** if they believed 𝐵. Mathematically, the posterior belief, denoted $$P'$$, is updated according to the well-known formula for Bayesian belief revision:
+To understand why only new information can change the beliefs of a Bayesian reasoner, consider the standard rule for Bayesian belief revision. When a Bayesian reasoner learns that 𝐵 is true, their posterior belief in the probability of 𝐴 is updated to equal what they previously believed the probability of 𝐴 **would be** if they believed 𝐵. Mathematically, the posterior belief, denoted $P'$, is updated according to the well-known formula for Bayesian belief revision:
 
 $$
     P'(A) = P(A|B)
 $$
 
-But if 𝐵 is not new information -- that is, if the subject already believed that $$P(B)$$ was equal to 1 -- then $$P(A \vert B)$$ is already equal to $$P(A)$$. So the posterior $$P'(A)$$ is equal to the prior $$P(A)$$. 
+But if 𝐵 is not new information -- that is, if the subject already believed that $P(B)$ was equal to 1 -- then $P(A \vert B)$ is already equal to $P(A)$. So the posterior $P'(A)$ is equal to the prior $P(A)$. 
 
 On the other hand, if the subject had, for some reason, previously assumed that the candidate did *not* have a pulse, and then subsequently learned that he did, this discovery might considerably brighten the candidate's prospects. 
 
@@ -145,7 +146,7 @@ In fact, necessity is just the product of relevance and acceptance of the premis
 
 $$
 \begin{aligned}
-    N(A,B) &= R(A,B)P(B) \\
+    N(A,B) &= R(A,B)P(B) \cr
 \end{aligned}
 $$
 
@@ -163,13 +164,13 @@ $$
 
 It follows that as long as the premise is not completely accepted or rejected, it is **both necessary and sufficient**. 
 
-What's more, a premise cannot be relevant if it is completely accepted or rejected. For example, if the subject completely accepted or rejected the premise ($$P(B)$$ equals 0 or 1), relevance would be undefined, because either $$P(A \vert B)$$ or $$P(A \vert \bar{B})$$ would be undefined. For example, if $$P(B)=0$$, then $$P(A \vert B) = P(A,B)/P(B) = P(A,B)/0$$, which is undefined.
+What's more, a premise cannot be relevant if it is completely accepted or rejected. For example, if the subject completely accepted or rejected the premise ($P(B)$ equals 0 or 1), relevance would be undefined, because either $P(A \vert B)$ or $P(A \vert \bar{B})$ would be undefined. For example, if $P(B)=0$, then $P(A \vert B) = P(A,B)/P(B) = P(A,B)/0$, which is undefined.
 
-This means that **as long as the premise is relevant, it will be both necessary and sufficient** to some degree. In fact, relevance is **the sum of necessity and sufficiency**. So $$P(B)$$ just partitions relevance into components of necessity and sufficiency. **The more the premise is accepted, the more necessary and the less sufficient**, and vice versa.
+This means that **as long as the premise is relevant, it will be both necessary and sufficient** to some degree. In fact, relevance is **the sum of necessity and sufficiency**. So $P(B)$ just partitions relevance into components of necessity and sufficiency. **The more the premise is accepted, the more necessary and the less sufficient**, and vice versa.
 
 $$
 \begin{aligned}
-    R(A,B) &= P(B)R(A,B) + (1-P(B))R(A,B)\\
+    R(A,B) &= P(B)R(A,B) + (1-P(B))R(A,B)\cr
             &= N(A,B) + S(A,B)
 \end{aligned}
 $$
@@ -233,10 +234,9 @@ But an important question remains. Will the subject accept the premise? In the n
 The proofs below use the following equality, which is derived in the [previous essay](/relevance-and-corelevance#relevance-as-slope).
 
 $$
-\begin{equation}
-    P(A) = P(A|\bar{B}) + P(B)R(A,B) 
-    \tag{1}\label{eq:AfunctionofB}
-\end{equation}
+\label{1}
+P(A) = P(A|\bar{B}) + P(B)R(A,B) 
+\tag{1}
 $$
 
 
@@ -246,8 +246,8 @@ $$
 
 $$
 \begin{aligned}
-    N(A,B) &= P(A) - P(A|\bar{B}) \\ 
-            &= ( P(A|\bar{B}) + R(A,B)P(B) ) - P(A|\bar{B}) &&\eqref{eq:AfunctionofB} \\
+    N(A,B) &= P(A) - P(A|\bar{B}) \cr 
+            &= ( P(A|\bar{B}) + R(A,B)P(B) ) - P(A|\bar{B}) &&\text{Formula }\eqref{1} \cr
             &= R(A,B)P(B)
 \end{aligned}
 $$
@@ -260,14 +260,13 @@ $$
 
 $$
 \begin{aligned}
-    S(A,B) &= P(A|B) - P(A) \\
-            &= P(A|B) - ( P(A|\bar{B}) + R(A,B)P(B) ) &&\eqref{eq:AfunctionofB}\\
-            &= ( P(A|B) - P(A|\bar{B}) ) - R(A,B)P(B) \\
-            &= R(A,B) - R(A,B)P(B)\\
-            &= R(A,B)(1 - P(B))\\
+    S(A,B) &= P(A|B) - P(A) \cr
+            &= P(A|B) - ( P(A|\bar{B}) + R(A,B)P(B) ) &&\text{Formula }\eqref{1}\cr
+            &= ( P(A|B) - P(A|\bar{B}) ) - R(A,B)P(B) \cr
+            &= R(A,B) - R(A,B)P(B)\cr
+            &= R(A,B)(1 - P(B))\cr
             &= R(A,B)P(\bar{B})
 \end{aligned}
-
 $$
 
 ### Proof 3
@@ -280,11 +279,10 @@ $$
 
 $$
 \begin{aligned}
-    N(A,B) &= P(A) - P(A|\bar{B}) \\
-            &= (1 - P(A|\bar{B})) - (1 - P(A)) \\
-            &= P(\bar{A}|\bar{B}) - P(\bar{A}) \\
+    N(A,B) &= P(A) - P(A|\bar{B}) \cr
+            &= (1 - P(A|\bar{B})) - (1 - P(A)) \cr
+            &= P(\bar{A}|\bar{B}) - P(\bar{A}) \cr
             &= S(\bar{A},\bar{B})
-
 \end{aligned}
 $$
 

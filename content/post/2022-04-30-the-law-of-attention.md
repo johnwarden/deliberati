@@ -4,7 +4,7 @@ title:  "The Law of Attention"
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Game Theory']
-weight: 9
+weight: 90
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"

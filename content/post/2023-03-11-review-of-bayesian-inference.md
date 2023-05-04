@@ -5,7 +5,7 @@ slug: review-of-bayesian-inference
 date:   2021-10-26 00:00:00 +0200
 toc: true
 toc_sticky: true
-weight: 6
+weight: 60
 sidebar:
   - nav: "distributed-bayesian-reasoning-related"
     title: "Related Articles"

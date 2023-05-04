@@ -3,7 +3,7 @@ title: About
 toc: false
 menu:
     main:
-        weight: 2
+        weight: 20
         params: 
             icon: user
 # image: /assets/images/jonathan-profile-photo-2.png

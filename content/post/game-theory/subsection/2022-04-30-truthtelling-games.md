@@ -3,7 +3,7 @@ layout: single
 title:  "Truthtelling Games"
 date:   2021-09-12 00:00:00 +0200
 toc: true
-weight: 4
+weight: 60
 toc_sticky: true
 # categories: ['Social Protocols']
 tags: ['Social Protocols', 'Game Theory']

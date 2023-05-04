@@ -4,6 +4,7 @@ layout: single
 title:  "Informativeness and Persuasiveness"
 toc: true
 toc_sticky: true
+weight: 73
 tags: ['Social Protocols', 'Argumentation Theory']
 sidebar:
   - title: "In This Series"
@@ -46,15 +47,15 @@ So we can **model** an imperfect Bayesian as an equivalent perfect Bayesian.
 
 ## Definition of Post-Argument Belief
 
-We'll use the $$I$$ to indicate the **argument event**. This is the event, which is directly observed by the subject, that agent 𝑋 argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
+We'll use the $I$ to indicate the **argument event**. This is the event, which is directly observed by the subject, that agent 𝑋 argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
 
-We use $$P_i$$ to denote the **Post-Argument opinion** of the subject, defined as:
+We use $P_i$ to denote the **Post-Argument opinion** of the subject, defined as:
 
 $$
     P_i(∙) = P(∙|I) = P(∙|X\text{ argued }B\text{ in support of }A)
 $$
 
-So for example $$P_i(B)$$ is the subject's opinion on 𝐵 after the argument event 𝐼, and $$P_i(A)$$ is their opinion on 𝐴 after the argument event.
+So for example $P_i(B)$ is the subject's opinion on 𝐵 after the argument event 𝐼, and $P_i(A)$ is their opinion on 𝐴 after the argument event.
 
 ## Definition of Informative
 
@@ -78,11 +79,11 @@ $$
 
 <!--
 
-, but it is especially interesting to take an information-theoretic point of view, and quantify the amount of [**information gain**](https://en.wikipedia.org/wiki/Information_gain_in_decision_trees) from using the more Post-Argument probability distribution $$P_i$$ instead of $$P$$. This can be calculated as the [**relative entropy**](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Interpretations) or KL-Divergence between the pre- and post-argument belief in 𝐵. Using $$p$$ to indicate the probability distribution $$P$$ limited to events B and B̅.
+, but it is especially interesting to take an information-theoretic point of view, and quantify the amount of [**information gain**](https://en.wikipedia.org/wiki/Information_gain_in_decision_trees) from using the more Post-Argument probability distribution $P_i$ instead of $P$. This can be calculated as the [**relative entropy**](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Interpretations) or KL-Divergence between the pre- and post-argument belief in 𝐵. Using $p$ to indicate the probability distribution $P$ limited to events B and B̅.
 
 $$
 \begin{aligned}
-    D_{KL}(p_i || p) &= - ∑_b p_i(b) log(\frac{p_i(b)}{p(b)}) \\
+    D_{KL}(p_i || p) &= - ∑_b p_i(b) log(\frac{p_i(b)}{p(b)}) \cr
                                 &= - P_i(B) log(\frac{P_i(B)}{P(B)}) - P_i(\bar{B}) log(\frac{P_i(\bar{B})}{P(\bar{B})})
 \end{aligned}
 $$
@@ -98,7 +99,7 @@ $$
     P_i(A) ≠ P(A)
 $$
 
-Persuasiveness can be measured as the difference between $$P_i(A)$$ and $$P(A)$$, expressed as a ratio, percent difference, information gain, etc. We will focus on the absolute difference. 
+Persuasiveness can be measured as the difference between $P_i(A)$ and $P(A)$, expressed as a ratio, percent difference, information gain, etc. We will focus on the absolute difference. 
 
 ## Definition of Persuasiveness
 
@@ -110,10 +111,10 @@ $$
 
 
 <!--
-An information-theoretic measure of persuasiveness would be the [**information gain**](https://en.wikipedia.org/wiki/Information_gain_in_decision_trees) from using the more Post-Argument probability distribution $$P_i(a)$$ instead of $$P(a)$$, measured as relative entropy:
+An information-theoretic measure of persuasiveness would be the [**information gain**](https://en.wikipedia.org/wiki/Information_gain_in_decision_trees) from using the more Post-Argument probability distribution $P_i(a)$ instead of $P(a)$, measured as relative entropy:
 
 $$
-    D_{KL}(P_i(a) \vert\vert P(a)) &= - ∑_{a∈\{A,\bar{A}\}} P_i(a) log(\frac{P_i(a)}{P(a)}) \\
+    D_{KL}(P_i(a) \vert\vert P(a)) &= - ∑_{a∈\{A,\bar{A}\}} P_i(a) log(\frac{P_i(a)}{P(a)}) \cr
                                    &= - P_i(A) log(\frac{P_i(A)}{P(A)}) - P_i(\bar{A}) log(\frac{P_i(\bar{A})}{P(\bar{A})}) 
 $$
 
@@ -123,20 +124,21 @@ $$
 
 ## Persuasiveness = Relevance × Informativeness 
 
-In [Relevance and Corelevance](relevance-and-corelevance/#relevance-as-slope), we introduced Jeffrey's Rule of Conditioning, which says that if a Bayesian reasoner acquires information that has no effect other than to cause them to increase their belief in the premise, then their posterior belief in the conclusion changes according to the formula:
+In [Relevance and Corelevance](/relevance-and-corelevance/#relevance-as-slope), we introduced Jeffrey's Rule of Conditioning, which says that if a Bayesian reasoner acquires information that has no effect other than to cause them to increase their belief in the premise, then their posterior belief in the conclusion changes according to the formula:
 
-\begin{equation}
-    P'(A) = P(A|\bar{B}) + P'(B)R(A,B) 
-    \tag{1}\label{eq:jeffreys}
-\end{equation}
+$$
+\label{1}
+P'(A) = P(A|\bar{B}) + P'(B)R(A,B) 
+\tag{1}
+$$
 
-So if the argument is informative, their posterior belief in $$B$$ will be $$P_i(B)$$ and therefore their posterior belief in $$A$$ will be:
+So if the argument is informative, their posterior belief in $B$ will be $P_i(B)$ and therefore their posterior belief in $A$ will be:
 
 $$ 
-    P_i(A) = P(A|\bar{B}) + P_i(B)R(A,B) 
+P_i(A) = P(A|\bar{B}) + P_i(B)R(A,B) 
 $$ 
 
-So as long as $$R(A,B)$$ is not equal to zero, then a change in $$P_i(B)$$ will result in a change in $$P_i(A)$$. So a relevant and informative argument **must** also be persuasive. 
+So as long as $R(A,B)$ is not equal to zero, then a change in $P_i(B)$ will result in a change in $P_i(A)$. So a relevant and informative argument **must** also be persuasive. 
 
 In fact, persuasiveness is the product of relevance and informativeness ([proof](#proof-1)).
 
@@ -160,11 +162,11 @@ Then:
 
 $$
 \begin{aligned}
-    P_i(A) &= P(A|\bar{B}) + P_i(B)R(A,B)           &&\eqref{eq:jeffreys} \\
-           &> P(A|\bar{B}) + P(B)R(A,B)             &&\text{(}P(B) > P_i(B) \\
-           &                                   &&\text{and } R(A,B) > 0\text{)}\\
-           &> P(A|\bar{B}) + P(B)(P(A|B)-P(A|\bar{B}))  &&\text{(Definition of R)} \\
-           &> P(A|B)P(B) + P(A|\bar{B})(1-P(B))  &&\text{(Algebra)} \\
+    P_i(A) &= P(A|\bar{B}) + P_i(B)R(A,B)           &&\eqref{1} \cr
+           &> P(A|\bar{B}) + P(B)R(A,B)             &&\text{(}P(B) > P_i(B) \cr
+           &                                   &&\text{and } R(A,B) > 0\text{)}\cr
+           &> P(A|\bar{B}) + P(B)(P(A|B)-P(A|\bar{B}))  &&\text{(Definition of R)} \cr
+           &> P(A|B)P(B) + P(A|\bar{B})(1-P(B))  &&\text{(Algebra)} \cr
            &> P(A)                              &&\text{(Law of total prob.)}
 \end{aligned}
 $$
@@ -178,7 +180,7 @@ So we can look at argument as the **exchange of information among Bayesian reaso
 
 First, the assertion must be **informative**. The assertion itself must effectively be new information that causes the subject to change their belief in the premise (even if the assertion induces them to change their belief by actively seeking new information, fixing their reasoning, etc.). 
 
-Second, the premise must be **relevant** to the conclusion, which means the belief in the conclusion has a linear relationship with belief in the premise, as illustrated in [Chart 1](#relevance-as-slope). When this is the case, the agent will necessarily revise their beliefs in the conclusion according to Jeffrey's Rule \eqref{eq:jeffreys}. The argument can then said to be **persuasive**.
+Second, the premise must be **relevant** to the conclusion, which means the belief in the conclusion has a linear relationship with belief in the premise, as illustrated in [Chart 1](#relevance-as-slope). When this is the case, the agent will necessarily revise their beliefs in the conclusion according to Jeffrey's Rule $\eqref{1}$. The argument can then said to be **persuasive**.
 
 However, if the argument was not informative, it is not necessarily a bad argument. The subject may already believe in the premise, and it may still be a **necessary** argument, because the premise forms the basis for the subject's belief in the conclusion in that the subject **would** change their belief in the conclusion if they were for any reason to reject the premise.
 
@@ -238,20 +240,19 @@ $$
 This proof uses the following equality defined in the [previous essay](/relevance-and-corelevance#relevance-as-slope).
 
 $$
-\begin{equation}
-    P(A) = P(A|\bar{B}) + P(B)R(A,B) 
-    \tag{2}\label{eq:AfunctionofB}
-\end{equation}
+\label{2}
+P(A) = P(A|\bar{B}) + P(B)R(A,B) 
+\tag{2}
 $$
 
 Then
 
 $$
 \begin{aligned}
-P_i(A)  &= P(A|\bar{B}) + P_i(B)R(A,B) ~~ \eqref{eq:jeffreys}\\
-        &= P(A|\bar{B}) + P_i(B)R(A,B) - P(B)R(A,B) + P(B)R(A,B) \\      
-        &= P(A|\bar{B}) + (P_i(B) - P(B))R(A,B) + P(B)R(A,B) \\      
-        &= ( P(A|\bar{B}) + P(B)R(A,B) ) + (P_i(B) - P(B))R(A,B) ~~ \eqref{eq:AfunctionofB}\\
+P_i(A)  &= P(A \vert \bar{B}) + P_i(B)R(A,B) && \text{Formula }\eqref{1}\cr
+        &= P(A \vert \bar{B}) + P_i(B)R(A,B) - P(B)R(A,B) + P(B)R(A,B)\cr
+        &= P(A \vert \bar{B}) + (P_i(B) - P(B))R(A,B) + P(B)R(A,B) \cr
+        &= ( P(A \vert \bar{B}) + P(B)R(A,B) ) + (P_i(B) - P(B))R(A,B) && \text{Formula }\eqref{2}\cr
         &= P(A) +  (P_i(B) - P(B))R(A,B)
 \end{aligned}
 $$

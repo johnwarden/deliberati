@@ -3,7 +3,7 @@ layout: single
 title:  "The Deliberative Poll"
 date:   2020-11-08 13:40:43 -0700
 tags: ['Social Protocols']
-weight: 3
+weight: 30
 toc: true
 toc_sticky: true
 # header:
@@ -20,6 +20,8 @@ sidebar:
 
 
 A [deliberative poll](https://en.wikipedia.org/wiki/Deliberative_opinion_poll) measures the **informed opinion** of a group of people who have participated in a discussion about the topic of the poll. This essay introduces a method for integrating deliberative polling into online discussions in social platforms, in order to discover the informed opinion of a group. 
+
+<!--more-->
 
 ## Summary
 

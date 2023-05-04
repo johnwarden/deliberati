@@ -3,6 +3,7 @@ layout: single
 title:  "Distributed Bayesian Reasoning Math"
 date:   2021-09-08 00:00:00 +0200
 
+weight: 110
 # toc_sticky: true
 tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 # categories: ["social-protocols"]

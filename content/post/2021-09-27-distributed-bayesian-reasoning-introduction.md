@@ -2,7 +2,7 @@
 layout: single
 title:  "Distributed Bayesian Reasoning Introduction"
 date:   2021-09-08 00:00:00 +0200
-weight: 4.5
+weight: 50
 tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
 # tags: distributed-bayesian-reasoning
 toc: true
@@ -25,7 +25,6 @@ sidebar:
 ## Brief Introduction
 
 **Distributed Bayesian Reasoning** is a kind of **hypothetical opinion poll**. It tells us not what people actually believe, but what they **would believe** if they knew more.
-
 
 The purpose is to produce **more intelligent [group judgments](https://personal.lse.ac.uk/list/PDF-files/ReviewPaper.pdf)** that better represent a group's collective knowledge.
 
