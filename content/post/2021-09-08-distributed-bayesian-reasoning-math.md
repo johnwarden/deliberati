@@ -1,11 +1,12 @@
 ---
 layout: single
 title:  "Distributed Bayesian Reasoning Math"
-date:   2021-09-08 00:00:00 +0200
+date:   2021-10-27 00:00:00 +0200
 
 weight: 110
 # toc_sticky: true
-tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
+tags: ['Social Protocols']
+series: ['Distributed Bayesian Reasoning']
 # categories: ["social-protocols"]
 
 sidebar:
@@ -552,7 +553,7 @@ $$
     P_h(A) &= P_i(A|do(J))  \cr  \cr
             &= \sum_{b} P_i(B=b|J) &&\text{front-door adj. formula} \cr
             &~~~~~~~~~× \sum_{j'}P_i(A|J=j',B=b)P_i(J=j') \cr \cr
-            &= \sum_{b} P_i(B=b|J)P_i(A|B=b) &&\text{TODO} \cr \cr
+            &= \sum_{b} P_i(B=b|J)P_i(A|B=b) && \cr \cr
             &= \sum_{b≥0} P(B=b|J)P(A|B=b) &&\text{definition of } P_i \cr \cr
             &= \sum_{b≥0} P_h(B=b)P(A|B=b) &&\text{definition of } P_h \cr \cr
 \end{aligned}

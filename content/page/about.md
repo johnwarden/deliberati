@@ -19,14 +19,47 @@ menu:
             width: 120px;
 	}
 
-    }
 </style>
 
 
 <img src="/assets/images/jonathan-profile-photo-2.png" title="Jonathan Warden" class="photo site-avatar"/>
 
-### About The Author
-<p>Jonathan Warden a software engineer working independently on building technologies to make conversations on the Internet more intelligent and less polarizing. I publish my work on this web site.
+<p>
+    <br/>Jonathan Warden a software engineer working independently on building technologies to make conversations on the Internet more intelligent and less polarizing. I publish my work here.
 </p>
 
+
+<br/>
+
+#### Contact
+
+
+<ol class="social-menu">
+
+<li>
+    <a href="https://github.com/johnwarden" target="_blank" title="GitHub" rel="me">
+        {{< readfile file="/assets/icons/brand-github.svg">}}
+    </a>
+</li>
+
+<li>
+    <a href="https://twitter.com/johnwarden" target="_blank" title="Twitter" rel="me">
+        {{< readfile file="/assets/icons/brand-twitter.svg">}}
+    </a>
+</li>
+
+<li>
+    <a href="https://www.linkedin.com/in/jonathan-r-warden-4aa2357/" target="_blank" title="LinkedIn" rel="me">
+        {{< readfile file="/assets/icons/brand-linkedin.svg">}}
+    </a>
+</li>
+
+<li style="font-size: .9em; line-height: 1.5em; vertical-align: center; color: var(--body-text-color)"> | &nbsp;
+Jonathan Warden &lt;jonathan@deliberati.io&gt;
+
+
+
+</li>
+
+</ol>
 

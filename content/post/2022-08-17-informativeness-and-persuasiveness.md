@@ -11,6 +11,7 @@ sidebar:
     nav: "bayesian-argumentation"
   - nav: "bayesian-argumentation-related"
     title: "Related Articles"
+series: ['Bayesian Argumentation']
 
 ---
 
@@ -47,9 +48,9 @@ So we can **model** an imperfect Bayesian as an equivalent perfect Bayesian.
 
 ## Definition of Post-Argument Belief
 
-We'll use the $I$ to indicate the **argument event**. This is the event, which is directly observed by the subject, that agent 𝑋 argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
+We'll use $I$ to indicate the **argument event**. This is the event, which is directly observed by the subject, that agent 𝑋 argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
 
-We use $P_i$ to denote the **Post-Argument opinion** of the subject, defined as:
+We use $P_i$ to denote the **Post-Argument beliefs** of the subject, defined as:
 
 $$
     P_i(∙) = P(∙|I) = P(∙|X\text{ argued }B\text{ in support of }A)
@@ -180,9 +181,9 @@ So we can look at argument as the **exchange of information among Bayesian reaso
 
 First, the assertion must be **informative**. The assertion itself must effectively be new information that causes the subject to change their belief in the premise (even if the assertion induces them to change their belief by actively seeking new information, fixing their reasoning, etc.). 
 
-Second, the premise must be **relevant** to the conclusion, which means the belief in the conclusion has a linear relationship with belief in the premise, as illustrated in [Chart 1](#relevance-as-slope). When this is the case, the agent will necessarily revise their beliefs in the conclusion according to Jeffrey's Rule $\eqref{1}$. The argument can then said to be **persuasive**.
+Second, the premise must be **relevant** to the conclusion, which means the belief in the conclusion has a linear relationship with belief in the premise, as illustrated in [Chart 1 from Relevance and Corelevance](/relevance-and-corelevance/#chart1). When this is the case, the agent will necessarily revise their beliefs in the conclusion according to Jeffrey's Rule $\eqref{1}$. The argument can then said to be **persuasive**.
 
-However, if the argument was not informative, it is not necessarily a bad argument. The subject may already believe in the premise, and it may still be a **necessary** argument, because the premise forms the basis for the subject's belief in the conclusion in that the subject **would** change their belief in the conclusion if they were for any reason to reject the premise.
+However, if the argument was not informative, it is not necessarily a bad argument. The subject may already believe in the premise, and it may still be **necessary**, because the premise forms the basis for the subject's belief in the conclusion in that the subject **would** change their belief in the conclusion if they were for any reason to reject the premise.
 
 
 <!--

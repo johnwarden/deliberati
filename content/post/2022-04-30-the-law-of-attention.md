@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "The Law of Attention"
+date:   2021-09-13 00:00:00 +0200
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Game Theory']
@@ -10,7 +11,7 @@ sidebar:
     nav: "give-truth-the-advantage"
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
-
+series: ['Game Theory in Social Media']
 ---
 
 

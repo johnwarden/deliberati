@@ -1,11 +1,13 @@
 ---
 layout: single
 title:  "A Bayesian Account of Argumentation"
+slug: bayesian-argumentation
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Argumentation Theory']
+series: ['Bayesian Argumentation']
 weight: 71
-summary: 'In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. in other words we can objectively measure subjective beliefs.'
+summary: 'In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the quality of an argument in the mind of the subject. In other words we can objectively measure the subjective quality of an argument.'
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"
@@ -21,9 +23,9 @@ What makes for a *good* argument? How can this be quantified?
 
 From a logical point of view, a good argument is logically sound. But in the real-world people rarely argue with pure logic. 
 
-From a rhetorical point of view, a good argument is one that is convincing, whether through emotion, logic, or ethics. But how can this be measured?
+From a rhetorical point of view, a good argument is one that is convincing. But how can this be measured?
 
-In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. in other words we can objectively measure subjective beliefs.
+In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. In other words we can objectively measure an arguments' subjective quality.
 
 Economists and data scientists increasingly use the Bayesian rational agent as a model of human behavior. Like all models it is imperfect, but it has the advantage of being well defined. Building clear terminology on top of a clear model helps clarify our thinking and sharpen our intuition about what argument actually is.
 
@@ -50,29 +52,35 @@ Consider the argument *this is a good candidate for the job* because *he has a p
 If our subject is a Bayesian rational agent with common sense, then probably:
 
 - The argument is not **persuasive**.
-- Nor is it **informative**. *He has a pulse* is not news to the subject. 
+- Nor is it **informative**. *He has a pulse* is not new information to the subject. 
 - Yet the argument is clearly **relevant**, because:
     - If the subject learned that the subject did **not** have a pulse, this would be **sufficient** to reject him as a candidate.
     - Alternatively, the belief that he probably has a pulse is **necessary** for the belief that he might be a good candidate.
 
-In this series of asseys, we will precisely define the concepts of relevance, informativeness, persuasiveness, sufficiency, and necessity and quantify these with some concrete numerical examples.
+In this series of esseys, we will precisely define the concepts of relevance, informativeness, persuasiveness, sufficiency, and necessity and quantify these with some concrete numerical examples.
 
 ## Introductory Example 2
 
-Now consider another example argument: *the car won't start* because *the car is out of gas*. And suppose that this **is** new information to the subject. So it is probably going to be persuasive.
+Now consider another example argument: *the car won't start* because *the car is out of gas*. Assuming this **is** new information to the subject (and assuming an internal combustion engine) it is probably going to be persuasive.
 
 Except what if the the subject previously believed that *the car's battery is dead*? With this assumption, the car being out of gas is now in a sense now irrelevant. 
 
-Clearly the relevance of an argument depends on context, or more specifically the various related prior beliefs of the subject. If we have a model of the subject's prior beliefs, we can identify the **corelevant** beliefs -- the prior beliefs cause the argument to be relevant.
+Clearly the relevance of an argument depends on context. It depends on other beliefs the subject has about the state of world. 
 
-This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). In this essay, we'll introduce the basic concepts of **premise**, **conclusion**, and **warrant** from argumentation theory, and connect these to the Bayesian concepts of **evidence**, **hypothesis**, and **priors**.
+But theoretically, if we have a model of some subject's beliefs about the world (in the form of a probability distribution), we can actually identify the **corelevant** beliefs -- the beliefs cause the argument to be relevant. We will define this more precisely in the essay on [relevance and corelevance](/relevance-and-corelevance).
 
 
 ## Argumentation Terminology 
 
-Traditional logic, with its ideas of **validity** and **soundness** requires logical propositions are either true are false, whereas the beliefs of a Bayesian reasoner allow uncertainty.
+This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). In this essay, we'll introduce the basic concepts of **premise**, **conclusion**, and **warrant** from argumentation theory, and connect these to the Bayesian concepts of **evidence**, **hypothesis**, and **priors**.
 
-Modern [Argumentation Theory](https://en.wikipedia.org/wiki/Argumentation_theory) views argument as a kind of more flexible, informal logic. Arguments are typically generalized as involving some stated **premise**, which is asserted as a reason for accepting a **conclusion**. The inferential leap from premise to conclusion is justified by some unexpressed premise, called the [**warrant**](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.). The warrant can be any kind of inferential rule: deductive, inductive, intuitive -- whatever justifies the inference in the mind of the arguer. Some academics use different terms for these concepts: our terminology is influenced by the influential [Toulmin model](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.), except we prefer the traditional terms **premise** and **conclusion**. More precise definitions of our terms are given in the [Deliberati Argument Model](/argument-model).
+Modern [Argumentation Theory](https://en.wikipedia.org/wiki/Argumentation_theory) views argument as a kind of more flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* in support the claim *it's probably cold outside*. 
+
+We use the terms **premise** and **conclusion** to differentiate between the supporting and supported claim. An **argument** is just a premise stated in support of some conclusion.
+
+In every argument is the unstated claim that *this premise supports this conclusion*. This claim doesn't need to be stated because its obvious: why would one make the argument at all if the premise didn't support the conclusion? People rarely spell out the argument "if people are wearing jackets it's probably cold outside and people are wearing jackets". It's sufficient to argue *people are wearing jackets*.
+
+The unexpressed premise that justifies the inferential leap from premise to conclusion is called the [**warrant**](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.). The warrant can be any kind of inferential rule: deductive, inductive, intuitive -- whatever justifies the inference in the mind of the arguer. Some academics use different terms for these concepts: our terminology is influenced by the influential [Toulmin model](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.), except we prefer the traditional terms **premise** and **conclusion** over **grounds** and **claim**. More precise definitions of our terms are given in the [Deliberati Argument Model](/argument-model).
 
 In Bayesian terms, a rational agent is said to acquire **evidence**, which causes them to change their belief in the probability of some **hypothesis**. There is clearly an analogy here: **evidence is to hypothesis as premise is to conclusion**. But what is the warrant? 
 
@@ -94,15 +102,22 @@ $$
 
 If the warrant exists, we say that 𝐵 is **relevant** to 𝐴. Otherwise, we say it is **irrelevant**.
 
-## Next in this Series
+## Summary
 
 So in a Bayesian argument, an arguer asserts a **premise** in support/opposition to some **conclusion**, and if the premise is **relevant** -- the subject is more likely to believe the conclusion if they believe the conclusion -- then there must be some **warrant** justifying the inference from premise to conclusion.
 
-In the [next essay](/relevance-and-corelevance), we will formally define relevance and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of necessity, sufficiency, informativeness, and persuasiveness, all of which relate back to this central concept of relevance.  A summary of these definitions is below.
+
+## This Series
+
+In the [next essay](/relevance-and-corelevance) in this series, we will formally define **relevance** and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of necessity, sufficiency, informativeness, and persuasiveness, all of which relate back to this central concept of relevance, and all of which can be precisely defined.
+
+- [Relevance and Corelevance](/relevance-and-corelevance)
+- [Necessity and Sufficiency](/necessity-and-suficiency)
+- [Informativeness and Persuasiveness](/informativeness-and-persuasiveness)
 
 ## Summary of Definitions
 
-Here is a summary of definitions in this series:
+But skipping ahead, here is a tl;dr; of all the terms that will be defined in the essays in this series:
 
 *For an argument with premise 𝐵 and conclusion 𝐴, and a subject whose beliefs are represented by probability measure P...*
 
@@ -116,7 +131,7 @@ Here is a summary of definitions in this series:
 - **Oppose**: The premise **opposes** the conclusion **iff** $P(A \vert B) < P(A \vert \bar{B})$
     - If 𝐵 supports 𝐴, then 𝐵 opposes $\bar{A}$
 
-- **Relevance**: $R(A,B) = P(A \vert B) - P(A \vert \bar{B})$$
+- **Relevance**: $R(A,B) = P(A \vert B) - P(A \vert \bar{B})$
 
 - **Conditional Relevance**: *Given some third premise 𝐶*: $R(A,B \vert C) = P(A \vert B,C) - P(A \vert \bar{B},C)$
 
@@ -124,12 +139,11 @@ Here is a summary of definitions in this series:
 
 - **Corelevance**: $CR(A;B,C) = R(A,B \vert C) - R(A,B \vert \bar{C}) = R(A,C \vert B) - R(A,C \vert \bar{B})$
 
-- **Necessity**: $N(A,B) = P(A) - P(A \vert \bar{B}) = P(B)R(A,B)$$
+- **Necessity**: $N(A,B) = P(A) - P(A \vert \bar{B}) = P(B)R(A,B)$
 
-- **Sufficiency**: $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$$
+- **Sufficiency**: $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$
 
 - **Argument Event**: The event, directly observed by the subject, that the arguer asserted the premise in support of the conclusion.
-    - This subtle concept is is discussed in more detail in [Argument as Exchange of Information](#argument-as-exchange-of-information)
 
 - **Post-Argument Belief**: *Given the argument event I*: $P_i(∙) = P(∙ \vert I)$
     - e.g. $P_i(B) = P(B \vert I)$ is the post-argument belief in 𝐵.
@@ -164,25 +178,22 @@ And here is a summary of key equations in this series: $\label{1}$
 - Necessity = Relevance × Acceptance: $N(A,B) = P(A) - P(A \vert \bar{B}) = R(A,B)P(B)$
 - Sufficiency = Relevance × Rejection: $S(A,B) = P(A \vert B) - P(A) = R(A,B)P(\bar{B})$
 - Relevance = Necessity + Sufficiency: $R(A,B) = N(A,B) + S(A,B)$
-- Sufficiency/Necessity of Rejection of Premise/Conclusion: $S(A,B) = N(\bar{A},\bar{B})$ and $N(\bar{A},\bar{B}) = N(A,B)$
+- Sufficiency/Necessity of Rejection of Premise/Conclusion: $N(A,B) = S(\bar{A},\bar{B})$ and $S(A,B) = N(\bar{A},\bar{B})$
 - Persuasiveness = Relevance × Informativeness: $ P_i(A) - P(A) = (P_i(B) - P(B))R(A,B) $
-
-
 
 
 ## Numerical Example
 
-
-
+The following example illustrates all of the concepts introduced in this series.
 
 Suppose the priors of the subject are modeled by the probability measure 𝑃 given in this table: 
 
 | a | b | P(a,b)     |
 | - | - | ---------- |
-| $\bar{A}$ | $\bar{B}$ |  25%       |
-| $\bar{A}$ | 𝐵 |  10%       |
-| 𝐴 | $\bar{B}$ |  25%       |
-| 𝐴 | 𝐵 |  40%       |
+| $\bar{A}$ | $\bar{B}$ |  .25       |
+| $\bar{A}$ | 𝐵 |  .10       |
+| 𝐴 | $\bar{B}$ |  .25       |
+| 𝐴 | 𝐵 |  .40       |
 
 The marginal probabilities are:
 
@@ -222,7 +233,7 @@ $$
 And the sufficiency of 𝐵 to 𝐴 is:
 
 $$
-    S(A,B) = P(A|B) - P(A) = .8 - .65 = = .15
+    S(A,B) = P(A|B) - P(A) = .8 - .65 = .15
 $$
 
 Notice that relevance is the sum of necessity and sufficiency:
@@ -327,7 +338,7 @@ $$
 
 **Post-Argument Necessity and Sufficiency**
 
-If **after** the argument the subject were to learn **additional** information causing them to reject 𝐵, the **new** posterior would be $P_i(A \vert \bar{B}) = P(A \vert \bar{B}) = 50\\%$. 
+If **after** the argument the subject were to learn **additional** information causing them to reject 𝐵, the **new** posterior would be $P_i(A \vert \bar{B}) = P(A \vert \bar{B}) = .5. 
 
 The post-argument necessity is therefore:
 
@@ -335,7 +346,7 @@ $$
     N_i(A,B) = P_i(A) - P_i(A | \bar{B}) = .77 - .5 = .27
 $$
 
-And if the subject were to learn additional information causing them to accept $B$ 100%, then new posterior would be $P_j(A) = P_i(A \vert B) = P(A \vert B) = 80\\%$.
+And if the subject were to learn additional information causing them to accept $B$ completely, then new posterior would be $P_j(A) = P_i(A \vert B) = P(A \vert B) = .8$.
 
 The post-argument sufficiency is therefore:
 

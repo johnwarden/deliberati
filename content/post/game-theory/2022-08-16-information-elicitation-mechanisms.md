@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Information Elicitation Mechanisms"
-date:   2021-09-12 00:00:00 +0200
+date:   2021-09-14 00:00:00 +0200
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Game Theory']
@@ -10,7 +10,7 @@ sidebar:
     nav: "give-truth-the-advantage"
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
-
+series: ['Game Theory in Social Media']
 
 ---
 
@@ -107,5 +107,4 @@ Fortunately, variations of these methods have since been developed that don't re
 
 We think these mechanisms have tremendous unrealized potential: in crowdsourced fact checking systems and blockchain governance protocols, and as key part of social media algorithms that [give truth the advantage](/give-truth-the-advantage).
 
-## Next in this Series: [The Law of Attention](/the-law-of-attention)
 

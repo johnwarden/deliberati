@@ -27,8 +27,9 @@ DefaultContentLanguage: en
 hasCJKLanguage: false
 
 taxonomies:
-  category: categories
+  # category: categories
   tag: tags
+  series: series
 
 permalinks:
     post: /:slug/
@@ -154,15 +155,9 @@ params:
             # - type: categories
             #   params:
             #       limit: 10
-            - type: tag-cloud
-              params:
-                  limit: 10
         page:
             - type: toc
-
-            - type: tag-cloud
-              params:
-                  limit: 10
+            - type: next-in-series
 
 
     opengraph:
@@ -210,14 +205,26 @@ menu:
         - identifier: github
           name: GitHub
           url: https://github.com/johnwarden
+          weight: 1
           params:
               icon: brand-github
 
         - identifier: twitter
           name: Twitter
+          weight: 2
           url: https://twitter.com/johnwarden
           params:
               icon: brand-twitter
+
+        - identifier: linkedin
+          weight: 3
+          name: LinkedIn
+          url: https://www.linkedin.com/in/jonathan-r-warden-4aa2357/
+          params:
+              icon: brand-linkedin
+
+
+enableInlineShortcodes: true
 
 related:
     includeNewer: true

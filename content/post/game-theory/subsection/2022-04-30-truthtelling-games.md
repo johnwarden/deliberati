@@ -14,6 +14,7 @@ sidebar:
     title: "Related Articles"
 # header:
 #     teaser: /assets/images/decentralized-truth-wide.png
+series: ['Game Theory in Social Media']
 
 ---
 
@@ -121,9 +122,6 @@ This means that, if a social network is designed as a coordination game where pa
 What does it mean to "tell the truth?" Colloquially it means **to say what one believes to be true**: to be honest. But this is not the same as speaking truth. **People can be honest and wrong.** 
 
 [The Deliberative Poll](/the-deliberative-poll) describes a social media algorithm for promoting **informed** opinions. Combining a Truthelling Game and a Deliverative Poll addresses the problems of **dishonesty** and **ignorance**, and can result in online communities where the way to win attention is to post, share, and upvote content that reflects opinions people's honest and informed opinions. The result is a social network that promotes not just truthtelling, but **the truth**.
-
-## Next in this Series: [Information Elicitation Mechanisms](/information-elicitation-mechanisms)
-
 
 
 [^1]: The rules of blockchains are complicated partly because common knowledge of the correct balance of an account requires common knowledge of the **order of transactions**. And although it's easy to prove that a transaction was authorized -- metaphorically, that a check was signed -- it's impossible to prove exactly **when**. But timing is critical because a check is no good unless there is enough money in the account, but this depends on which transactions happened previously. Once [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto#:~:text=Satoshi%20Nakamoto%20is%20the%20name,devised%20the%20first%20blockchain%20database.) solved this problem with a method for [objectively determining the order of transactions](https://bitcoin.org/bitcoin.pdf), it became possible to design a protocol where the **correct balance of each account was common knowledge**, and blockchains came into existence. 

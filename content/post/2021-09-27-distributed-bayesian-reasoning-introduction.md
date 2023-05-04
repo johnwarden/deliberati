@@ -3,7 +3,8 @@ layout: single
 title:  "Distributed Bayesian Reasoning Introduction"
 date:   2021-09-08 00:00:00 +0200
 weight: 50
-tags: ['Social Protocols', 'Distributed Bayesian Reasoning']
+tags: ['Social Protocols']
+series: ['Distributed Bayesian Reasoning']
 # tags: distributed-bayesian-reasoning
 toc: true
 toc_sticky: true
@@ -157,7 +158,7 @@ The real potential of collective intelligence is discovering not the opinion of 
 
 This super-human collective intelligence can only be achieved through a process of distributed reasoning.
 
-## Next in This Series
+## This Series
 
 - In [The Meta-Reasoner](/the-meta-reasoner), we precisely define the assumptions that go into our model of the hypothetical fully-informed group-member whose beliefs represent the combined knowledge and intelligence of the group.
 - We then derive the [Basic Math](/distributed-bayesian-reasoning-math) for estimating the post-deliberation beliefs of the meta-reasoner for a single argument thread.

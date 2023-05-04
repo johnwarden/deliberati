@@ -11,6 +11,7 @@ sidebar:
     nav: "bayesian-argumentation"
   - nav: "bayesian-argumentation-related"
     title: "Related Articles"
+series: ['Bayesian Argumentation']
 
 ---
 
@@ -112,8 +113,9 @@ $$
 Formula $\eqref{3}$ is known as [Jeffrey's Rule of Conditioning](https://www.sciencedirect.com/science/article/pii/0888613X89900030#:~:text=Abstract,of%20the%20normative%20Bayesian%20inference.). 
 
 
+
 <!-- This image is generated using R. Source: relevance-delta-chart.R -->
-<img src="/assets/images/bayesian-argumentation/relevance-delta.png"
+<img id="chart1" src="/assets/images/bayesian-argumentation/relevance-delta.png"
      alt="Relevance Chart"
      style="display: block; margin-left: auto; margin-right: auto; max-height: 800px" />
 
@@ -146,7 +148,7 @@ The horizontal axis is the **posterior** belief $P'(B)$, and the vertical axis i
 
 Relevance exists in the context of the subject's other prior beliefs.  For example, if (𝐶̅) *the car is out of gas*, and also ($\bar{B}$) *the battery is dead*, then both of these are good reasons to believe (𝐴̅) *the car won't start*. Yet neither is relevant on its own by the definition of relevance given above. Given that the car is out of gas, it makes no difference whether the battery is dead or not: the car won't start anyway. In other words, ($\bar{B}$) *the battery is dead* is irrelevant to (𝐴̅) *the car won't start* given (𝐶̅) *the car is out of gas*.
 
-But if the subject believes (𝐶) the car has gas, then ($\bar{B}$) the battery is dead will probably be relevant. When accepting one premise causes another premise to become relevant, we say that the premises are **corelevant**. If a premise is corelevant with some unexpressed premise, we can say that the premise is **conditionally relevant**.
+But if the subject believes (𝐶) *the car has gas*, then ($\bar{B}$) the battery is dead will probably be relevant. When accepting one premise causes another premise to become relevant, we say that the premises are **corelevant**. If a premise is corelevant with some unexpressed premise, we can say that the premise is **conditionally relevant**.
 
 ### Definition of Conditional Relevance
 
@@ -185,7 +187,7 @@ $$
 
 Unfortunately, this definition of conditional relevance still doesn't capture the the common notion of "relevance" very well, because we can almost always find some second premise that makes the premise conditionally relevant. For example, the premise (𝐻) *The car has a hood ornament* may not seem relevant to (𝐴) *the car will start*, but it is conditionally relevant given the premise (𝑀) *The car is powered by a magical hood ornament*.
 
-Of course, 𝑀 is pretty implausible -- $P(M)$ may be infinitesimally small, or even zero. But other more plausible corelevant premises may have small probabilities. For example, if the subject just filled the car with gas, they will be quite certain that (𝐺) the car has gas and thus $P(\bar{G})$ might be infinitesimally small. So in both cases we have corelevant premises with small prior probabilities, but a car running out of gas is something that is likely to actually happen in many similar scenarios, even if not this particular one. 
+Of course, 𝑀 is pretty implausible -- $P(M)$ may be infinitesimally small. But other more plausible corelevant premises may have small probabilities. For example, if the subject just filled the car with gas, they will be quite certain that (𝐺) *the car has gas* and thus $P(\bar{G})$ might be infinitesimally small. So in both cases we have corelevant premises with small prior probabilities, but a car running out of gas is something that is likely to actually happen in many similar scenarios, even if not this particular one. 
 
 Accounting for the difference in relevance in these two cases takes us into the metaphysical realm of modal logic, possible worlds, counterfactuals, and other difficult epistemological questions, that we won't try to answer here.
 

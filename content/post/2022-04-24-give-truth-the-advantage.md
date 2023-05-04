@@ -12,9 +12,12 @@ sidebar:
     nav: "give-truth-the-advantage"
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
+
+summary: "Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite?"
 # header:
 #     teaser: /assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 #     caption: "photo credit: [**Unsplash**](https://unsplash.com)"
+series: ['Game Theory in Social Media']
 
 ---
 
@@ -29,8 +32,6 @@ sidebar:
 
 
 Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite? 
-
-<!--more-->
 
 We can't prevent people from lying. But we can't on the one hand blame the algorithms for the spread of misinformation, and on the other hand blame everything on human nature. We know that the algorithms somehow change the nature of online discourse for the worse. So if they can be accidentally engineered to promote lies, couldn't they be intentionally engineered to promote truth?
 
@@ -87,8 +88,6 @@ The honest and informed opinion of a group of people on the Internet is not guar
 Today, the marketplace of ideas is held in public forums on the Internet, but the rules that govern the marketplace are broken. But we don't have to throw up our hands and accept this as an inevitable consequence of technology, or of human nature.
 
 If the platforms were designed differently, they could fulfill the original promise of the Internet: to democratize knowledge. To provide society with a tool for collectively discovering information, making sense of that information, and realizing humanity's potential for collective intelligence.
-
-## Next in this Series: [Truthtelling Games](/truthtelling-games)
 
 
 [^1]: https://www.nature.com/articles/s41599-020-00550-7

@@ -11,6 +11,7 @@ sidebar:
     nav: "bayesian-argumentation"
   - nav: "bayesian-argumentation-related"
     title: "Related Articles"
+series: ['Bayesian Argumentation']
 
 ---
 
@@ -33,7 +34,7 @@ $$
     P'(A) = P(A|B)
 $$
 
-But if 𝐵 is not new information -- that is, if the subject already believed that $P(B)$ was equal to 1 -- then $P(A \vert B)$ is already equal to $P(A)$. So the posterior $P'(A)$ is equal to the prior $P(A)$. 
+But if 𝐵 is not new information -- that is, if the subject already believed that $P(B) = 1$, then they must necessarily have *already* updated their belief in $A$, so that the prior belief $P(A) = P(A \vert B)$. So the posterior $P'(A)$ and the prior $P(A)$ are both equal to $P(A \vert B)$. 
 
 On the other hand, if the subject had, for some reason, previously assumed that the candidate did *not* have a pulse, and then subsequently learned that he did, this discovery might considerably brighten the candidate's prospects. 
 
@@ -66,22 +67,7 @@ So the effect of learning that the premise is true or false depends on the subje
 
 If the subject already accepts the premise and conclusion, and they wouldn't accept the conclusion if they didn't accept the premise, then the premise is **necessary**. If the subject does not already accept the premise or the conclusion, but they would accept the conclusion if they did accept the premise, then the premise is **sufficient**.
 
-Now, a Bayesian agent may only partially accept the premise or conclusion. And yet their partial acceptance of the premise may be necessary for their partial acceptance of the conclusion. For example, the subject may believe that the candidate **almost definitely** has a pulse, and that they are **probably** a good candidate, but almost definitely would not be if they didn't have a pulse. So necessity is a matter of degree.
-
-In fact, a premise can be *just a little bit* sufficient/necessary. The belief that *Tom Cruise is in Top Gun II* might be necessary for the subject's belief that Top Gun II is a little more likely than average to be a good movie. And learning that *Tim liked Top Gun II* may be sufficient to conclude that it may be worth going to see. 
-
-This contrasts with traditional logical ideas about necessity and sufficiency, where because propositions are either true or false, things are either necessary/sufficient or not.
-
-In the rest of this section, we will quantify necessity and sufficiency and demonstrate the following relationships between them:
-
-- The greater the prior acceptance of the premise, the more necessary
-- The greater the prior acceptance of the premise, the less sufficient
-- The more necessary the premise for the conclusion, the more sufficient the rejection of the premise for rejection of the conclusion, and vice versa.
-
-
-### Examples of Sufficiency and Necessity
-
-**Necessary but not Sufficient**:
+### Examples: Necessary but not Sufficient:
 
 Consider the following examples. You probably agree that these premises all seem like they should be necessary but not sufficient. 
 
@@ -89,9 +75,9 @@ Consider the following examples. You probably agree that these premises all seem
 - *Tweety can fly* **because** *he has wings*.
 - *My car will start* **because** *it has a battery*.
 
-Notice also that these premises all seem, *a priori*, probable. So if the subject learned that these premises were **not** true, this would probably be sufficient to reject the premise.
+Notice also that these premises all seem, *a priori*, probable. The subject probably accepts the premise, and that is why they probably accept the conclusion. If they didn't accept the premise, they would probably reject the conclusion, and so the premise is necessary.
 
-**Sufficient but not Necessary**:
+### Examples: Sufficient but not Necessary:
 
 For the following examples, you probably agree that the premises all seem like they should be (fairly) sufficient for the conclusion, but not necessary. 
 
@@ -99,21 +85,45 @@ For the following examples, you probably agree that the premises all seem like t
 - *John can fly* **because** *John is a bird*.
 - *The world will end next year* **because** *it will be hit by a giant asteroid*.
 
-Notice also that these premises all seem, *a priori*, improbable.  So if the subject learned that premises were true, this would be probably sufficient to accept the premise.
+Notice also that these premises all seem, *a priori*, improbable. The subject probably rejects the premise, and that is why the probably reject the conclusion. If they accepted the premise, they probably accept the conclusion, and so the premise is sufficient.
 
-**Both Sufficient and Necessary**:
+## Partial Acceptance of the Premise
 
-For  the following examples, you probably agree that the premises seem like they are both somewhat sufficient and somewhat necessary. But notice also that these premises all seem, *a priori*, neither very probable nor very improbable.
+So for a premise to be necessary, the subject must accept it to some degree: it must be *a priori* probable. For it to be sufficient, they must reject it to some degree: it must be *a priori* improbable. 
+
+In many cases, the subject neither completely accepts nor completely rejects the premise. In such cases it can be **both sufficient and necessary**.
+
+### Examples: Both Necessary and Sufficient
+
+For the following examples, you probably agree that the premises seem like they are both somewhat sufficient and somewhat necessary. 
 
 - *This is an above-average candidate* **because** *she scored above average on the skills test*.
 - *It is nighttime* **because** *it is dark outside*.
 - *The economy is doing poorly* **because** *stock prices are falling*.
 
+Notice also that these premises all seem, *a priori*, roughly equally likely to be true or false. The subject neither completely accepts nor completely rejects the premise, and that is why they neither completely accept nor completely rejects the conclusion. If they completely reject the premise, the conclusion seems less likely, and so the premise is somewhat necessary. If they completely accept the premise, the conclusion seems more likely, and so the premise is somewhat sufficient.
+
+## Quantifying Necessity and Sufficiency
+
+<!--
+
 Now what if the subject learned that these premises were definitely true, or definitely false? This would
  probably be almost sufficient to accept or reject the premise, respectively.
 
 
-### Quantifying Necessity and Sufficiency
+
+Now, a Bayesian agent may only partially accept the premise or conclusion. And yet their partial acceptance of the premise may be necessary for their partial acceptance of the conclusion. For example, the subject may believe that the candidate **almost definitely** has a pulse, and that they are **probably** a good candidate, but almost definitely would not be if they didn't have a pulse. So necessity is a matter of degree.
+
+
+For example, the subject may believe that the candidate **probably** has a pulse, and that they are **probably** a good candidate, but almost definitely would not be if they didn't have a pulse. So necessity is a matter of degree.
+
+
+So if the subject learned that premises were true, this would be probably sufficient to accept the premise.
+ So if the subject learned that these premises were **not** true, this would probably be sufficient to reject the premise.
+
+In fact, a premise can be *just a little bit* sufficient/necessary. The belief that *Tom Cruise is in Top Gun II* might be necessary for the subject's belief that Top Gun II is a little more likely than average to be a good movie. And learning that *Tim liked Top Gun II* may be sufficient to conclude that it may be worth going to see. 
+
+-->
 
 We can quantify the degree to which a premise is necessary by considering how much the subject's belief in the conclusion would decrease if they rejected the premise. Likewise we can quantify sufficiency as how much their belief in the conclusion would increase if they accepted the premise. These difference can be measured as an absolute difference, percent difference, etc. We will focus on the absolute difference.
 
@@ -221,6 +231,21 @@ It follows trivially that, to the degree that the premise is sufficient for the 
 $$
     S(A,B) = N(\bar{A},\bar{B})
 $$
+
+
+## Summary 
+
+- **Necessity**: $N(A,B) = P(A) - P(A \vert \bar{B}) = P(B)R(A,B)$
+- **Sufficiency**: $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$
+- The greater the prior acceptance of the premise, the more necessary it is for the conclusion
+    - Necessity = Relevance × Acceptance: $N(A,B) = P(A) - P(A \vert \bar{B}) = R(A,B)P(B)$
+- The greater the prior acceptance of the premise, the less sufficient it is for the conclusion
+    - Sufficiency = Relevance × Rejection: $S(A,B) = P(A \vert B) - P(A) = R(A,B)P(\bar{B})$
+- Relevance = Necessity + Sufficiency: $R(A,B) = N(A,B) + S(A,B)$
+- The more necessary the premise for the conclusion, the more sufficient the rejection of the premise for rejection of the conclusion, and vice versa.
+    $N(A,B) = S(\bar{A},\bar{B})$ and $S(A,B) = N(\bar{A},\bar{B})$
+
+
 
 ## Next in this Series
 
