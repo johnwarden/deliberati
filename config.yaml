@@ -192,39 +192,15 @@ params:
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    # main:
-        # - identifier: social-protocols
-        #   name: Social Protocols
-        #   url: /tags/social-protocols/
-        #   weight: -100
-        #   params:
-        #     icon: categories
-        #     newTab: false
+    main:
+        - identifier: home
+          name: Home
+          url: /
+          weight: -100
+          params:
+            icon: home
+            newTab: false
 
-        # - identifier: travel
-        #   name: Travel
-        #   url: /tags/travel/
-        #   weight: -98
-        #   params:
-        #     icon: categories
-        #     newTab: false
-
-        # - identifier: language-design
-        #   name: Language Design
-        #   url: /tags/language-design/
-        #   weight: -98
-        #   params:
-        #     icon: categories
-        #     newTab: false
-
-
-        # - identifier: philosophy
-        #   name: Philosophy
-        #   url: /tags/philosophy/
-        #   weight: -99
-        #   params:
-        #     icon: categories
-        #     newTab: false
 
     social:
         - identifier: github
