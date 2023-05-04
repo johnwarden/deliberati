@@ -4,7 +4,7 @@ layout: single
 title:  "Relevance and Corelevance"
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Argumentation Theory']
+tags: ['Argumentation Theory']
 weight: 71
 sidebar:
   - title: "In This Series"

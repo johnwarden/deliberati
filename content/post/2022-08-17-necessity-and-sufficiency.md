@@ -4,7 +4,7 @@ layout: single
 title:  "Necessity and Sufficiency"
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Argumentation Theory']
+tags: ['Argumentation Theory']
 weight: 72
 sidebar:
   - title: "In This Series"

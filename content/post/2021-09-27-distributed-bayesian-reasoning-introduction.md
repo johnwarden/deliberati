@@ -3,7 +3,6 @@ layout: single
 title:  "Distributed Bayesian Reasoning Introduction"
 date:   2021-09-08 00:00:00 +0200
 weight: 50
-tags: ['Social Protocols']
 series: ['Distributed Bayesian Reasoning']
 # tags: distributed-bayesian-reasoning
 toc: true

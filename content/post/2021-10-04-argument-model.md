@@ -3,7 +3,7 @@ layout: single
 title:  "The Deliberati Argument Model"
 slug: argument-model
 date:   2021-10-03 00:00:00 +0200
-tags: ['Social Protocols', 'Argumentation Theory']
+tags: ['Argumentation Theory']
 toc: true
 math: true
 weight: 70

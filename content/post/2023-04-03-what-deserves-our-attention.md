@@ -12,6 +12,7 @@ sidebar:
     nav: "social-protocols"
   - nav: "social-protocols-related"
     title: "Related Articles"
+image: assets/images/what-deserves-our-attention.png
 
 # menu:
 #     main:

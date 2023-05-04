@@ -4,7 +4,7 @@ title:  "A Bayesian Account of Argumentation"
 slug: bayesian-argumentation
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Argumentation Theory']
+tags: ['Argumentation Theory']
 series: ['Bayesian Argumentation']
 weight: 71
 summary: 'In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the quality of an argument in the mind of the subject. In other words we can objectively measure the subjective quality of an argument.'
@@ -74,11 +74,11 @@ But theoretically, if we have a model of some subject's beliefs about the world 
 
 This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). In this essay, we'll introduce the basic concepts of **premise**, **conclusion**, and **warrant** from argumentation theory, and connect these to the Bayesian concepts of **evidence**, **hypothesis**, and **priors**.
 
-Modern [Argumentation Theory](https://en.wikipedia.org/wiki/Argumentation_theory) views argument as a kind of more flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* in support the claim *it's probably cold outside*. 
+Modern [Argumentation Theory](https://en.wikipedia.org/wiki/Argumentation_theory) views argument as a kind of more flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* to support the claim *it's probably cold outside*. 
 
 We use the terms **premise** and **conclusion** to differentiate between the supporting and supported claim. An **argument** is just a premise stated in support of some conclusion.
 
-In every argument is the unstated claim that *this premise supports this conclusion*. This claim doesn't need to be stated because its obvious: why would one make the argument at all if the premise didn't support the conclusion? People rarely spell out the argument "if people are wearing jackets it's probably cold outside and people are wearing jackets". It's sufficient to argue *people are wearing jackets*.
+In every argument there is an unstated claim that *this premise supports this conclusion*. This claim doesn't need to be stated because its obvious: why would one make the argument at all if the premise didn't support the conclusion? I might argue **it is cold outside** because **people are wearing jackets**. I don't need to add the obvious "and if people are wearing jackets it must be cold outside".
 
 The unexpressed premise that justifies the inferential leap from premise to conclusion is called the [**warrant**](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.). The warrant can be any kind of inferential rule: deductive, inductive, intuitive -- whatever justifies the inference in the mind of the arguer. Some academics use different terms for these concepts: our terminology is influenced by the influential [Toulmin model](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.), except we prefer the traditional terms **premise** and **conclusion** over **grounds** and **claim**. More precise definitions of our terms are given in the [Deliberati Argument Model](/argument-model).
 

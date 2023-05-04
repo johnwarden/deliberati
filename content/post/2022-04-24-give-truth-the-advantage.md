@@ -5,7 +5,7 @@ title:  "Give Truth the Advantage"
 toc: true
 toc_sticky: true
 weight: 20 # Pin to top
-tags: ['Social Protocols', 'Game Theory']
+tags: ['Social Protocols']
 image: assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 sidebar:
   - title: "In This Series"

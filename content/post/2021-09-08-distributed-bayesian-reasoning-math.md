@@ -5,7 +5,6 @@ date:   2021-10-27 00:00:00 +0200
 
 weight: 110
 # toc_sticky: true
-tags: ['Social Protocols']
 series: ['Distributed Bayesian Reasoning']
 # categories: ["social-protocols"]
 

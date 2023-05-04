@@ -5,7 +5,7 @@ title:  "Informativeness and Persuasiveness"
 toc: true
 toc_sticky: true
 weight: 73
-tags: ['Social Protocols', 'Argumentation Theory']
+tags: ['Argumentation Theory']
 sidebar:
   - title: "In This Series"
     nav: "bayesian-argumentation"
