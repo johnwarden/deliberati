@@ -156,8 +156,8 @@ params:
             #   params:
             #       limit: 10
         page:
+            - type: series
             - type: toc
-            - type: next-in-series
 
 
     opengraph:
