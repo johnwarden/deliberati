@@ -12,20 +12,19 @@ sidebar:
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
 series: ['Game Theory in Social Media']
+
 ---
 
+In this article, I argue that we can apply [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain and control the behaviors that dominate in an online community. Not only can game theory explain why misinformation and abuse are so common in social platforms, it can be used to design social platforms that will be filled with honest, informed, civil, and behavior.
+
+
+## Attention Games
 
 > "If a tree falls in a forest and no one is around to hear it, does it make a sound?
 > If content is distributed and no attention is paid to it, does it matter?"
 >
 > -- Aviv Ovadya and Luke Thorburn, [Bridging Systems, 2023](https://arxiv.org/pdf/2301.09976.pdf)
 
-
-In this article, I argue that we can apply [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain and control the behaviors that dominate in an online community. Not only can game theory explain why misinformation and abuse are so common in social platforms, it can be used to design social platforms that will be filled with honest, informed, civil, and behavior.
-
-<!--more-->
-
-## Attention Games
 
 Social networks are games where people compete for attention. 
 

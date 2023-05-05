@@ -47,7 +47,7 @@ $$
 
 ## Quantifying Relevance
 
-We have defined the term **relevant** as a binary attribute. But we often talk about degrees or relevance. This can be measured as the difference between $P(A \vert B)$ and $P(A \vert \bar{B})$, which can be expressed in various ways (percent difference, absolute difference, ratio, etc.). We will focus on the absolute difference. 
+We have defined the term **relevant** as a binary attribute. But we often talk about degrees or relevance. This can be measured as the difference between $P(A \vert B)$ and $P(A \vert \bar{B})$.
 
 ### Definition of Relevance
 

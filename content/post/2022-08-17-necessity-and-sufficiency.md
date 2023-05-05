@@ -85,7 +85,7 @@ For the following examples, you probably agree that the premises all seem like t
 - *John can fly* **because** *John is a bird*.
 - *The world will end next year* **because** *it will be hit by a giant asteroid*.
 
-Notice also that these premises all seem, *a priori*, improbable. The subject probably rejects the premise, and that is why the probably reject the conclusion. If they accepted the premise, they probably accept the conclusion, and so the premise is sufficient.
+Notice also that these premises all seem, *a priori*, improbable. The subject probably rejects the premise, and that is why the probably reject the conclusion. If they accepted the premise, they would probably accept the conclusion, and so the premise is sufficient.
 
 ## Partial Acceptance of the Premise
 
@@ -101,7 +101,7 @@ For the following examples, you probably agree that the premises seem like they 
 - *It is nighttime* **because** *it is dark outside*.
 - *The economy is doing poorly* **because** *stock prices are falling*.
 
-Notice also that these premises all seem, *a priori*, roughly equally likely to be true or false. The subject neither completely accepts nor completely rejects the premise, and that is why they neither completely accept nor completely rejects the conclusion. If they completely reject the premise, the conclusion seems less likely, and so the premise is somewhat necessary. If they completely accept the premise, the conclusion seems more likely, and so the premise is somewhat sufficient.
+Notice also that these premises all seem, *a priori*, roughly equally likely to be true or false. The subject neither completely accepts nor completely rejects the premise, and that is why they neither completely accept nor completely reject the conclusion. If they completely rejected the premise, the conclusion would seem less likely. So the premise is somewhat necessary. If they completely accepted the premise, the conclusion would seem more likely. So the premise is somewhat sufficient.
 
 ## Quantifying Necessity and Sufficiency
 
@@ -125,7 +125,7 @@ In fact, a premise can be *just a little bit* sufficient/necessary. The belief t
 
 -->
 
-We can quantify the degree to which a premise is necessary by considering how much the subject's belief in the conclusion would decrease if they rejected the premise. Likewise we can quantify sufficiency as how much their belief in the conclusion would increase if they accepted the premise. These difference can be measured as an absolute difference, percent difference, etc. We will focus on the absolute difference.
+We can quantify the degree to which a premise is necessary by considering how much the subject's belief in the conclusion would decrease if they rejected the premise. Likewise we can quantify sufficiency as how much their belief in the conclusion would increase if they accepted the premise.
 
 #### Necessity
 

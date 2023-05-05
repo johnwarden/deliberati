@@ -19,13 +19,13 @@ sidebar:
 
 ## Quantifying Argument
 
-What makes for a *good* argument? How can this be quantified?
+What makes for a *good* argument?
 
 From a logical point of view, a good argument is logically sound. But in the real-world people rarely argue with pure logic. 
 
 From a rhetorical point of view, a good argument is one that is convincing. But how can this be measured?
 
-In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. In other words we can objectively measure an arguments' subjective quality.
+In this essay, we present an account of argumentation as the exchange of information between Bayesian rational agents. The basic idea of the Bayesian view of probability is that probabilities represent subjective degrees of belief. So if we know the beliefs of some rational "subject", we can precisely define and measure various concepts relating to the strength or quality of an argument in the mind of the subject. In other words we can objectively measure an arguments' subjective qualities.
 
 Economists and data scientists increasingly use the Bayesian rational agent as a model of human behavior. Like all models it is imperfect, but it has the advantage of being well defined. Building clear terminology on top of a clear model helps clarify our thinking and sharpen our intuition about what argument actually is.
 
@@ -57,7 +57,7 @@ If our subject is a Bayesian rational agent with common sense, then probably:
     - If the subject learned that the subject did **not** have a pulse, this would be **sufficient** to reject him as a candidate.
     - Alternatively, the belief that he probably has a pulse is **necessary** for the belief that he might be a good candidate.
 
-In this series of esseys, we will precisely define the concepts of relevance, informativeness, persuasiveness, sufficiency, and necessity and quantify these with some concrete numerical examples.
+In this series of esseys, we will precisely define the concepts of **relevance**, **informativeness**, **persuasiveness**, **sufficiency**, and **necessity** and quantify these with some concrete numerical examples.
 
 ## Introductory Example 2
 
@@ -72,27 +72,25 @@ But theoretically, if we have a model of some subject's beliefs about the world 
 
 ## Argumentation Terminology 
 
-This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). In this essay, we'll introduce the basic concepts of **premise**, **conclusion**, and **warrant** from argumentation theory, and connect these to the Bayesian concepts of **evidence**, **hypothesis**, and **priors**.
+This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). Argumentation theory views argument as a kind of flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* to support the claim *it's probably cold outside*. 
 
-Modern [Argumentation Theory](https://en.wikipedia.org/wiki/Argumentation_theory) views argument as a kind of more flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* to support the claim *it's probably cold outside*. 
+We use the terms **premise** and **conclusion** to differentiate between the supporting and supported claims. An **argument** is just a premise stated in support of some conclusion.
 
-We use the terms **premise** and **conclusion** to differentiate between the supporting and supported claim. An **argument** is just a premise stated in support of some conclusion.
-
-In every argument there is an unstated claim that *this premise supports this conclusion*. This claim doesn't need to be stated because its obvious: why would one make the argument at all if the premise didn't support the conclusion? I might argue **it is cold outside** because **people are wearing jackets**. I don't need to add the obvious "and if people are wearing jackets it must be cold outside".
+In every argument there is an unstated claim that *this premise supports this conclusion*. This doesn't need to be stated because it's implied by the fact that the argument was made. After arguing *it's probably cold outside* because *people are wearing jackets*, I don't need to add, pedantically, "and you see, if people are wearing jackets it must be cold outside".
 
 The unexpressed premise that justifies the inferential leap from premise to conclusion is called the [**warrant**](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.). The warrant can be any kind of inferential rule: deductive, inductive, intuitive -- whatever justifies the inference in the mind of the arguer. Some academics use different terms for these concepts: our terminology is influenced by the influential [Toulmin model](https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html#:~:text=Toulmin%2C%20the%20Toulmin%20method%20is,the%20grounds%2C%20and%20the%20warrant.), except we prefer the traditional terms **premise** and **conclusion** over **grounds** and **claim**. More precise definitions of our terms are given in the [Deliberati Argument Model](/argument-model).
 
-In Bayesian terms, a rational agent is said to acquire **evidence**, which causes them to change their belief in the probability of some **hypothesis**. There is clearly an analogy here: **evidence is to hypothesis as premise is to conclusion**. But what is the warrant? 
+## A Bayesian Definition of Warrant
 
-## Warrants
+In Bayesian terms, a rational agent is said to acquire **evidence**, which causes them to change their belief in the probability of some **hypothesis**. There is clearly an analogy here: **evidence is to hypothesis as premise is to conclusion**. But what is the warrant? 
 
 The warrant clearly has to do with the subject's **prior beliefs**, because a Bayesian agent's priors are precisely what justify, in their mind, any inferential leap from premise to conclusion.
 
 For example, if our subject is more likely to believe that (𝐴) *it is going to rain today* if they believe that (𝐵) *the sky is cloudy* than if they do not, then there clearly exists a warrant justifying, in the subject's mind, the inferential leap from 𝐵 to 𝐴.
 
-But **why** does this warrant exist in the subject's mind? What actually justifies the inference? Is it a deductive inference? Inductive inference? Gut feeling?
+But **why** does this warrant exist in the subject's mind? What actually justifies the inference? Is it a deductive inference? Inductive? Gut feeling?
 
-We can't necessarily answer this question, because a Bayesian agent's beliefs are modeled by a simple probability distribution, which gives us the end result of the agent's internal reasoning process, but not how they got there.
+We can't necessarily answer this question, because a Bayesian agent's beliefs are modeled by a simple probability distribution, which gives us the end result of the agent's internal belief-forming process, but not how they got there.
 
 If the prior beliefs of our subject are represented by the probability measure $P$, then we can at least say that, in the mind of the subject, **a warrant exists justifying the inference from premise 𝐵 to conclusion 𝐴 iff**:
 
@@ -109,7 +107,7 @@ So in a Bayesian argument, an arguer asserts a **premise** in support/opposition
 
 ## This Series
 
-In the [next essay](/relevance-and-corelevance) in this series, we will formally define **relevance** and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of necessity, sufficiency, informativeness, and persuasiveness, all of which relate back to this central concept of relevance, and all of which can be precisely defined.
+In the [next essay](/relevance-and-corelevance) in this series, we will formally define **relevance** and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of **necessity**, **sufficiency**, **informativeness**, and **persuasiveness**, all of which relate back to this central concept of relevance, and all of which can be precisely defined and quantified.
 
 - [Relevance and Corelevance](/relevance-and-corelevance)
 - [Necessity and Sufficiency](/necessity-and-suficiency)
@@ -122,16 +120,15 @@ But skipping ahead, here is a tl;dr; of all the terms that will be defined in th
 *For an argument with premise 𝐵 and conclusion 𝐴, and a subject whose beliefs are represented by probability measure P...*
 
 - **Relevant**: The premise is **relevant** to the conclusion (or, the argument is relevant) **iff** $P(A \vert B) ≠ P(A \vert \bar{B})$
-
-- **Irrelevant**: The premise is **irrelevant** to the conclusion (or, the argument is irrelevant) **iff** $P(A \vert B) = P(A \vert \bar{B})$.
-    - Irrelevance implies statistical independence of A and B.
+    - Otherwise, the premise is **irrelevant** to the conclusion  (or, the argument is irrelevant)
+        - Irrelevance implies statistical independence of A and B.
 
 - **Support**: The premise **supports** the conclusion **iff** $P(A \vert B) > P(A \vert \bar{B})$
 
 - **Oppose**: The premise **opposes** the conclusion **iff** $P(A \vert B) < P(A \vert \bar{B})$
     - If 𝐵 supports 𝐴, then 𝐵 opposes $\bar{A}$
 
-- **Relevance**: $R(A,B) = P(A \vert B) - P(A \vert \bar{B})$
+- **Relevance**: The relevance of the premise to the conclusion is $R(A,B) = P(A \vert B) - P(A \vert \bar{B})$
 
 - **Conditional Relevance**: *Given some third premise 𝐶*: $R(A,B \vert C) = P(A \vert B,C) - P(A \vert \bar{B},C)$
 
@@ -139,9 +136,9 @@ But skipping ahead, here is a tl;dr; of all the terms that will be defined in th
 
 - **Corelevance**: $CR(A;B,C) = R(A,B \vert C) - R(A,B \vert \bar{C}) = R(A,C \vert B) - R(A,C \vert \bar{B})$
 
-- **Necessity**: $N(A,B) = P(A) - P(A \vert \bar{B}) = P(B)R(A,B)$
+- **Necessity**: The necessity of the premise to the conclusion is $N(A,B) = P(A) - P(A \vert \bar{B}) = P(B)R(A,B)$
 
-- **Sufficiency**: $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$
+- **Sufficiency**: The sufficiency of the premise for the conclusion is $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$
 
 - **Argument Event**: The event, directly observed by the subject, that the arguer asserted the premise in support of the conclusion.
 
@@ -150,12 +147,12 @@ But skipping ahead, here is a tl;dr; of all the terms that will be defined in th
 
 - **Informative**: The assertion of the premise is **informative** (the argument is informative) **iff** $P_i(B) > P(B)$
 
-- **Informativeness**: The difference (absolute, percent, relative entropy. etc.) between $P_i(B)$ and $P(B)$
+- **Informativeness**: The informativeness of the argument is $P_i(B) - P(B)$
 
 - **Persuasive**: The argument is **persuasive** **iff** $P_i(A) > P(A)$
     - Alternatively, the argument is **persuasive** if the argument is relevant and informative
 
-- **Persuasiveness**: The difference (absolute, percent, relative entropy. etc.) between $P_i(A)$ and $P(A)$
+- **Persuasiveness**: The persuasiveness of the argument is $P_i(A) - P(A)$
 
 
 <!--

@@ -49,7 +49,7 @@ But how can technology give the advantage to truth without having an opinion abo
 
 In the same way that today's social networks give the advantage to falsehood without having an opinion about what is false. By creating a feedback loop.
 
-## The Engagement Trap
+## The Law of Attention
 
 > "What information consumes is rather obvious: it consumes the attention of its recipients."
 >

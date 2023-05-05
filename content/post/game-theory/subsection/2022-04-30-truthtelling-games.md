@@ -15,15 +15,17 @@ sidebar:
 # header:
 #     teaser: /assets/images/decentralized-truth-wide.png
 series: ['Game Theory in Social Media']
-
+summary: "In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions."
 ---
 
+## How To Get People on the Internet to Tell the Truth
 
 Everyone knows that you can't believe what you read on the Internet. That is, unless it comes from people you trust. 
 
 Except...many of us also trust content from websites such as Wikipedia and Stack Overflow, which accept anonymous contributions from random people on the Internet. How can these sites consistently produce trusthworthy content from people who are not necessarily trustworthy? 
 
 In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions.
+
 
 A striking example of where this has actually been done is blockchain. If you directly own cryptocurrency, the balance of your cryptocurrency wallet is stored in a ledger maintained by a group of anonymous people on the Internet. These people are not necessarily by nature very honest, and yet they always tell the truth about your wallet balance. Game theory can explain why they don't just take all your cryptocurrency for themselves.
 

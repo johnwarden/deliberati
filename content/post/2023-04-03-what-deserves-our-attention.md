@@ -27,7 +27,9 @@ image: assets/images/what-deserves-our-attention.png
 
 Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page. This rule concentrates attention on popular content. 
 
-But this is a terrible rule. It creates perverse incentives for people to share content with generic appeal based on uninformed first impressions. It encourages shallow conversation on lowbrow topics. The engagement-based ranking used in many social networks is even worse, concentrating attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
+But this is a terrible rule. It creates perverse incentives for people to share content that people will reflexively upvote based on first impressions. It encourages shallow conversation on lowbrow topics. 
+
+Engagement-based ranking, use by many social networks, is even worse. It concentrates attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
 
 So how should content be ranked? What content deserves our collective attention, and how should this be determined? 
 
