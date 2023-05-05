@@ -81,7 +81,7 @@ And since the second trial revealed that a randomly-selected juror *would* find 
 
 ## The Bayesian Juror
 
-The reasoning of the hypothetical juror can be seen as a trivial use of [**Bayesian inference**](/review-of-bayesian-inference) to **revise beliefs based on new information**. For a very brief review of the basic concept of Bayesian inference, sufficient to understand the section below, read [A Brief Review of Bayesian Inference](/review-of-bayesian-inference).
+The reasoning of the hypothetical juror can be seen as a trivial use of **Bayesian inference** to **revise beliefs based on new information**. For a very brief review of the basic concept of Bayesian inference, sufficient to understand the section below, I suggest [A Bayesian Inference Primer](/bayesian-inference-primer).
 
 Imagine a hypothetical juror that is a perfect Bayesian reasoner and that has **prior beliefs that are equal to the average beliefs of the jurors in the first jury**. 
 

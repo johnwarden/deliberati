@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "A Brief Review of Bayesian Inference"
-slug: review-of-bayesian-inference 
+title:  "A Bayesian Inference Primer"
+slug: bayesian-inference-primer 
 date:   2021-10-26 00:00:00 +0200
 toc: true
 toc_sticky: true
@@ -19,9 +19,9 @@ header:
 > -- Sherlock Holmes (Arthur Conan Doyle)
 
 
-For a long time Bayesian inference was something I understood without really understanding it. I only really *got it* it after reading Chapter 2 of John K. Kruschke's textbook [*Doing Bayesian Data Analysis*](https://nyu-cdsc.github.io/learningr/assets/kruschke_bayesian_in_R.pdf), where he describes Bayesian Inference as [*Reallocation of Credibility Across Possibilities*](https://link.springer.com/article/10.3758/s13423-017-1272-1).
+For a long time Bayesian inference was something I understood without really understanding it. I only really *got it* it after reading Chapter 2 of John K. Kruschke's textbook [*Doing Bayesian Data Analysis*](https://nyu-cdsc.github.io/learningr/assets/kruschke_bayesian_in_R.pdf), where he describes Bayesian Inference as *Reallocation of Credibility Across Possibilities*
 
-I now understand Bayesian Inference to be essentially Sherlock Holmes' pithy statement about eliminating the impossible quoted above, taken to its mathematical conclusion. This article is my own attempt to elucidate this idea, targeted for readers of my article on [Distributed Bayesian Reasoning](/distributed-bayesian-reasoning-introduction).
+I now understand Bayesian Inference to be essentially Sherlock Holmes' pithy statement about eliminating the impossible quoted above, taken to its mathematical conclusion. This article is my own attempt to elucidate this idea. If this essay doesn't do the trick, you might try [Bayesian Reasoning for Intelligent People](https://www.google.com/search?q=bayesian+for+smart+people&oq=bayesian+for+smart+people&aqs=chrome..69i57.3581j0j9&sourceid=chrome&ie=UTF-8) by Simon DeDeo or Kruschke's [Bayesian data analysis for newcomers](https://link.springer.com/article/10.3758/s13423-017-1272-1).
 
 ## Prior Beliefs
 
@@ -47,7 +47,9 @@ Bayesian reasoners then revise their beliefs when they acquire evidence accordin
 
 For example, if the Duchess's body is found buried under the Atrium, Holmes must eliminate the possibility that she is being held captive and alive by the Duke. He must then reallocate probability among the remaining possibilities.
 
-So he concludes that she was either murdered by the Duke or murdered by the Count. These new beliefs are called his **posterior** beliefs.
+So all the remaining probability is allocated to the possible scenarios in which the Duchess is dead: murdered either by the Duke or the Count.
+
+These new beliefs are called his **posterior** beliefs.
 
 **Posterior Beliefs**
 
@@ -84,10 +86,6 @@ Another way of looking at this is that the 50% "probability mass" previously all
 
 <div style="font-size: smaller; padding-left: 20px; margin-bottom: 20px;">Illustration of the concept of "Reallocation" or Probability Mass. After the "Alive+Duke" scenario is eliminated, probability mass is reallocated to the remaining 2 scenarios.</div>
 
-<!--
-Reallocation of probability mass must be **proportional**. In the example above, the prior probabilities of last two possibilities are equal, so the posteriors must also be equal. On the other hand, if one possibility were twice as likely as the next in the priors, it would remain twice as likely in the posteriors. We will discuss the exact math for calculating posterior probabilities below.
--->
-
 ## Sequential Updating
 
 Suppose Holmes subsequently finds evidence that exonerates the Count. We now simply repeat the process of Bayesian inference: the posterior from the last piece of evidence become the prior for the next, and probability mass is again reallocated. This time, since only one possibility remains, all probability mass is reallocated to this possibility.
@@ -123,9 +121,8 @@ Suppose Holmes subsequently finds evidence that exonerates the Count. We now sim
 
 So what happens now that we've reached a point where there are no more possibilities to eliminate? At this point, no more inferences can be made. There is nothing more to learn -- at least with respect to the Case of the Disappearing Duchess.
 
-It might seem counter-intuitive that every time a Bayesian reasoner learns something, they eliminate rows from the probability distribution, in a sense **decreasing** the amount of information. Isn't Bayesian inference about increasing information, not decreasing it?
 
-But in fact, from an information-theoretic perspective, eliminating possibilities is exactly what information is. It is the reduction of uncertainty. Every time a possibility is eliminated from the probability distribution, its entropy decreases, until only one possibility remains and there is no uncertainty, at which point entropy is zero.
+From an information-theoretic perspective, fewer possibilities means less *entropy*. Every time a possibility is eliminated from the probability distribution, its entropy decreases, until only one possibility remains, at which point entropy is zero.
 
 Which brings us back to Sherlock Holmes: *When you have eliminated the impossible, all that remains, no matter how improbable, must be the truth.* Bayesian inference can be thought of as the process of eliminating the impossible, and then updating the probability of "all that remains" to be 1.
 
@@ -136,15 +133,15 @@ Which brings us back to Sherlock Holmes: *When you have eliminated the impossibl
 
 ## Updating Beliefs based on Evidence
 
-What makes Bayesian inference so powerful is that learning one thing can change the probability of another thing, sometimes in non-intuitive ways.
+What makes Bayesian inference so powerful is that learning one thing can change belief in another thing, sometimes in non-intuitive ways.
 
 For example, learning that the Duchess is dead **decreased** the probability that the Duke did it (from 75% to 50%), and **increased** the probability that the Count did it (from 25% to 50%). 
 
-You can see this in the four charts below. The first two charts we have already seen: they show the prior and posterior for each *scenario*. 
+You can see this in the four charts below. The first row of charts we have already seen: they show Holme's priors, and his posteriors after learning that the Duchess is dead. 
 
-The second two charts show the same probabilities, but this time showing the *total* for reach *culprit*. The Duke is the culprit in two difference scenarios, so the total prior probability for the Duke is the sum of the probability of these two scenarios (50% + 25% = 75%).
+The second row of charts show the same probabilities, but this the chart shows the *total* for each *culprit*. The Duke is the culprit in two different scenarios, so the total prior probability for the Duke is 50% + 25% = 75%. The total prior probability for the Count is 25%.
 
-After eliminating the Alive+Dike scenario, the remaining probability mass for the Duke and the Count are the same. 
+After eliminating the Alive+Dike scenario, the remaining probability mass for the Duke and the Count are the same. These are then scaled up so to 50% each so their total sums to 100%. But the net result is that a decreased total probability for the Duke and increased total probability for the Count.
 
 <img src="/assets/images/distributed-bayesian-reasoning/reallocation-of-probabilities-3.svg"
      alt="Reallocation of Probabilities Example"
@@ -156,75 +153,68 @@ After eliminating the Alive+Dike scenario, the remaining probability mass for th
 
 ## Beliefs as Joint Probability Distributions 
 
-Evidence about one proposition can only change beliefs about another proposition because the prior beliefs are beliefs in **combinations** of propositions, not individual propositions. 
+The key to the power of Bayesian inference is that it tells us exactly how a rational being should update their belief in one thing (the probability that the Duke or Count did it), after learning another thing (the Countess is dead). The logic shown in the charts above is inescapable: if Holme's prior beliefs are those in the first column of charts above, then his posteriors *must* be those in the second column. Anything else would be irrational.
 
-Holmes' prior beliefs are not simply that *there is a 75% chance that the Duke did it* or *there is a 50% chance that the Duchess is dead*. If his beliefs were so simple, learning that the Duchess was murdered would not tell Holmes anything about whether it was the Duke or the Count that did it.
+Inferring one thing from another thing is only possible here because the prior beliefs are beliefs in **combinations** of propositions, not individual propositions. Holmes' prior beliefs are not simply that *there is a 75% chance that the Duke did it* or *there is a 50% chance that the Duchess is dead*. If his beliefs were so simple, learning that the Duchess was murdered would not tell Holmes anything about whether it was the Duke or the Count that did it.
 
-Rather his beliefs are a joint probability distribution in which there is positive correlation between the Duchess being dead and Count having done it. It is these correlations that encode the knowledge that enables Homes to make inferences about the culprit upon learning of the Duchess's death.
+Rather his beliefs are a joint probability distribution telling is the probability of **combinations** of propositions (e.g. the Countess is Dead + the Duke did). And in this join distribution, there is positive correlation between the Duchess being dead and Count having done it. It is these correlations that encode the knowledge that enables Homes to make inferences about the culprit upon learning of the Duchess's death.
 
-I think that understanding prior beliefs as a belief in a **join probability distribution** is key to understanding Bayesian Inference.
+I think that understanding prior beliefs as a belief in a join probability distribution is key to understanding Bayesian Inference.
 
-## Math for Reallocating Probability
+<!--
+## Proportional Reallocation
 
-Here again are Homes's prior beliefs before the Countess was found buried under the Atrium. 
+An important detail we previously glossed over as that reallocation of probability must be proportional. In the example above, the prior probabilities of last two possibilities were equal, so the posteriors must also be equal -- anything else would be arbitrary and illogical. On the other hand, if one possibility were twice as likely as the next in the priors, it would remain twice as likely in the posteriors. 
+-->
 
-**Prior Beliefs**
+## Conditional Probability
 
-| Culprit   | Status    | Probability 
-| --------- | --------- | -------------
-| Duke      | Alive     | 50%          
-| Duke      | Dead      | 25%         
-| Count     | Dead      | 25%         
-|           | TOTAL     | 100%
+Before discovering the Duchess's body under the Atrium, we can calculate what Holme's beliefs **would** be if he learned that the Duchess was dead. This hypothetical probability is called a **conditional** probability.
 
-After eliminating the first possibility, the probability of the second two possibilities must be scaled so that they sum to 100%.
+Conditional probabilities are written in the form $P(Hypothesis \vert Evidence)$. $Evidence$ is whatever new information has been learned (e.g. the Duchess is Dead), and $Hypothesis$ is any other proposition of interest (e.g. the Duke Count did it).
 
-To scale any set of numbers so that they sum to 100%, just divide each by the total. The total probability of the last two possibilities is 25% + 25% = 50%. So to make these two possibilities sum to 100%, we divided each by 50%. Since 25%/50% = 50%, the posterior probability of each remaining possibility is 50%.
-
-
-Generalizing, **the total prior probability of the possibilities compatible with the evidence is just the total prior probability of the evidence**. So in this case, the evidence is that the countess is dead, and the total prior probability that the countess is dead is 25%+25% = 50%.
-
-Using $P$ to indicate the prior probability, we can write this mathematically as:
+The conditional probability can be calculated according to the following formula:
 
 $$
 \begin{aligned}
-    P(Dead) &= P(Duke, Dead) + P(Count, Dead) \newline
-            &= 25\\% + 25\\% = 50\\%
+    P(Hypothesis \vert Evidence) &= \frac{P(Hypothesis, Evidence)}{P(Evidence)}
 \end{aligned}
 $$
 
-We use $P'$ to indicate the posterior probability. To find the posterior probability of the remaining possibilities, we divide each by $P(Dead) = 50\\%$$
+Where $P(Hypothesis, Evidence)$ is the **total prior probability** of all possibilities where both the evidence and hypothesis is true, and $P(Evidence)$ is the total probability of possibilities where the evidence is true.
+
+For example, referring back to Holme's prior probability table, you can see that $P(Duke, Dead) = 25\\%$, and $P(Dead) = 25\\% + 25\\% = 50\\%$. So:
 
 $$
 \begin{aligned}
-    P'(Duke, Dead) &= \frac{P(Duke, Dead)}{P(Dead)} &= \frac{25\\%}{50\\%} = 50\\% \newline
-    P'(Count, Dead) &= \frac{P(Count, Dead)}{P(Dead)} &= \frac{25\\%}{50\\%} = 50\\%
+    P(Duke|Dead) &= \frac{P(Duke, Dead)}{P(Dead)}\cr
+                 &= \frac{25\\%}{50\\%} = 50\\%
 \end{aligned}
 $$
 
-## Conditioning
+## Posterior Belief Formula
 
-Now since we know that the Duchess is dead, $P'(Duke, Dead)$ and $P'(Count, Dead)$ are redundant: they are just equal to $P'(Duke)$ and $P'(Count)$ respectively. So:
+It is a common convention to represent **prior** beliefs (before learning some piece of new information) as $P$, and **posterior** beliefs (after learning new information) as $P'$. $P'$ represents a whole new probability distribution, generated from $P$ by eliminating all possibilities incompatible with the evidence and scaling the remaining probabilities so they sum to 1.
 
-$$
-\begin{aligned}
-    P'(Duke) &= \frac{P(Duke, Dead)}{P(Dead)}\newline
-    P'(Count) &= \frac{P(Count, Dead)}{P(Dead)}
-\end{aligned}
-$$
+For example, Holme's belief in the probability that the Duke did it, after finding the Duchess's body, is $P'(Duke)$.
 
-
-We can generalize this formula. After learning some evidence (e.g. the Duchess is Dead), a Bayesian reasoner's posterior probability of some hypothesis (e.g. the Duke or the Count did it), should be:
+Now we don't actually have to calculate all of $P'$ if all we want to know is $P'(Duke)$. Instead, we can use the conditional probability formula. Holme's posterior beliefs, after learning that the Duchess is dead, is equal to his prior beliefs *given* the Duchess was dead:
 
 $$
-\begin{aligned}
-    P'(Hypothesis) &= \frac{P(Hypothesis, Evidence)}{P(Evidence)}
-\end{aligned}
+    P'(Duke) = P(Duke|Dead)
 $$
+
+Or more generally
+
+$$
+    P'(Hypothesis) = P(Hypothesis|Evidence)
+$$
+
+This simple little formula is an important one to memorize. Note that the left-hand side is a posterior probability, and the right-hand side is a prior probability. The formula enables us to calculate, knowing the prior probabilities, the posterior probability of any hypothesis given any piece of evidence.
 
 ## Summary
 
-So far, we have engaged in Bayesian inference without using the famous Bayes' Theorem, or the concept of conditional probability. Once you understand the above conditioning rule, these will be very easy to understand. But I won't explain them here, as I think is where my ability to contribute some unique insight about Bayesian inference ends.
+So far, we have engaged in Bayesian inference without using the famous Bayes' Theorem. Bayes rule is not actually necessary for Bayesian inference. However, it often comes in handy. However, I won't explain Bayes' theorem here, as I think is where my ability to contribute some unique insight about Bayesian inference ends.
 
 Here's a summary of the idea presented in this essay:
 
@@ -234,6 +224,7 @@ Here's a summary of the idea presented in this essay:
   - By dividing their probability by the prior probability of the evidence
 - Update beliefs sequentially by eliminating possibilities as new evidence is learned
 - Make inferences about hypotheses based on evidence by simply calculating the total posterior probability of the hypothesis
+
 
 <!--
 
