@@ -37,19 +37,19 @@ menu:
 <ol class="social-menu">
 
 <li>
-    <a href="https://github.com/johnwarden" target="_blank" title="GitHub" rel="me">
+    <a href="https://github.com/johnwarden" target="_blank" title="github.com/johnwarden" rel="me">
         {{< readfile file="/assets/icons/brand-github.svg">}}
     </a>
 </li>
 
 <li>
-    <a href="https://twitter.com/johnwarden" target="_blank" title="Twitter" rel="me">
+    <a href="https://twitter.com/johnwarden" target="_blank" title="@johnwarden" rel="me">
         {{< readfile file="/assets/icons/brand-twitter.svg">}}
     </a>
 </li>
 
 <li>
-    <a href="https://www.linkedin.com/in/jonathan-r-warden-4aa2357/" target="_blank" title="LinkedIn" rel="me">
+    <a href="https://www.linkedin.com/in/jonathan-r-warden-4aa2357/" target="_blank" title="Jonathan Warden's LinkedIn" rel="me">
         {{< readfile file="/assets/icons/brand-linkedin.svg">}}
     </a>
 </li>
