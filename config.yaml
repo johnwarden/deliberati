@@ -1,4 +1,4 @@
-baseurl: https://new.deliberati.io
+baseurl: https://deliberati.io
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 20

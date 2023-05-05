@@ -17,6 +17,31 @@ Or you can delete these file if you don't need it.
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.css" integrity="sha256-I1UoFd33KHIydu88R9owFaQWzwkiZV4hXXug5aYaM28=" crossorigin="anonymous" />
 -->
 
+<script>
+  //auto redirect from current *.gitlab.io to custom domain
+  //send destination domain as domainTo (FQDN)
+  function _redirectNoncanonicalDomains(domainTo=true){
+
+    // Gitlab can't do domain-level 301 redirects per: https://docs.gitlab.com/ee/user/project/pages/redirects.html
+    // And namecheap can't do wildcard URL redirects through SSL (because they'd need to have our SSL cert)
+    // So we are stuck with using Javascript for redirects
+
+    var x = location.hostname.search("gitlab.io")!= -1 ? true : false; // true if *.gitlab.io
+    if(x) location.hostname = domainTo; 
+
+    var x = location.hostname.search("github.io")!= -1 ? true : false; // true if *.github.io
+    if(x) location.hostname = domainTo; 
+
+
+    var x = location.hostname.search(".deliberati.io")!= -1 ? true : false; // true if *.deliberati.io
+    if(x) location.hostname = domainTo; 
+
+  }
+
+  // _redirectNoncanonicalDomains("deliberati.io");
+
+</script>
+
 
 <style>
 
