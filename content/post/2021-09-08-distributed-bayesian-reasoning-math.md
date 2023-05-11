@@ -525,7 +525,7 @@ Our causal assumptions are that:
 
 1. simply voting on 𝐵 (and thus being informed of the arguments for/against 𝐴) effects probability of accepting 𝐴 and.
 
-2. 𝐵 is the **only** variable that directly effects the probability of accepting 𝐴 (the (#conditional-independence)[conditional-independence] assumption).
+2. 𝐵 is the **only** variable that directly effects the probability of accepting 𝐴 (the [conditional-independence](#conditional-independence# assumption).
 
 These assumptions give us this causal graph:
 
@@ -563,7 +563,7 @@ Which is $\eqref{3}$.
 
 ### Derivation 2
 
-Given this definition for $P_i$$
+Given this definition for $P_i$
 
 $$
 \begin{aligned} 

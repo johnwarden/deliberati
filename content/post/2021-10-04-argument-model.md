@@ -106,7 +106,7 @@ $$
     \text{𝑋◃-𝑌}
 $$
 
-For example, the argument $\text{𝐵◃-𝐺} might be expressed in plain English as *the fact that the signature was forged is a good reason NOT to believe that the defendant signed a confession*.
+For example, the argument $\text{𝐵◃-𝐺}$ might be expressed in plain English as *the fact that the signature was forged is a good reason NOT to believe that the defendant signed a confession*.
 
 If the claim 𝐵 is also used as the premise of some other argument, that would be a separate argument. For example, an argument that opposes conclusion 𝐻 with premise 𝐵 would be $\text{𝐻◃-𝐵}$, which is not the same argument as $\text{𝐴◂-𝐵}$, even though it uses the same premise
 
