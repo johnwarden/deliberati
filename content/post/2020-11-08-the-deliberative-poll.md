@@ -5,15 +5,8 @@ date:   2020-11-08 13:40:43 -0700
 tags: ['Social Protocols']
 weight: 30
 toc: true
-toc_sticky: true
-# header:
-#     teaser: /assets/images/dylan-gillis-KdeqA3aTnBY-unsplash-wide-1920.jpg
-#     caption: "photo credit: [**Unsplash**](https://unsplash.com)"
-sidebar:
-  - title: "In This Series"
-    nav: "give-truth-the-advantage"
-  - nav: "give-truth-the-advantage-related"
-    title: "Related Articles"
+# toc_sticky: true
+image: /assets/images/the-deliberative-poll/dylan-gillis-KdeqA3aTnBY-unsplash-wide-1920.jpg
 
 ---
 
@@ -43,11 +36,11 @@ For example, suppose a group of coworkers votes on where to go to lunch. Six peo
 
 In person, that comment would settle the matter: everybody who voted for Dino's would change their vote. 
 
-
 <img src="/assets/images/the-deliberative-poll/synchronous-conversation.png"
      alt="A Synchronous Conversation"
      style="display: block; margin-left: auto; margin-right: auto; width: 500px" />
 
+<!-- ![](images/synchronous-conversation.png) -->
 
 Online, however, this kind of comment is often overlooked, buried in a comment thread that nobody reads.
 
