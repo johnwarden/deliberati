@@ -25,9 +25,10 @@ From a logical point of view, a good argument is logically sound. But in the rea
 
 From a rhetorical point of view, a good argument is one that is convincing. But how can this be measured?
 
-In this series of essays, we present a model of argumentation as the exchange of information between Bayesian rational agents. The  subjective beliefs of Bayesian agents are modeled as probabilities, and the agent updates their beliefs on learning new information according to well-defined rules. So if we know the probabilities representing the beliefs of some rational "subject", we can precisely define and measure how an argument effects the beliefs of the subject. In other words we can objectively measure an arguments' subjective qualities. 
+In this series of essays, we present a Bayesian model of argumentation, where arguments are treated as information that may cause a Bayesian rational agent to modify their beliefs. Given a model of the beliefs of some Bayesian "subject", we can objectively define "subjective" measures of an argument's quality or strength, such as **relevance**, **persuasiveness**, and **sufficiency**.
 
-This essay provides concrete definitions for the concepts of **relevance**, **informativeness**, **persuasiveness**, **sufficiency**, and **necessity**, and show how to calculate these given a probability measure of the beliefs of the subject.
+This perspective can provide some powerful insights for the increasing number of people that need to put a microscope to the concept of *argument* in a variety of fields: artificial intelligence, law, argument mapping software, or in our case, design of [social protocols](/tags/social-protocols). Consider the following example.
+
 
 <!--
 
@@ -46,34 +47,38 @@ https://link.springer.com/article/10.1007/s11229-005-5233-2
 
 ## Introductory Example 1
 
-Consider the argument *this is a good candidate for the job* because *he has a pulse*. This is a pretty lame argument. But what if the candidate did **not** have a pulse?
+Consider the argument *this is a good candidate for the job* because *he has a pulse*. 
 
 If our subject is a Bayesian rational agent with common sense, then probably:
 
-- The argument is not **persuasive**.
-- Nor is it **informative**. *He has a pulse* is not new information to the subject. 
+- The argument is not very **persuasive**.
+- Nor is it **informative**. *He has a pulse* is probably not new information to the subject. 
 - Yet the argument is clearly **relevant**, because:
     - If the subject learned that the subject did **not** have a pulse, this would be **sufficient** to reject him as a candidate.
     - Alternatively, the belief that he probably has a pulse is **necessary** for the belief that he might be a good candidate.
 
-## Why Bayesian Argumentation
+As everyone knows, a Bayesian rational agent updates their beliefs when they acquire new information. An argument that is not informative to the agent therefore can't be persuasive. But a Bayesian model allows us to calculate what an agent **would** believe if they did not have that information (e.g. if they thought for some reason the candidate *didn't* have a pulse). This simple insight cracks open a number of ways of measuring argument **strength** other than just persuasiveness. In the essays on 
+[Relevance and Corelevance](/relevance-and-corelevance) and [Necessity and Sufficiency](/necessity-and-suficiency) we will define these measure and see how they all relate mathematically to the information content of the argument.
 
-Like all models, the Bayesian model of subjective belief is a incomplete description of the human mind. But it has the advantage of being clearly defined. Building clear terminology on top of a clear model helps clarify our thinking, facilitate discussion, and sharpen our intuition about what argument actually is.
-
-There is a large body of academic work on Bayesian argumentation[^1][^2]. But these essay are intended for practitioners: specifically software engineers building practical applications of argumentation for AI, argument mapping systems, or in my particular case, design of [social protocols](/tags/social-protocols). Our goal is to provide a useful and clear vocabulary, with common-sense but precise definitions for common concepts related to argument strength. This can hopefully help clarify discussion among collaborators and prove useful in documentation and code.
+The Bayesian model also allows us to take into account the reliability of the arguer themselves. A Bayesian rational agent will only update their beliefs if they believe the information given them. So for an argument to be informative it must not just be **new information**, it must come from a **reliable source**. This perspective shows us when what may be considered to be an *ad hominim* fallacy is actually perfectly rational[^3]. These ideas are discussed in the essays on [informativeness and persuasiveness](/informativeness-and-persuasiveness).
 
 ## Introductory Example 2
 
-Now consider another example argument: *the car won't start* because *the car is out of gas*. If the subject previously believed the car had gas (and assuming an internal combustion engine), then this new information might well be persuasive. But only if the subject *believes* the car actually is out of gas. For the argument to be persuasive, the subject must actually accept this new information as possibly true. These ideas are more precisely defined and quantified in [informativeness and persuasiveness](/informativeness-and-persuasiveness).
+Now consider another example argument: *the car won't start* because *the car is out of gas*. If the subject previously believed the car had gas, then this new information might well be persuasive. But suppose the subject accepts this information, but also believes that *the car's battery is dead*? With this assumption, the car being out of gas is now in a sense now irrelevant. 
 
-Now, suppose the subject accepts the premise, but also believes that *the car's battery is dead*? With this assumption, the car being out of gas is now in a sense now irrelevant. 
-
-Clearly the relevance of an argument depends on context. It depends on other beliefs the subject has about the state of world. 
+Clearly the relevance of an argument depends on context: it depends on other beliefs the subject has about the state of world. 
 
 But theoretically, if we have a model of some subject's beliefs about the world, we can actually identify the **corelevant** beliefs -- the beliefs cause the argument to be relevant. We will define this more precisely in the essay on [relevance and corelevance](/relevance-and-corelevance).
 
 
-## Argumentation Terminology 
+## Why Bayesian Argumentation?
+
+Like all models, the Bayesian model of subjective belief is an incomplete description of the human mind. But it is clearly defined. Building clear terminology on top of a clear model helps clarify our thinking, facilitate discussion, and sharpen our intuition about what argument actually is. 
+
+There is a lot of recent academic work on Bayesian argumentation[^1][^2]. These essay are intended not as an overview of current theory, but as a useful set of definitions and formulas for practitioners: specifically software engineers building practical applications of argumentation for AI, argument mapping systems, or in our particular case, design of [social protocols](/tags/social-protocols). Our goal is to provide a useful and clear vocabulary, with common-sense but precise definitions for common concepts related to argument strength. This can hopefully help clarify discussion among collaborators and prove useful in documentation and code.
+
+
+## Argumentation Theory and Warrants
 
 This idea of unexpressed beliefs that justify an argument evokes the idea of the **warrant** from the field of [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory). Argumentation theory views argument as a kind of flexible, informal logic. Instead of arguing with logical syllogisms, we make simple statements, or **claims** which support other claims. For example, I might claim *people are wearing jackets* to support the claim *it's probably cold outside*. 
 
@@ -95,7 +100,7 @@ For example, if our subject is more likely to believe that (𝐴) *it is going t
 
 But **why** does this warrant exist in the subject's mind? What actually justifies the inference? Is it a deductive inference? Inductive? Gut feeling?
 
-We can't necessarily answer this question, because a Bayesian agent's beliefs are modeled by a simple probability distribution, which gives us the end result of the agent's internal belief-forming process, but not how they got there.
+We can't necessarily answer this question, because a Bayesian agent's beliefs are modeled by a simple probability distribution, which gives us the end result of the agent's internal belief structure, but not how they got there.
 
 If the prior beliefs of our subject are represented by the probability measure $P$, then we can at least say that, in the mind of the subject, **a warrant exists justifying the inference from premise 𝐵 to conclusion 𝐴 iff**:
 
@@ -112,7 +117,7 @@ So in a Bayesian argument, an arguer asserts a **premise** in support/opposition
 
 ## This Series
 
-In the [next essay](/relevance-and-corelevance) in this series, we will formally define **relevance** and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of **necessity**, **sufficiency**, **informativeness**, and **persuasiveness**, all of which relate back to this central concept of relevance, and all of which can be precisely defined and quantified.
+In the [next essay](/relevance-and-corelevance) in this series, we will formally define **relevance** from a Bayesian perspective and discuss some of its mathematical properties. In the remaining articles in this series we will define the concepts of **necessity**, **sufficiency**, **informativeness**, and **persuasiveness**, all of which relate back to this central concept of relevance, and all of which can be precisely defined and quantified.
 
 - [Relevance and Corelevance](/relevance-and-corelevance)
 - [Necessity and Sufficiency](/necessity-and-suficiency)
@@ -145,9 +150,9 @@ But skipping ahead, here is a tl;dr; of all the terms that will be defined in th
 
 - **Sufficiency**: The sufficiency of the premise for the conclusion is $S(A,B) = P(A \vert B) - P(A) = P(\bar{B})R(A,B)$
 
-- **Argument Event**: The event, directly observed by the subject, that the arguer asserted the premise in support of the conclusion.
+- **Testimony Event**: The event, directly observed by the subject, that the arguer asserted the premise in support of the conclusion.
 
-- **Post-Argument Belief**: *Given the argument event I*: $P_i(∙) = P(∙ \vert I)$
+- **Post-Argument Belief**: *Given the testimony I*: $P_i(∙) = P(∙ \vert I)$
     - e.g. $P_i(B) = P(B \vert I)$ is the post-argument belief in 𝐵.
 
 - **Informative**: The assertion of the premise is **informative** (the argument is informative) **iff** $P_i(B) > P(B)$
@@ -356,9 +361,11 @@ $$
     S_i(A,B) = P_i(A \vert B) - P_i(A) = .8 - .77 = .03
 $$
 
-[^1]: Hahn, U., & Oaksford, M. (2007). [The rationality of informal argumentation: A Bayesian approach to reasoning fallacies.](https://psycnet.apa.org/record/2007-10421-007) Psychological Review, 114(3), 704–732. https://doi.org/10.1037/0033-295X.114.3.704
-[^2]: Hahn, U., Oaksford, M., & Harris, A. J. L. (2013). [Testimony and argument: A Bayesian perspective](https://psycnet.apa.org/record/2013-00206-002 
-). In F. Zenker (Ed.), Bayesian argumentation: The practical side of probability (pp. 15–38). Springer Science + Business Media. https://doi.org/10.1007/978-94-007-5357-0_2
+[^1]: Hahn, U., & Oaksford, M. (2007). The rationality of informal argumentation: A Bayesian approach to reasoning fallacies. (https://psycnet.apa.org/record/2007-10421-007) Psychological Review, 114(3), 704–732. https://doi.org/10.1037/0033-295X.114.3.704
+[^2]: Hahn, U., Oaksford, M., & Harris, A. J. L. (2013). Testimony and argument: A Bayesian perspective. (https://psycnet.apa.org/record/2013-00206-002). In F. Zenker (Ed.), Bayesian argumentation: The practical side of probability (pp. 15–38). Springer Science + Business Media. https://doi.org/10.1007/978-94-007-5357-0_2
+[^3]: Oaksford, M., & Hahn, U. (2013). Why are we convinced by the ad hominem argument?: Bayesian source reliability and pragma-dialectical discussion rules. In F. Zenker (Ed.), Bayesian argumentation: The practical side of probability (pp. 39–58). Springer Science + Business Media. https://doi.org/10.1007/978-94-007-5357-0_3
+
+
 
 <!--
 

@@ -17,7 +17,7 @@ series: ['Bayesian Argumentation']
 
 ## Why Accept the Premise?
 
-In the [previous essay](/necessity-and-sufficiency) in this series, we defined the ideas of **necessity and sufficiency** from the perspective of a Bayesian rational agent. If an argument is necessary, then if the subject were to reject the premise, they would decrease their acceptance of the conclusion. And if an argument is sufficient, then if the subject were to accept the premise, they would increase their acceptance of the conclusion. 
+In the [previous essay](/necessity-and-sufficiency) in this series, we defined the ideas of **necessity and sufficiency** from the perspective of a Bayesian rational agent. If an argument is *necessary*, then if the subject were to reject the premise, they would decrease their acceptance of the conclusion. And if an argument is *sufficient*, then if the subject were to accept the premise, they would increase their acceptance of the conclusion. 
 
 But why would the subject accept the premise? A Bayesian rational agent only changes their beliefs in light of evidence. But what evidence has the arguer given? When someone makes an argument, all they do is assert that the premise is true. **The only direct evidence is the observation that the arguer asserted that the premise was true**.
 
@@ -29,26 +29,26 @@ $$
 
 If Alice can see the sky through her window and already knows the sky is cloudy, then Bob's claim provides no new information. But if she can't see the sky, why does the event that *bob claimed that the sky was cloudy* change her beliefs?
 
+There are various reasons that someone else merely asserting a premise would induce a rational human being to change their beliefs. 
+
+1. First, they may **simply believe the person making the argument**. For a Bayesian agent, the **testimony** of the arguer -- the fact that they asserted something to be true -- is itself information. How that testimony effects the agent's belief in the premise depends on how reliable they believe the arguer to be, how plausible they find the premise, and what other ulterior motives they believe the arguer may have for making the claim. For a deeper discussion on a Bayesian perspective on agent reliability and testimony, see [this paper](https://psycnet.apa.org/record/2013-00206-002)[^1].
+
+2. Second, even if they initially doubt the premise, the agent may be **prompted to seek information** about the claim. Bob's assertion may prompt Alice to look out the window. Or the claim my include a link or reference to a trusted source.
+
+3. Third, an argument may simply **remind them of knowledge they had temporarily forgotten**. My spouse reminding me *I bought milk yesterday* can convince me not to go to the grocery store even if it is something I already knew.
+
+4. Forth, they may be **convinced by reasoning that provides no new information**. My belief about the answer to a math problem can change when someone shows me how to solve it. But the solution is only the logical consequence of my existing beliefs, not new information about the world. 
+
 ## Imperfect Bayesians
 
-There are various reasons that someone else merely asserting a premise would cause a rational human being to change their beliefs. 
-
-First, they may **simply believe the person making the argument**, because they find them at least somewhat trustworthy and find the premise **a priori** credible.
-
-Second, even if they initially doubt the premise, they may be **prompted to seek information** about the claim. Bob's assertion may prompt Alice to look out the window. Or the claim my include a link or reference to a trusted source.
-
-Third, an argument may simply **remind them of knowledge they had temporarily forgotten**. My spouse reminding me *I bought milk yesterday* can convince me not to go to the grocery store even if it is something I already knew.
-
-Forth, they may be **convinced by reasoning that provides no new information**. My belief about the answer to a math problem can change when someone shows me how to solve it. But the solution is only the logical consequence of my existing beliefs, not new information about the world. 
-
-A rational agent that actively seeks and forgets information is not exactly a perfect Bayesian. **But regardless of the actual reason** that the assertion causes the subject to change their beliefs, we can treat the assertion **as if it were simply new information.** If we assume that the assertion only directly effects the subject's belief in 𝐵, then we can then find the prior probability distribution that would lead to the same posterior belief in 𝐵. We can then **model** our subject as a perfect Bayesian with beliefs represented by this probability distribution. 
+A rational agent that actively seeks and forgets information is not exactly a perfect Bayesian. **But regardless of the actual reason** that the assertion causes the subject to change their beliefs, we can treat the assertion **as if it were simply new information** that caused them to update their beliefs according to the rules of Bayesian belief revision. We can then **model** our subject as a perfect Bayesian with beliefs represented by the prior probability distribution that would result in the same posterior distribution given this new information.
 
 So we can **model** an imperfect Bayesian as an equivalent perfect Bayesian.
 
 
 ## Definition of Post-Argument Belief
 
-We'll use $I$ to indicate the **argument event**. This is the event, which is directly observed by the subject, that agent 𝑋 argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
+We'll use $I$ to indicate the **testimony event**. This is the event, which is directly observed by the subject, that the argued premise 𝐵 in support of conclusion 𝐴. We always assume that the subject trusts the medium of communication, and their own senses, and so accepts 𝐼 as 100% true, even if they don't accept 𝐵.
 
 We use $P_i$ to denote the **Post-Argument beliefs** of the subject, defined as:
 
@@ -56,7 +56,7 @@ $$
     P_i(∙) = P(∙|I) = P(∙|X\text{ argued }B\text{ in support of }A)
 $$
 
-So for example $P_i(B)$ is the subject's opinion on 𝐵 after the argument event 𝐼, and $P_i(A)$ is their opinion on 𝐴 after the argument event.
+So for example $P_i(B)$ is the subject's opinion on 𝐵 after the testimony event 𝐼, and $P_i(A)$ is their opinion on 𝐴 after the testimony event.
 
 ## Definition of Informative
 
@@ -263,3 +263,8 @@ So:
 $$
     P_i(A) - P(A) = R(A,B)(P_i(B) - P(B))
 $$
+
+[^1]: Hahn, U., Oaksford, M., & Harris, A. J. L. (2013). Testimony and argument: A Bayesian perspective. (https://psycnet.apa.org/record/2013-00206-002). In F. Zenker (Ed.), Bayesian argumentation: The practical side of probability (pp. 15–38). Springer Science + Business Media. https://doi.org/10.1007/978-94-007-5357-0_2
+
+
+
