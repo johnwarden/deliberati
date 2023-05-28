@@ -13,16 +13,13 @@ toc_sticky: true
 ---
 
 
-In this article we introduce a few key terms and concepts used to develop the [mathematics of Distributed Bayesian Reasoning](/distributed-bayesian-reasoning-math).
-
-In the field of argumentation theory, there are many different theories and models for analyzing arguments and naming their parts. But many modern theories still incorporate the basic ideas from the influential [Toulmin model](https://link.springer.com/content/pdf/10.1007%2F978-90-481-9473-5_4.pdf) first [introduced in 1948](https://www.goodreads.com/book/show/859298.The_Uses_of_Argument). We will adopt the core parts of the Toulmin model here, but use more modern terminology.
-
+In this article we introduce an *argument model*: a set of terms for analyzing *arguments* by naming their parts. There are various argument models in the academic literature on [argumentation theory](https://en.wikipedia.org/wiki/Argumentation_theory) and related fields but none provide us with precise definitions for all the concepts behind our algorithms for improving for online conversations. So we will define those concepts here. Our model incorporates the basic ideas from the influential [Toulmin model](https://link.springer.com/content/pdf/10.1007%2F978-90-481-9473-5_4.pdf) of argumentation first [introduced in 1948](https://www.goodreads.com/book/show/859298.The_Uses_of_Argument).
 
 ## Anatomy of an Argument
 
 ### Claims
 
-A **claim** is a declarative sentence that people can accept or reject (agree with or disagree with). This definition is broad enough to include not only **descriptive** claims about reality, such as *the universe is expanding*, but also **normative** claims such as *we should go to the beach.*
+A **claim** is a declarative sentence that people can accept or reject (agree with or disagree with). This definition is broad enough to include not only **descriptive** claims about reality, such as *the universe is expanding*  (what *is*), but also **normative** claims about goals, such as *we should go to the beach* (what *should be*).
 
 An argument involves at least three claims:
 
@@ -30,32 +27,41 @@ An argument involves at least three claims:
 - A **premise**: the reason given to accept or reject the conclusion.
 - A **warrant**: an unstated claim that the premise, if accepted, is a good reason to accept or reject the conclusion. 
 
-The diagram below shows a sample argument from a hypothetical jury trial, with labels for the three parts of the argument.
+
+### Premise and Conclusion
+
+For example, during a jury trial, the prosecutor might claim that (𝐵) *the defendant signed a confession* to support the claim that  (𝐴) *the defendant is guilty*. In this case (𝐵) *the defendant signed a confession* is the premise, and (𝐴) *the defendant is guilty* is the conclusion
+
+An argument may be worded in such a way that the premise is unclear (sarcasm, etc.), but there is general agreement among argumentation theorists that there is always a premise hiding in an argument. Some authors use the "grounds", "evidence", or "data" instead of premise.
+
+Since any logical combination of premises can be treated as a single premise, we will speak of an argument as always having one explicit premise. 
+
+It is easy to confuse the term *claim* with *premise* or *conclusion*. A claim is any declarative statement that can be agreed with or disagreed with. A claim can also take the **role** of premise or conclusion in some argument. In the example above, 𝐴 and 𝐵 are both claims, where 𝐵 takes on the role of premise, and 𝐴 takes on the role of conclusion. If the defense contested the premise 𝐵 with some new argument (e.g. *the signature was forged*), 𝐵 would take on the role of **conclusion** in the new argument.
+
+### The Warrant
+
+The warrant can be thought of as a second unexpressed premise, comprising whatever might link the premise to the conclusion in the minds of the arguers. 
+
+Anything that is actually stated in the argument is part of the explicit premise, but there is always always *something* that is left unexpressed, some belief that justifies the inferential leap from premise to conclusion. In his case, the unexpressed premise might be a general rule like *if people confess, they are usually guilty*, or something more specific, such as *this defendant wouldn't confess unless they were guilty.* In any case, the warrant can be thought of as the claim that, for whatever reason, the premise is a good reason to accept the conclusion.
+
+So in our model, for simplicity sake, we assume **every argument has an implicit warrant**, which is the claim that **the premise is a good reason to accept the conclusion**. 
+
+The idea of an argument with an unstated premise is related to the Aristotles concept of [**enthymeme**](https://en.wikipedia.org/wiki/Enthymeme). This means that in our model, we in a sense treat all arguments as enthymemes.
+
+
+### Summary of Model
+
+The diagram below shows a sample argument with labels for the three parts of the argument.
 
 <img src="/assets/images/distributed-bayesian-reasoning/anatomy-of-argument.svg"
      alt="Anatomy of an Argument"
      style="display: block; margin-left: auto; margin-right: auto; width: 500px" />
 
 
-### The Premise
+So in the diagram above, the argument in support of conclusion (𝐴) *the defendant is guilty*, has two halves. On the left is the premise (𝐵) *the defendant signed a confession*. This is the actual claim that has been made. On the right is the *warrant*: the claim that *𝐵 is a good reason to accept 𝐴*.
 
-Since any logical combination of premises can be treated as a single premise, we will speak of an argument as having one explicit premise. 
+This is a very simplified model. There are many concepts from the field of argumentation theory literature that we don't need to address here (rebuttals, backing, etc.), and our definitions may lack nuance. But these definitions are meant to provide not as a comprehensive theory of argumentation, but a vocabulary that helps us develop the [math](/distributed-bayesian-reasoning-math).
 
-The premise itself can be the conclusion of another argument. 
-
-An argument may be worded in such a way that the premise is unclear (sarcasm, etc.), but there is general agreement among argumentation theorists that there is always a premise hiding in an argument. Some authors use the "grounds", "evidence", or "data" instead of premise.
-
-### The Warrant
-
-The warrant can be thought of as a second unexpressed premise, comprising whatever might link the premise to the conclusion in the minds of the jurors. 
-
-Anything that is actually stated in the argument is part of the explicit premise, but there is always always *something* that is left unexpressed, some belief that justifies the inferential leap from premise to conclusion. In his case, the unexpressed premise might be a general rule like "if people confess, they are usually guilty", or something more specific, such as "this defendant wouldn't confess unless they are guilty." In any case, the warrant can be thought of as the belief, for whatever reason, that the premise is a good reason to accept the conclusion.
-
-So in our model, for simplicity sake, we assume **every argument has an implicit warrant**, which is the belief that **the premise is a good reason to accept the conclusion**. 
-
-The idea of an argument with an unstated premise is related to the Aristotles concept of [**enthymeme**](https://en.wikipedia.org/wiki/Enthymeme). This means that in our model, we in a sense treat all arguments as enthymemes.
-
-So in the diagram above, the argument in support of conclusion (𝐴) *the defendant is guilty*, has two halves. On the left is the premise (𝐵) *the defendant signed a confession*. This is the actual claim that has been made. On the right is the *warrant*: the belief that *𝐵 is a good reason to accept 𝐴*.
 
 ## Types of Arguments
 
@@ -69,7 +75,7 @@ Note that an opposing argument is just a supporting argument for the negation of
 
 Making the distinction between premise and warrant allows us to cleanly distinguish between **premise arguments** and **warrant arguments**.
 
-In the chart below, we have added two arguments that oppose 𝐵. The argument with premise (𝐺) *the signature was forged*, opposes the premise (𝐵) *the defendant signed a confession*. It is a reason asserted for believing that 𝐵 is not true. We call this a **premise argument**. The argument with premise (𝐶) *the defendant retracted her confession*, opposes the *warrant* of the argument with premise 𝐵 -- the belief that 𝐵 is a good reason to accept 𝐴. We call this a **warrant argument**.
+In the chart below, we have added two arguments that oppose 𝐵. The argument with premise (𝐺) *the signature was forged*, opposes the premise (𝐵) *the defendant signed a confession*. It is a reason asserted for believing that 𝐵 is not true. We call this a **premise argument**. The argument with premise (𝐶) *the defendant retracted her confession*, opposes the *warrant* of the argument with premise 𝐵 -- the claim that 𝐵 is a good reason to accept 𝐴. We call this a **warrant argument**.
 
 
 <img src="/assets/images/distributed-bayesian-reasoning/argument-graph-with-argument-types.svg"
@@ -77,11 +83,6 @@ In the chart below, we have added two arguments that oppose 𝐵. The argument w
      style="display: block; margin-left: auto; margin-right: auto; width: 800px" />
 
 
-## Notes on Terminology
-
-It is easy to confuse the terms "claim" and "premise". A claim is any declarative statement that can be agreed with or disagreed with. A claim can also take the **role** of premise or conclusion in some argument.
-
-This is a very simplified model. There are many concepts from the field of argumentation theory literature that we don't need to address here (rebuttals, backing, etc.), and our definitions may lack nuance. But these definitions are meant to provide not as a comprehensive theory of argumentation, but a vocabulary that helps us develop the [math](/distributed-bayesian-reasoning-math).
 
 
 ## Argument Notation
@@ -186,9 +187,9 @@ We define an **argument thread** is a premise argument followed by a chain of **
 
 ### Argument Threads are Dialogs
 
-Argument threads proceed along the lines of "𝐴 because 𝐵, yes but not 𝐶, okay but 𝐷," and so on. Each argument in the thread is made in the context of all the previous arguments in the thread. The thread may be long, but jurors that are adding to the thread can be assumed to have have followed the whole thread of the argument -- even if they have not participated in the sub-jury about each premise. 
+Argument threads proceed along the lines of "𝐴 because 𝐵, yes but not 𝐶, okay but 𝐷," and so on. Each argument in the thread is made in the context of all the previous arguments in the thread. The thread may be long, but arguers that are adding to the thread can be assumed to have have followed the whole thread of the argument -- even if they have not participated in the sub-jury about each premise. 
 
-The claims in the thread thus represents a **shared context**. Each argument in the thread is made in the context of all the previous claims in the thread, and **presumes acceptance of all of them**. For example, when someone argues that ($\text{𝐴◂𝐵◃-𝐶}$) *the defendant retracted her confession* it is clear from context that they accept (concede) that (𝐵) *the defendant signed a confession* but still don't accept that (𝐴) *the defendant is guilty*. 
+The claims in the thread thus represents a **shared context**. Each argument in the thread is made in the context of all the previous claims in the thread, and **presumes acceptance of all claims but the root claim**. For example, when someone argues that ($\text{𝐴◂𝐵◃-𝐶}$) *the defendant retracted her confession* it is clear from context that they accept (concede) that (𝐵) *the defendant signed a confession* but still don't accept that (𝐴) *the defendant is guilty*. 
 
 Now, the arguer may not actually accept 𝐵 to be true, but by responding with a warrant argument instead of a premise argument (e.g. (𝐵◃-𝐺) *the signature was forged*), they are *conceding* 𝐵 for the sake of argument, providing a reason to reject 𝐴 even if 𝐵 is accepted.
 
