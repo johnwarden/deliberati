@@ -29,7 +29,7 @@ So the meta-reasoner must update its beliefs to be consistent. To do this, it en
 
 
 
-Suppose during the subtrial, a witness claimed that the DNA lab technician was drunk, but only 85% of the jurors believed this, and as a result 20% of the sub-jurors believe that the DNA evidence was valid. 
+Suppose during the subtrial, a witness claimed that the DNA lab technician was drunk, and all of the jurors believed this, and as a result conclude that the DNA evidence was not valid.
 
 The meta-reasoner would then need to use the rules of Bayesian belief revision to update their posterior belief in the probability of guilt based on a new posterior belief in the probability that the DNA evidence was valid. We will develop the formula for doing this in [The Math](/distributed-bayesian-reasoning-math). The process is illustrated in the diagram below.
 
