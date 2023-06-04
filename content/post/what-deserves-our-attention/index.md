@@ -5,13 +5,6 @@ toc: false
 date:   2023-05-01 00:00:00 +0200
 tags: ['Social Protocols']
 weight: 1 # Pin to top
-
-# toc_sticky: true
-sidebar:
-  - title: "In This Series"
-    nav: "social-protocols"
-  - nav: "social-protocols-related"
-    title: "Related Articles"
 image: what-deserves-our-attention.png
 # menu:
 #     main:
@@ -38,9 +31,11 @@ But our collective attention should not just be a commodity to be exploited. It 
 
 Social networks and online forums, as the public square where public discourse takes place, are public goods that should be independent of the whims of politics. They should be governed by transparent, democratic protocols that direct society's collective attention towards production of common knowledge, narratives, values, and culture. They should direct our attention towards constructive, civilized public discourse and a collective, cooperative pursuit of truth. Towards the realization of our collective will, and manifestation of our collective intelligence.
 
-Designing such rules is the goal of *Social Protocols*.
 
-<!-- ## Next Article
+We publish articles with our ideas for the design of such rules here on [this site](/). Here are some suggested articles.
 
-- What Is a Social Protocol
- -->
+- In [Give Truth the Advantage](/give-truth-the-advantage), we lay out an overall vision for social protocols that make it easier for accurate information to spread, by identifying content that reflects honest, informed opinions.
+- In [The Law of Attention](/the-law-of-attention), we argue that we can apply Game Theory to design social protocols that encourage certain outcomes.
+- In [Truthtelling Games](/truthtelling-games), we Game Theoretical mechanisms encourage subjectively honest behavior.
+- In [The Deliberative Poll](/the-delibrerative-poll), we propose a protocol for promoting constructive discussions and directing attention to content that reflects the most **informed** opinions.
+
