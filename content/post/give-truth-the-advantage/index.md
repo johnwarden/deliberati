@@ -18,7 +18,7 @@ summary: "Everyone knows that the infamous social media algorithms promote the s
 #     teaser: /assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 #     caption: "photo credit: [**Unsplash**](https://unsplash.com)"
 series: ['Game Theory in Social Media']
-# series_weight: 1
+series_weight: 1
 ---
 
 

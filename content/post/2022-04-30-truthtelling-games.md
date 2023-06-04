@@ -3,7 +3,7 @@ layout: single
 title:  "Truthtelling Games"
 date:   2021-09-12 00:00:00 +0200
 toc: true
-weight: 60
+weight: 90
 toc_sticky: true
 # categories: ['Social Protocols']
 tags: ['Game Theory']
@@ -15,6 +15,7 @@ sidebar:
 # header:
 #     teaser: /assets/images/decentralized-truth-wide.png
 series: ['Game Theory in Social Media']
+series_weight: 3
 summary: "In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions."
 ---
 

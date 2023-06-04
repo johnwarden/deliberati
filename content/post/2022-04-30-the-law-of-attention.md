@@ -5,13 +5,14 @@ date:   2021-09-13 00:00:00 +0200
 toc: true
 toc_sticky: true
 tags: ['Social Protocols', 'Game Theory']
-weight: 90
+weight: 60
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
 series: ['Game Theory in Social Media']
+series_weight: 2
 
 ---
 

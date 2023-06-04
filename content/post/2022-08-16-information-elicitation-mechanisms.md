@@ -10,7 +10,6 @@ sidebar:
     nav: "give-truth-the-advantage"
   - nav: "give-truth-the-advantage-related"
     title: "Related Articles"
-series: ['Game Theory in Social Media']
 
 ---
 
