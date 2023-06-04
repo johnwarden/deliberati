@@ -6,6 +6,8 @@ date:   2023-05-01 00:00:00 +0200
 tags: ['Social Protocols']
 weight: 1 # Pin to top
 image: what-deserves-our-attention.png
+aliases:
+- /2023/05/01/what-deserves-our-attention/
 # menu:
 #     main:
 #         - identifier: home
