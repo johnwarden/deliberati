@@ -50,7 +50,7 @@ Bayesian reasoners then revise their beliefs when they acquire new information/e
 - reject any possibilities that are incompatible with the evidence
 - reallocate probability to the remaining possibilities so that they sum to 100%
 
-For example, if the Duchess's body is found buried under the Atrium, Holmes must eliminate the possibility that she is being held captive and alive by the Duke. He must then reallocate probability among the remaining possibilities.
+For example, if the Duchess's body is found buried under the Atrium, Holmes must eliminate the possibility that she is being held captive and alive by her jealous husband, the Duke. He must then reallocate probability among the remaining possibilities.
 
 So all the remaining probability is allocated to the remaining two scenarios in which the Duchess is dead.
 
@@ -93,7 +93,7 @@ Another way of looking at this is that the 50% "probability mass" previously all
 
 ## Sequential Updating
 
-Suppose Holmes subsequently finds evidence that exonerates the Count. We now simply repeat the process and revise/update Holmes' beliefs again. The posterior from the last piece of evidence becomes the prior for the next, and probability mass is again reallocated. This time, since only one possibility remains, all probability mass is reallocated to this possibility.
+Suppose Holmes subsequently finds evidence that exonerates the Count. To update Holmes' beliefs again, we repeat the process. The posterior after the last piece of evidence becomes the new prior. We then eliminate possibility #3 (she was murdered by the Count). This time, since only one possibility remains, all probability mass is reallocated to this possibility.
 
 <!--
     
@@ -120,30 +120,26 @@ Suppose Holmes subsequently finds evidence that exonerates the Count. We now sim
      alt="Reallocation of Probabilities Example"
      style="display: block; margin-left: auto; margin-right: auto; max-height: 800px" />
 
-<div style="font-size: smaller; padding-left: 20px; margin-bottom: 20px;">Illustration of sequential updating. The posterior after the first piece of evidence becomes the prior for the next piece of evidence. After the "Dead+Count" scenario is eliminated, probability mass is reallocated to the remaining possibility.</div>
-
-
-So what happens now that we've reached a point where there are no more possibilities to eliminate? At this point, no more inferences can be made. There is nothing more to learn -- at least with respect to the Case of the Disappearing Duchess. Holmes' has eliminated the impossible and the remaining possibility *must* be the truth.
+<div style="font-size: smaller; padding-left: 20px; margin-bottom: 20px;">Illustration of sequential updating. The posterior after the first piece of evidence becomes the prior for the next piece of evidence. After the "Dead+Count" possibility is eliminated, probability mass is reallocated to the remaining possibility.</div>
 
 ## All That Remains
 
-Bayesian inference can be thought of as the process of reducing uncertainty by eliminating the impossible, and increasing the probability of "all that remains" so that it sums to 100%.
+So what happens now that we've reached a point where there are no more possibilities to eliminate? At this point, no more inferences can be made. There is nothing more to learn -- at least with respect to the Case of the Disappearing Duchess. Holmes' has eliminated the impossible and the remaining possibility *must* be the truth.
+
+It's not always possible to eliminate all uncertainty such that only one possibility remains. But Bayesian inference can be thought of as the process of reducing uncertainty: eliminating the impossible, and increasing the probability of "all that remains" so that it sums to 100%.
 
 > When you have eliminated the impossible, the probability of all that remains, no matter how improbable, must sum to 100%
 > 
 > -- Sherlock Thomas Bayes Holmes (Jonathan Warden)
 
-## Constantly Decreasing Entropy
-
-From an information-theoretic perspective, fewer possibilities means less *entropy*. Every time a possibility is eliminated from the probability distribution, the distribution's entropy decreases. If all but one possibility have been eliminated, then no uncertainty remains, at which point entropy is zero.
 
 ## Updating Beliefs based on Evidence
 
-What makes Bayesian inference so powerful is that learning can shift beliefs in another things, sometimes in non-intuitive ways.
+What makes Bayesian inference so powerful is that learning about one thing can shift beliefs in other things, sometimes in non-intuitive ways.
 
 For example, learning that the Duchess is dead **decreased** the probability that the Duke did it (from 75% to 50%), and **increased** the probability that the Count did it (from 25% to 50%).
 
-How is this so? You can see this visually in the four charts below. The first row of charts we have already seen: they show Holmes' priors on the left, and his posteriors after learning that the Duchess is dead on the right.
+How can this be? This is demonstrated visually in the four charts below. The first row of charts we have already seen: they show Holmes' priors on the left, and his posteriors after learning that the Duchess is dead on the right.
 
 The second row of charts show the same probabilities, but this time the charts show the *total* for each possible *culprit*. The Duke is the culprit in two different scenarios in the priors, so the total prior probability for the Duke is 50% + 25% = 75%. The total prior probability for the Count is 25%.
 
@@ -163,7 +159,7 @@ The key to the power of Bayesian inference is that it tells us exactly how a rat
 
 Inferring one thing from another thing is only possible here because Holmes' prior beliefs are beliefs in **combinations** of propositions, not just individual propositions. Holmes' prior beliefs are not simply that *there is a 75% chance that the Duke did it* or *there is a 50% chance that the Duchess is dead*. If his beliefs were so simple, learning that the Duchess was murdered would not tell Holmes anything about whether it was the Duke or the Count that did it.
 
-Rather his beliefs are about **combinations** of propositions (e.g. *the Countess is Dead and the Duke did*). His beliefs form a **joint probability distribution** that encodes the knowledge that enables Holmes to make inferences about the culprit upon learning of the Duchess's death.
+Rather his beliefs are about **combinations** of propositions (e.g. *the Countess is Dead and the Duke did*). His beliefs form a [**joint probability distribution**](https://en.wikipedia.org/wiki/Joint_probability_distribution) that encodes the knowledge that enables Holmes to make inferences about the culprit upon learning of the Duchess's death.
 
 I think that understanding prior beliefs a joint probability distribution is key to understanding Bayesian Inference.
 
