@@ -16,7 +16,7 @@ sidebar:
 #     teaser: /assets/images/decentralized-truth-wide.png
 series: ['Game Theory in Social Media']
 series_weight: 3
-summary: "In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions."
+summary: "In this article, I will use game theory to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions."
 ---
 
 ## How To Get People on the Internet to Tell the Truth
