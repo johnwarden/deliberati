@@ -5,7 +5,7 @@ slug: bayesian-inference-primer
 date:   2021-10-26 00:00:00 +0200
 toc: true
 toc_sticky: true
-weight: 60
+weight: 100
 sidebar:
   - nav: "distributed-bayesian-reasoning-related"
     title: "Related Articles"
