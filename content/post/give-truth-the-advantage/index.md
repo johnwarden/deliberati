@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 weight: 20 # Pin to top
 tags: ['Social Protocols']
-image: assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
+image: daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
@@ -18,7 +18,7 @@ summary: "Everyone knows that the infamous social media algorithms promote the s
 #     teaser: /assets/images/daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
 #     caption: "photo credit: [**Unsplash**](https://unsplash.com)"
 series: ['Game Theory in Social Media']
-
+# series_weight: 1
 ---
 
 
