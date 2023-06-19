@@ -4,3 +4,6 @@
 [submodule "syndication-sources/social-protocols"]
 	path = syndication-sources/social-protocols
 	url = https://github.com/social-protocols/social-protocols.github.io
+[submodule "syndication-sources/jonathanwarden.com"]
+	path = syndication-sources/jonathanwarden.com
+	url = https://github.com/johnwarden/jonathanwarden.com
