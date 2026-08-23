@@ -6,10 +6,11 @@
     <link rel="canonical" href="https://jonathanwarden.com">
     <title>Redirecting to jonathanwarden.com</title>
     <script>
-        // Preserve query string and hash when redirecting from homepage
+        // Preserve the current path and query string when redirecting
+        var path = window.location.pathname;
         var search = window.location.search;
         var hash = window.location.hash;
-        var targetUrl = "https://jonathanwarden.com" + search + hash;
+        var targetUrl = "https://jonathanwarden.com" + path + search + hash;
         window.location.href = targetUrl;
     </script>
 </head>
